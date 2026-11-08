@@ -1,42 +1,48 @@
-# MONAISEC Website V2 — Regulatory Intelligence
+# MONAISEC V7 — Complete static research platform
 
-This release preserves the V1 homepage and adds the first functional research feature: a global Regulatory Intelligence register.
+MONAISEC is an independent research initiative examining security, reliability, governance and systemic risks of autonomous AI agents in financial and monetary systems. This release consolidates the five research modules and adds the missing research-governance foundation.
 
-## Contents
-- `index.html` — existing V1 homepage, updated to link to Regulatory Intelligence.
-- `regulatory.html` — responsive regulatory database interface.
-- `data/regulations.json` — structured seed dataset (12 records).
-- `assets/css/regulatory.css` — page styling.
-- `assets/js/regulatory.js` — filtering, search, record profiles and CSV export.
+## Site map
 
-## Deploy to GitHub Pages
-Upload the contents of this folder to the root of your existing GitHub repository (keep the folders). Commit to the branch configured in Settings → Pages. No build step is required.
+- `index.html` — institutional homepage and research navigation.
+- `regulatory.html` — Regulatory Intelligence register.
+- `threats.html` — Threat & Vulnerability Intelligence taxonomy.
+- `knowledge-graph.html` — cross-register relationship explorer.
+- `financial-risks.html` — Financial Risk Observatory.
+- `scenario-lab.html` — qualitative Agentic Finance Scenario Lab.
+- `sources.html` — searchable, deduplicated source registry.
+- `methodology.html` — research principles, evidence classes, event types and limitations.
+- `404.html`, `robots.txt`, `sitemap.xml` — basic site operations and discoverability.
 
-If replacing an existing site, keep a local copy of the current repository before overwriting. The `index.html` here is based on the V1 delivered in this project and includes the new Regulatory Intelligence navigation link.
+## Deployment to GitHub Pages
 
-## Test locally
-Because the page fetches `data/regulations.json`, do not open `regulatory.html` as a `file://` URL. From this folder run:
+1. Download and extract the V7 ZIP.
+2. Back up the current GitHub repository contents.
+3. Upload the *contents* of `monaisec-v7/` to the repository root (not the enclosing folder and not the ZIP).
+4. Preserve the `assets/`, `data/` and `scripts/` directories. Replace corresponding files with V7 versions.
+5. Commit to the branch configured under repository Settings → Pages.
+6. After deployment, test every page, source links, JSON fetches, mobile navigation and the 404 page. Confirm HTTPS and custom-domain settings remain intact.
 
-```bash
-python -m http.server 8000
-```
+The site is static and requires no build step. Test locally with `python -m http.server 8000` from this directory. Do not open JSON-fetching pages via `file://`.
 
-Then open `http://localhost:8000`.
+## Research governance
 
-## Database methodology and limitations
-- The 12 records are a curated seed dataset, not an exhaustive global inventory.
-- Primary official publisher sources are linked for each record.
-- Legal force and agentic-AI relevance are separate classifications.
-- No arbitrary global strictness score is used.
-- Summaries are analytical research notes, not legal advice.
-- The dataset snapshot is marked 7 November 2026. Records must be rechecked when legal texts, effective dates or guidance change.
-- Some records are adjacent frameworks, standards initiatives or technical guidance rather than legislation. Their non-binding status is explicitly stated.
-- The OWASP Agentic Applications record's version date is flagged for confirmation against its version history before being treated as a finalized bibliographic citation.
+Read `methodology.html` and `DATA_DICTIONARY.md` before adding records. The source registry is generated from URLs already present in the source datasets. Its presence does not mean every source was re-verified on the registry generation date. Use record-level verification dates and notes.
 
-## Updating records
-Edit `data/regulations.json`. Preserve each record's unique `id`, use ISO dates (`YYYY-MM-DD`), and update `last_verified` only after checking the official publisher source. Keep the `verification_note` concise and specific. Do not label an instrument binding unless the legal text supports that classification.
+Evidence classes distinguish primary sources, independently corroborated evidence, secondary sources, unverified claims and analytical hypotheses. Event types distinguish observed incidents, demonstrated attacks, known vulnerabilities, threat patterns and analytical scenarios. Never represent a scenario or taxonomy pattern as an observed financial-sector incident without evidence.
 
-## Feature status
-Implemented: responsive register, live keyword search, filters for jurisdiction/instrument/legal force/agent relevance, primary-source verification toggle, record detail modal, official source links, and CSV export.
+Legal force and agent relevance are separate dimensions. Cross-links and graph edges are analytical unless a cited source explicitly states the relationship. No universal legal strictness, probability, expected-loss or systemic-risk score is calculated.
 
-Not included yet: user accounts, server-side search, automated legal monitoring, admin editing interface, API integrations or legal advice.
+## Data maintenance
+
+- Keep stable unique IDs; never recycle deleted IDs.
+- Use ISO dates (`YYYY-MM-DD`) and update `last_verified` only after checking the underlying source.
+- Preserve provenance, scope, caveats and verification notes.
+- Update `CHANGELOG.md` for material changes.
+- Run `python scripts/validate_data.py` before publishing.
+- Rebuild `sources.json` when adding/removing source URLs. Review registry mappings.
+- Rebuild `knowledge-graph.json` when related registers change; inspect every relationship before publication.
+
+## Current limitations
+
+No backend, login, database service, editor interface, automated source monitoring, incident submission pipeline or alerting is included. Dataset coverage is curated and incomplete. This is not legal, investment, supervisory, audit or operational advice.
