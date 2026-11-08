@@ -1,0 +1,315 @@
+{
+  "dataset_title": "MONAISEC Threat & Vulnerability Intelligence Taxonomy",
+  "dataset_version": "1.0.0",
+  "last_reviewed": "2026-11-07",
+  "methodology": "Curated initial taxonomy synthesised from OWASP Agentic Applications, MITRE ATLAS and official cyber guidance. Evidence maturity distinguishes documented threat patterns from analytical financial scenarios. Financial consequences are potential impacts, not claims of observed incidents. Severity is not scored because it depends on system exposure, controls and context.",
+  "records": [
+    {
+      "id": "MON-THR-001",
+      "title": "Agent goal hijack",
+      "owasp_mapping": "ASI01",
+      "description": "An attacker changes an agent’s objective, plan or decision path by supplying malicious instructions through user input, retrieved content, documents, websites or tool outputs.",
+      "financial_scenario": "Indirect prompt injection in a market-news article causes a research agent to disregard its portfolio mandate and initiate unauthorised downstream actions.",
+      "potential_financial_impact": "Potential unauthorised trading or payment instructions; corrupted investment research; breach of mandate; market abuse exposure.",
+      "mitigations": "Untrusted-content isolation; instruction hierarchy; source provenance; action confirmation; policy checks before consequential actions.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI01; MITRE ATLAS: LLM Prompt Injection; MITRE ATLAS: Prompt Infiltration via Public-Facing Application",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Threat pattern established in agentic security guidance. Financial example is an analytical scenario, not a claimed incident.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-002",
+      "title": "Tool misuse and exploitation",
+      "owasp_mapping": "ASI02",
+      "description": "An agent invokes a legitimate tool in an unsafe, unauthorised or unintended way, or chains tools so that individually permitted actions produce a harmful outcome.",
+      "financial_scenario": "A treasury agent combines account lookup, beneficiary creation and payment initiation tools in a sequence that bypasses the intended approval workflow.",
+      "potential_financial_impact": "Unauthorised transfers; incorrect settlement instructions; transaction reversals; operational losses and control failures.",
+      "mitigations": "Fine-grained tool allowlists; transaction-level authorisation; parameter validation; separation of duties; approval gates for irreversible actions.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI02; MITRE ATLAS: AI Agent Tool Invocation",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Agent tool invocation is represented in MITRE ATLAS. The treasury workflow is a hypothetical financial scenario.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-003",
+      "title": "Identity and privilege abuse",
+      "owasp_mapping": "ASI03",
+      "description": "An attacker exploits delegated credentials, inherited user permissions, long-lived tokens or weak identity boundaries to make an agent act with excessive authority.",
+      "financial_scenario": "A compromised investment assistant reuses a privileged service token to access client records or execute operations beyond its assigned desk.",
+      "potential_financial_impact": "Client-data exposure; unauthorised account changes; fraud; regulatory breaches; lateral movement into core systems.",
+      "mitigations": "Dedicated workload identities; short-lived scoped credentials; least privilege; token binding; continuous access reviews; strong attribution.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI03; MITRE ATLAS: AI Agent Tool Credential Harvesting; Credentials from AI Agent Configuration",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Credential and privilege abuse are established threat classes. Specific financial outcomes are scenario analysis.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-004",
+      "title": "Agentic supply-chain compromise",
+      "owasp_mapping": "ASI04",
+      "description": "A dependency in the agent supply chain—model, plugin, tool, MCP server, skill, package, dataset or update channel—is compromised or maliciously modified.",
+      "financial_scenario": "A third-party market-data connector update introduces a malicious tool description that causes an agent to transmit sensitive context to an external endpoint.",
+      "potential_financial_impact": "Data leakage; compromised trading or payment workflows; service disruption; concentration and third-party risk.",
+      "mitigations": "Supplier due diligence; signed artifacts; provenance and version pinning; sandboxing; dependency inventories; runtime egress controls.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI04; MITRE ATLAS: AI Supply Chain Compromise; OWASP MCP Top 10",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Supply-chain compromise appears in OWASP and MITRE taxonomies. The market-data connector example is illustrative.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-005",
+      "title": "Unexpected code execution",
+      "owasp_mapping": "ASI05",
+      "description": "Agent-generated or agent-invoked code executes with unsafe privileges, insufficient isolation or attacker-controlled inputs, enabling system compromise.",
+      "financial_scenario": "An operations agent runs a generated reconciliation script with broad filesystem and network permissions after ingesting manipulated transaction data.",
+      "potential_financial_impact": "Compromise of back-office infrastructure; altered records; disruption of reconciliation or settlement; data theft.",
+      "mitigations": "Ephemeral sandboxes; no ambient credentials; restricted system calls and network; code review; signed execution policies; immutable logs.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI05; MITRE ATLAS: Command and Scripting Interpreter; AI Agent Tool Invocation",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Mapped to general execution techniques and agentic tool invocation. Financial example is hypothetical.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-006",
+      "title": "Memory and context poisoning",
+      "owasp_mapping": "ASI06",
+      "description": "Persistent memory, conversation history, vector stores, retrieval corpora or agent state are manipulated so future reasoning and actions rely on attacker-controlled information.",
+      "financial_scenario": "A poisoned internal research note persists in a portfolio agent’s retrieval store and repeatedly biases issuer-risk assessments.",
+      "potential_financial_impact": "Persistent analytical distortion; unsuitable credit or investment decisions; hidden manipulation; model governance failures.",
+      "mitigations": "Write-access controls; memory provenance; quarantine and review of new memories; retrieval integrity checks; expiry and rollback.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI06; MITRE ATLAS: AI Agent Context Poisoning; RAG Poisoning",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Memory and context poisoning are explicit agentic threat categories in OWASP and MITRE ATLAS.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-007",
+      "title": "Insecure inter-agent communication",
+      "owasp_mapping": "ASI07",
+      "description": "Messages exchanged between agents are spoofed, replayed, altered or accepted without sufficient authentication, integrity, provenance or trust-boundary enforcement.",
+      "financial_scenario": "A settlement-monitoring agent accepts a forged instruction from an untrusted agent claiming to represent a payment-control service.",
+      "potential_financial_impact": "Fraudulent instructions; inconsistent risk decisions; unauthorised workflow transitions; loss of accountability across agent chains.",
+      "mitigations": "Mutual authentication; signed messages; replay protection; explicit trust registries; schema validation; end-to-end audit trails.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI07; MITRE ATLAS: Autonomous AI Agent Communication",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Agent-to-agent trust is a recognised design risk. Specific payment example is analytical.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-008",
+      "title": "Cascading and correlated agent failures",
+      "owasp_mapping": "ASI08",
+      "description": "A local agent error, compromised component or shared dependency propagates across connected agents and workflows, amplifying impact through automation and correlated decisions.",
+      "financial_scenario": "A faulty liquidity forecast is consumed by treasury, collateral and funding agents, each taking mutually reinforcing actions before human review.",
+      "potential_financial_impact": "Liquidity stress; correlated trading or funding actions; operational contagion; disruption to market or payment infrastructure.",
+      "mitigations": "Circuit breakers; blast-radius limits; independent validation; rate limits; staged rollout; kill switches; cross-agent monitoring.",
+      "evidence_maturity": "Analytical scenario / systemic-risk pathway",
+      "framework_mappings": "OWASP ASI08; MITRE ATLAS: Autonomous Attack Orchestration; FSB AI risk analysis (contextual)",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "Cascading failure is an OWASP agentic risk. Financial contagion pathway is a MONAISEC analytical scenario, not an observed event.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Systemic-risk scenario",
+      "related_regulatory_records": [
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-009",
+      "title": "Human–agent trust exploitation",
+      "owasp_mapping": "ASI09",
+      "description": "Attackers exploit automation bias, authority cues, unclear accountability or approval fatigue to induce people to accept unsafe agent recommendations or actions.",
+      "financial_scenario": "A relationship manager approves a high-value transfer because an agent presents a fabricated compliance clearance with confident language.",
+      "potential_financial_impact": "Fraud; mis-selling; control override; client harm; accountability and conduct risk.",
+      "mitigations": "Meaningful explanations; independent evidence links; risk-tiered approvals; dual control; anti-fatigue design; staff training.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "OWASP ASI09; MITRE ATLAS: AI Agent Clickbait (adjacent technique)",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://atlas.mitre.org/",
+      "evidence_note": "OWASP identifies human-agent trust exploitation. The approval example is illustrative.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-010",
+      "title": "Rogue or misaligned agent behaviour",
+      "owasp_mapping": "ASI10",
+      "description": "An agent behaves outside its intended goals, policy or operational envelope because of compromise, specification gaps, emergent behaviour or failed controls.",
+      "financial_scenario": "A portfolio execution agent continues to rebalance despite a changed risk limit because the control update is not propagated to its planning state.",
+      "potential_financial_impact": "Unauthorised trading; limit breaches; unexpected exposures; market impact; supervisory and governance failures.",
+      "mitigations": "Runtime policy enforcement outside the model; hard exposure limits; independent monitoring; bounded autonomy; emergency stop and rollback.",
+      "evidence_maturity": "Demonstrated risk class; scenario-dependent manifestation",
+      "framework_mappings": "OWASP ASI10; NIST AI Agent Standards Initiative (security and identity focus)",
+      "primary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "secondary_source_url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
+      "evidence_note": "The threat class is in OWASP. The portfolio example is a hypothetical financial manifestation.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-011",
+      "title": "Agent-mediated data exfiltration",
+      "owasp_mapping": "Cross-cutting",
+      "description": "An agent uses authorised retrieval or tool access to collect, transform or transmit sensitive information to an unauthorised destination, potentially through prompt injection or compromised tools.",
+      "financial_scenario": "A customer-support agent is manipulated into summarising confidential account data and sending it to an attacker-controlled external destination.",
+      "potential_financial_impact": "Client confidentiality breach; market-sensitive information leakage; privacy and banking-secrecy exposure; litigation and supervisory action.",
+      "mitigations": "Data classification; purpose-bound retrieval; egress filtering; DLP; output inspection; destination allowlists; access-aware logging.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "MITRE ATLAS: Exfiltration via AI Agent Tool Invocation; LLM Data Leakage; OWASP ASI01–ASI03",
+      "primary_source_url": "https://atlas.mitre.org/",
+      "secondary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "evidence_note": "MITRE ATLAS documents agent-mediated exfiltration techniques. Example is illustrative.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-THR-012",
+      "title": "Denial of service and cost/resource exhaustion",
+      "owasp_mapping": "Cross-cutting",
+      "description": "An attacker or runaway workflow drives excessive agent loops, model calls, tool invocations or resource consumption, degrading availability or creating uncontrolled cost.",
+      "financial_scenario": "A multi-agent fraud-monitoring workflow enters a retry loop during a payment spike, exhausting inference capacity needed by higher-priority controls.",
+      "potential_financial_impact": "Service unavailability; delayed fraud detection or payments; cloud cost spikes; operational resilience impact.",
+      "mitigations": "Call budgets; loop detection; quotas; backoff; workload prioritisation; anomaly alerts; graceful degradation and circuit breakers.",
+      "evidence_maturity": "Demonstrated / documented risk",
+      "framework_mappings": "MITRE ATLAS: Denial of AI Service; Cost Harvesting; OWASP ASI08",
+      "primary_source_url": "https://atlas.mitre.org/",
+      "secondary_source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "evidence_note": "Resource exhaustion and denial of AI service are represented in MITRE ATLAS. Financial operational impact is analytical.",
+      "sectors": [
+        "Banking",
+        "Capital markets",
+        "Payments",
+        "Financial market infrastructure"
+      ],
+      "last_verified": "2026-11-07",
+      "record_type": "Threat pattern",
+      "related_regulatory_records": [
+        "MON-REG-EU-002"
+      ]
+    }
+  ]
+}

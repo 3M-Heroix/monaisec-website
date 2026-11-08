@@ -1,0 +1,331 @@
+{
+  "dataset_title": "MONAISEC Agentic Finance Scenario Lab",
+  "dataset_version": "1.0.0",
+  "last_reviewed": "2026-11-08",
+  "methodology": "Qualitative scenario analysis linking agentic threat pathways to financial risk channels, regulatory context and control gates. Scenarios are constructed analytical exercises, not forecasts, probability estimates or claims of observed incidents. Regulatory links indicate potential relevance for analyst review, not legal conclusions. No quantitative probability, severity or loss estimate is assigned.",
+  "disclaimer": "For research, tabletop exercise and risk-discussion purposes only. Not investment, legal, supervisory or operational advice. Validate assumptions against each institution, jurisdiction and deployment.",
+  "scenarios": [
+    {
+      "id": "MON-SC-001",
+      "title": "Compromised autonomous trading agent",
+      "sector": "Capital markets",
+      "scenario_type": "Cyber compromise → market integrity",
+      "summary": "A research-and-execution agent consumes hostile market content, its mandate is altered, and it submits orders through an authorised brokerage interface.",
+      "starting_conditions": [
+        "Agent can read external news, filings or web content.",
+        "Agent has access to portfolio context and an order-management tool.",
+        "Pre-trade controls do not independently validate mandate, size and intent."
+      ],
+      "sequence": [
+        {
+          "stage": "Entry",
+          "event": "An attacker places indirect instructions in content the agent is expected to analyse.",
+          "signal": "Unexpected instruction-like content; provenance or trust-boundary violations.",
+          "failure_mode": "Untrusted data is treated as authoritative instruction."
+        },
+        {
+          "stage": "Objective deviation",
+          "event": "The agent changes its plan or interprets the mandate incorrectly.",
+          "signal": "Plan divergence, unusual tool-call sequence, policy conflicts.",
+          "failure_mode": "Goal hijack or context contamination."
+        },
+        {
+          "stage": "Execution",
+          "event": "The agent submits orders outside intended constraints.",
+          "signal": "Order size, frequency, instrument or direction deviates from approved envelope.",
+          "failure_mode": "Tool misuse and insufficient transaction controls."
+        },
+        {
+          "stage": "Market transmission",
+          "event": "Orders contribute to losses, disorderly trading or correlated activity if similar systems respond alike.",
+          "signal": "Concentration, unusual order flow, slippage, volatility or repeated cancellations.",
+          "failure_mode": "Potential market-integrity and correlated-behaviour impact."
+        }
+      ],
+      "threat_ids": [
+        "MON-THR-001",
+        "MON-THR-002",
+        "MON-THR-006",
+        "MON-THR-008"
+      ],
+      "risk_ids": [
+        "MON-FR-001",
+        "MON-FR-009",
+        "MON-FR-010"
+      ],
+      "regulation_ids": [
+        "MON-REG-EU-001",
+        "MON-REG-UK-001",
+        "MON-REG-INT-001",
+        "MON-REG-US-001"
+      ],
+      "control_gates": [
+        "Treat retrieved content and tool outputs as untrusted; enforce instruction hierarchy and provenance.",
+        "Separate research from execution; require independent policy validation before order submission.",
+        "Enforce hard limits for instruments, notional, velocity, loss and market conditions outside the agent.",
+        "Provide kill switch, immutable audit trail, replay capability and human escalation."
+      ],
+      "impact_path": "Unauthorised orders → trading losses or disorderly execution → potential market-integrity concerns → possible confidence or cross-firm effects.",
+      "evidence_class": "Analytical scenario grounded in documented agentic threat patterns and financial-market risk research",
+      "caveat": "This is a constructed scenario, not a claim that this event occurred at a named institution. Market impact depends on scale, liquidity, strategy similarity and controls."
+    },
+    {
+      "id": "MON-SC-002",
+      "title": "Coordinated liquidity withdrawal by multiple agents",
+      "sector": "Banking and treasury",
+      "scenario_type": "Multi-agent correlation → liquidity stress",
+      "summary": "Treasury and liquidity-management agents at multiple institutions react to similar signals or shared model/provider behaviour, accelerating withdrawals, funding shifts or asset sales.",
+      "starting_conditions": [
+        "Multiple institutions use similar agent architectures, vendors or market signals.",
+        "Agents can recommend or initiate treasury actions within delegated limits.",
+        "Controls assess each institution locally but do not monitor common-mode behaviour."
+      ],
+      "sequence": [
+        {
+          "stage": "Shared trigger",
+          "event": "A market signal, data error or provider update reaches many agents at once.",
+          "signal": "Synchronous alerts, common data lineage or shared dependency change.",
+          "failure_mode": "Common-mode input or model dependency."
+        },
+        {
+          "stage": "Local optimisation",
+          "event": "Each agent independently recommends defensive liquidity actions.",
+          "signal": "Similar recommendations across portfolios or institutions.",
+          "failure_mode": "Correlated decision-making and feedback loops."
+        },
+        {
+          "stage": "Execution",
+          "event": "Withdrawals, funding substitutions or asset sales occur within delegated permissions.",
+          "signal": "Concurrent outflows, rising funding costs, concentrated asset sales.",
+          "failure_mode": "Automation amplifies timing and scale."
+        },
+        {
+          "stage": "Systemic transmission",
+          "event": "Market depth weakens and funding pressure propagates to connected counterparties.",
+          "signal": "Liquidity buffers decline; spreads widen; settlement or collateral pressures rise.",
+          "failure_mode": "Potential liquidity stress and contagion."
+        }
+      ],
+      "threat_ids": [
+        "MON-THR-008",
+        "MON-THR-010",
+        "MON-THR-004"
+      ],
+      "risk_ids": [
+        "MON-FR-002",
+        "MON-FR-006",
+        "MON-FR-010"
+      ],
+      "regulation_ids": [
+        "MON-REG-INT-001",
+        "MON-REG-EU-002",
+        "MON-REG-UK-001",
+        "MON-REG-SG-001"
+      ],
+      "control_gates": [
+        "Stress-test correlated and common-provider behaviours, not only single-agent performance.",
+        "Apply institution-wide and portfolio-level liquidity guardrails with independent approval for material actions.",
+        "Monitor common exposures, synchronized actions and third-party concentration.",
+        "Define throttling, pause and escalation triggers; coordinate incident response across critical functions."
+      ],
+      "impact_path": "Synchronized actions → market depth/funding pressure → counterparty and collateral stress → potential broader confidence and stability effects.",
+      "evidence_class": "Analytical scenario; transmission channels are grounded in financial-stability literature",
+      "caveat": "The scenario does not assert observed agent-driven bank runs. Similarity of systems, market structure, liquidity and policy responses determine plausibility and scale."
+    },
+    {
+      "id": "MON-SC-003",
+      "title": "Agent initiates unauthorised customer payments",
+      "sector": "Payments and retail banking",
+      "scenario_type": "Identity / tool abuse → fraud and consumer harm",
+      "summary": "A customer-service or operations agent is manipulated or misuses delegated payment tools, initiating transfers beyond the customer's intent or the agent's authorised purpose.",
+      "starting_conditions": [
+        "Agent can access customer records and payment initiation APIs.",
+        "Identity and entitlement checks are delegated to the same agent workflow.",
+        "High-risk transfers lack independent step-up authentication or confirmation."
+      ],
+      "sequence": [
+        {
+          "stage": "Manipulation",
+          "event": "A malicious request, compromised session or poisoned context induces an unsafe payment instruction.",
+          "signal": "Session anomalies, inconsistent customer intent, suspicious context changes.",
+          "failure_mode": "Goal hijack, identity abuse or trust exploitation."
+        },
+        {
+          "stage": "Privilege path",
+          "event": "The agent invokes a payment tool using a broad or improperly scoped credential.",
+          "signal": "Unexpected API scopes, service-account use or privilege escalation.",
+          "failure_mode": "Excessive permissions and tool misuse."
+        },
+        {
+          "stage": "Payment release",
+          "event": "A transfer is initiated without an independent authorisation gate.",
+          "signal": "Payee novelty, velocity, amount or behavioural deviation.",
+          "failure_mode": "Insufficient separation of duties and transaction controls."
+        },
+        {
+          "stage": "Loss and remediation",
+          "event": "Funds may leave the institution or customer account; recovery and dispute processes begin.",
+          "signal": "Fraud alerts, reversals, complaints, reconciliation breaks.",
+          "failure_mode": "Financial loss, conduct and operational impact."
+        }
+      ],
+      "threat_ids": [
+        "MON-THR-001",
+        "MON-THR-002",
+        "MON-THR-003",
+        "MON-THR-009",
+        "MON-THR-011"
+      ],
+      "risk_ids": [
+        "MON-FR-004",
+        "MON-FR-008",
+        "MON-FR-009",
+        "MON-FR-003"
+      ],
+      "regulation_ids": [
+        "MON-REG-EU-002",
+        "MON-REG-UK-001",
+        "MON-REG-SG-001",
+        "MON-REG-INT-001"
+      ],
+      "control_gates": [
+        "Use least-privilege, short-lived, purpose-bound credentials and segregated tool permissions.",
+        "Keep authentication, beneficiary validation and payment authorisation outside the agent's decision loop.",
+        "Require step-up customer confirmation and independent checks for risk-based transactions.",
+        "Apply velocity limits, anomaly detection, transaction holds, rapid revocation and auditable dispute handling."
+      ],
+      "impact_path": "Unauthorised payment → direct customer/institution loss → remediation and conduct exposure → operational and reputational consequences.",
+      "evidence_class": "Analytical scenario based on established fraud, identity and agent-tool risk patterns",
+      "caveat": "This is not a report of a confirmed agent-caused payment fraud. Applicable payment, consumer and data-protection obligations depend on jurisdiction and facts."
+    },
+    {
+      "id": "MON-SC-004",
+      "title": "Common AI-provider outage disrupts critical operations",
+      "sector": "Cross-sector financial infrastructure",
+      "scenario_type": "Third-party dependency → operational disruption",
+      "summary": "A shared model, orchestration or cloud provider outage degrades several financial institutions' agents used in customer support, compliance triage, operations or market workflows.",
+      "starting_conditions": [
+        "Several critical workflows depend on the same external provider or model endpoint.",
+        "Fallback processes are untested or rely on the same provider stack.",
+        "Agent outputs are embedded in time-sensitive operational decisions."
+      ],
+      "sequence": [
+        {
+          "stage": "Provider degradation",
+          "event": "The shared service becomes unavailable, slow or returns degraded outputs.",
+          "signal": "Latency, error rates, model drift or provider status anomalies.",
+          "failure_mode": "Third-party service dependency."
+        },
+        {
+          "stage": "Workflow interruption",
+          "event": "Agents fail, retry excessively or produce incomplete decisions across functions.",
+          "signal": "Queue growth, retry storms, missed service levels, inconsistent outputs.",
+          "failure_mode": "Automation and orchestration failure."
+        },
+        {
+          "stage": "Cross-firm concentration",
+          "event": "Institutions experience correlated disruption because of common dependencies.",
+          "signal": "Multiple entities report same provider, region or component failure.",
+          "failure_mode": "Concentration and common-mode operational risk."
+        },
+        {
+          "stage": "Service and market impact",
+          "event": "Payments, screening, reconciliations or other critical services slow or require manual fallback.",
+          "signal": "Backlogs, delayed settlement, customer complaints, control exceptions.",
+          "failure_mode": "Operational resilience and possible systemic transmission."
+        }
+      ],
+      "threat_ids": [
+        "MON-THR-004",
+        "MON-THR-008",
+        "MON-THR-012"
+      ],
+      "risk_ids": [
+        "MON-FR-003",
+        "MON-FR-006",
+        "MON-FR-007",
+        "MON-FR-010"
+      ],
+      "regulation_ids": [
+        "MON-REG-EU-002",
+        "MON-REG-INT-001",
+        "MON-REG-UK-001",
+        "MON-REG-SG-001"
+      ],
+      "control_gates": [
+        "Map direct and nth-party dependencies, including model, cloud, data and orchestration layers.",
+        "Maintain tested degraded-mode and manual fallback for critical services.",
+        "Set retry budgets, circuit breakers, timeouts and safe failure behaviours.",
+        "Test exit strategies, portability, provider substitution and coordinated incident communications."
+      ],
+      "impact_path": "Shared-provider failure → correlated workflow disruption → critical-service degradation → potential cross-institution operational stress.",
+      "evidence_class": "Analytical scenario grounded in documented third-party concentration and operational-resilience risks",
+      "caveat": "The scenario is not a claim of a specific outage. Criticality and impact depend on substitutability, fallback maturity, service dependency and duration."
+    },
+    {
+      "id": "MON-SC-005",
+      "title": "Contaminated data propagates through a multi-agent workflow",
+      "sector": "Asset management and financial services operations",
+      "scenario_type": "Data integrity → decision contamination",
+      "summary": "A compromised or low-quality data source enters one agent's context and is propagated by downstream agents into risk reports, credit decisions, compliance triage or portfolio recommendations.",
+      "starting_conditions": [
+        "Agents share memory, retrieval indexes or inter-agent messages.",
+        "Source provenance and data-quality checks are inconsistent.",
+        "Downstream agents trust upstream outputs without independent validation."
+      ],
+      "sequence": [
+        {
+          "stage": "Data compromise",
+          "event": "A source, document, memory store or retrieval index is poisoned or corrupted.",
+          "signal": "Provenance gaps, unusual source changes, conflicting records.",
+          "failure_mode": "Memory/context poisoning or data integrity failure."
+        },
+        {
+          "stage": "Agent handoff",
+          "event": "The first agent passes contaminated conclusions to other agents as trusted context.",
+          "signal": "Repeated claims with a single upstream origin; missing citations.",
+          "failure_mode": "Insecure inter-agent communication and trust propagation."
+        },
+        {
+          "stage": "Decision contamination",
+          "event": "Downstream agents incorporate false information into operational or financial recommendations.",
+          "signal": "Unexpected score shifts, decision drift, inconsistent source evidence.",
+          "failure_mode": "Correlated data-driven decision error."
+        },
+        {
+          "stage": "Institutional impact",
+          "event": "Incorrect decisions affect exposure, reporting, customer treatment or control prioritisation.",
+          "signal": "Override rates, reconciliation breaks, unexplained model or portfolio changes.",
+          "failure_mode": "Data/model integrity and conduct risk."
+        }
+      ],
+      "threat_ids": [
+        "MON-THR-006",
+        "MON-THR-007",
+        "MON-THR-011",
+        "MON-THR-008"
+      ],
+      "risk_ids": [
+        "MON-FR-005",
+        "MON-FR-009",
+        "MON-FR-008",
+        "MON-FR-010"
+      ],
+      "regulation_ids": [
+        "MON-REG-EU-001",
+        "MON-REG-INT-003",
+        "MON-REG-US-002",
+        "MON-REG-UK-001"
+      ],
+      "control_gates": [
+        "Attach provenance, timestamps and confidence metadata to all agent-to-agent messages.",
+        "Validate critical facts against independent authoritative sources before consequential decisions.",
+        "Segment memory and retrieval stores; control writes, versioning and rollback.",
+        "Monitor downstream decision drift and preserve lineage for audit and remediation."
+      ],
+      "impact_path": "Corrupted source → multi-agent propagation → incorrect institutional decisions → financial, conduct or reporting consequences.",
+      "evidence_class": "Analytical scenario grounded in documented data-poisoning and multi-agent risk patterns",
+      "caveat": "The described propagation chain is illustrative. It does not establish that a specific institution experienced agent-driven data contamination."
+    }
+  ]
+}

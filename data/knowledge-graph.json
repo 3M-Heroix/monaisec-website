@@ -1,0 +1,820 @@
+{
+  "dataset_title": "MONAISEC Risk Knowledge Graph",
+  "dataset_version": "1.0.0",
+  "last_reviewed": "2026-11-08",
+  "methodology": "Relationships are generated from the current MONAISEC regulatory and threat seed datasets. Threat-to-regulation edges are analytical relevance cross-references, not legal conclusions. Threat-to-sector edges indicate potential exposure, not observed incidents. Control domains group mitigation language for navigation and do not certify effectiveness.",
+  "nodes": [
+    {
+      "id": "MON-THR-001",
+      "label": "Agent goal hijack",
+      "type": "threat",
+      "description": "An attacker changes an agent’s objective, plan or decision path by supplying malicious instructions through user input, retrieved content, documents, websites or tool outputs.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-002",
+      "label": "Tool misuse and exploitation",
+      "type": "threat",
+      "description": "An agent invokes a legitimate tool in an unsafe, unauthorised or unintended way, or chains tools so that individually permitted actions produce a harmful outcome.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-003",
+      "label": "Identity and privilege abuse",
+      "type": "threat",
+      "description": "An attacker exploits delegated credentials, inherited user permissions, long-lived tokens or weak identity boundaries to make an agent act with excessive authority.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-004",
+      "label": "Agentic supply-chain compromise",
+      "type": "threat",
+      "description": "A dependency in the agent supply chain—model, plugin, tool, MCP server, skill, package, dataset or update channel—is compromised or maliciously modified.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-005",
+      "label": "Unexpected code execution",
+      "type": "threat",
+      "description": "Agent-generated or agent-invoked code executes with unsafe privileges, insufficient isolation or attacker-controlled inputs, enabling system compromise.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-006",
+      "label": "Memory and context poisoning",
+      "type": "threat",
+      "description": "Persistent memory, conversation history, vector stores, retrieval corpora or agent state are manipulated so future reasoning and actions rely on attacker-controlled information.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-007",
+      "label": "Insecure inter-agent communication",
+      "type": "threat",
+      "description": "Messages exchanged between agents are spoofed, replayed, altered or accepted without sufficient authentication, integrity, provenance or trust-boundary enforcement.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-008",
+      "label": "Cascading and correlated agent failures",
+      "type": "threat",
+      "description": "A local agent error, compromised component or shared dependency propagates across connected agents and workflows, amplifying impact through automation and correlated decisions.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-009",
+      "label": "Human–agent trust exploitation",
+      "type": "threat",
+      "description": "Attackers exploit automation bias, authority cues, unclear accountability or approval fatigue to induce people to accept unsafe agent recommendations or actions.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-010",
+      "label": "Rogue or misaligned agent behaviour",
+      "type": "threat",
+      "description": "An agent behaves outside its intended goals, policy or operational envelope because of compromise, specification gaps, emergent behaviour or failed controls.",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/"
+    },
+    {
+      "id": "MON-THR-011",
+      "label": "Agent-mediated data exfiltration",
+      "type": "threat",
+      "description": "An agent uses authorised retrieval or tool access to collect, transform or transmit sensitive information to an unauthorised destination, potentially through prompt injection or compromised tools.",
+      "source_url": "https://atlas.mitre.org/"
+    },
+    {
+      "id": "MON-THR-012",
+      "label": "Denial of service and cost/resource exhaustion",
+      "type": "threat",
+      "description": "An attacker or runaway workflow drives excessive agent loops, model calls, tool invocations or resource consumption, degrading availability or creating uncontrolled cost.",
+      "source_url": "https://atlas.mitre.org/"
+    },
+    {
+      "id": "MON-REG-EU-001",
+      "label": "EU AI Act",
+      "type": "regulation",
+      "description": "Horizontal, risk-based AI legislation establishing obligations for providers, deployers and other actors. Its relevance to financial institutions depends on the AI system's intended purpose, role and classification; not every financial AI use is automatically high-risk.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+      "id": "MON-REG-EU-002",
+      "label": "DORA",
+      "type": "regulation",
+      "description": "Establishes harmonised digital operational resilience requirements for financial entities, including ICT risk management, incident reporting, resilience testing and ICT third-party risk oversight.",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng"
+    },
+    {
+      "id": "MON-REG-UK-001",
+      "label": "FCA AI good and poor practice",
+      "type": "regulation",
+      "description": "FCA publication drawing on supervisory work and industry engagement. It explains how existing UK regulatory requirements apply to firms' AI use and describes good and poor practice in governance, accountability, human oversight, monitoring and consumer outcomes.",
+      "source_url": "https://www.fca.org.uk/publications/good-poor-practice/ai-financial-services"
+    },
+    {
+      "id": "MON-REG-SG-001",
+      "label": "MAS AI Risk Management Guidelines",
+      "type": "regulation",
+      "description": "MAS guidelines set out supervisory expectations for financial institutions managing risks arising from AI use. They apply across AI technologies and call for proportionate lifecycle controls, inventories, materiality assessment, governance, testing, human oversight, cybersecurity and third-party risk management.",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-artificial-intelligence-risk-management-for-financial-institutions"
+    },
+    {
+      "id": "MON-REG-SG-002",
+      "label": "MAS / Industry SAFR framework",
+      "type": "regulation",
+      "description": "Industry-developed framework proposing runtime safeguards for AI agents performing financial tasks, including authorisation of agent actions, activation of human oversight and recording at decision points.",
+      "source_url": "https://www.mas.gov.sg/publications/monographs-or-information-paper/2026/safeguards-for-agentic-finance-at-runtime"
+    },
+    {
+      "id": "MON-REG-INT-001",
+      "label": "FSB AI Sound Practices",
+      "type": "regulation",
+      "description": "FSB report sets out 12 sound practices for financial institutions, covering organisation-wide governance and AI lifecycle risk management from development through deployment. Topics include materiality, data governance, explainability, performance, human oversight, cyber and ICT risk, and third-party dependencies.",
+      "source_url": "https://www.fsb.org/2026/10/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-final-report/"
+    },
+    {
+      "id": "MON-REG-US-001",
+      "label": "US Treasury FS AI RMF",
+      "type": "regulation",
+      "description": "Treasury released a financial-services-specific AI Risk Management Framework and a shared AI lexicon to support a common understanding and practical risk management for AI use in the financial sector.",
+      "source_url": "https://home.treasury.gov/news/press-releases/sb0401"
+    },
+    {
+      "id": "MON-REG-US-002",
+      "label": "NIST AI RMF",
+      "type": "regulation",
+      "description": "NIST voluntary framework helps organisations incorporate trustworthiness considerations into the design, development, use and evaluation of AI systems. NIST indicates that AI RMF 1.0 is being revised.",
+      "source_url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "id": "MON-REG-US-003",
+      "label": "NIST AI Agent Standards Initiative",
+      "type": "regulation",
+      "description": "NIST initiative aims to support secure, interoperable AI agents and development of standards and protocols for agents capable of autonomous actions.",
+      "source_url": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure"
+    },
+    {
+      "id": "MON-REG-INT-002",
+      "label": "OWASP Agentic Applications Top 10",
+      "type": "regulation",
+      "description": "Security-focused taxonomy and guidance addressing risks in agentic applications. It provides a technical vocabulary for analysing agent-specific attack surfaces and mitigations.",
+      "source_url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/"
+    },
+    {
+      "id": "MON-REG-INT-003",
+      "label": "BIS FSI Insights 73",
+      "type": "regulation",
+      "description": "BIS FSI paper examines data-related challenges in financial-sector AI, including privacy, quality, security, third-party dependencies and concentration among service providers, and analyses supervisory approaches.",
+      "source_url": "https://www.bis.org/fsi/publ/insights73.htm"
+    },
+    {
+      "id": "MON-REG-UK-002",
+      "label": "UK Financial Services AI Adoption Plan",
+      "type": "regulation",
+      "description": "Independent AI Champions' adoption plan recommends actions for government, regulators and industry to accelerate safe AI adoption in UK financial services. Its recommendations cover regulatory framework, resilience and agentic payments among other areas.",
+      "source_url": "https://www.gov.uk/government/publications/ai-adoption-plan-financial-services"
+    },
+    {
+      "id": "SEC-BANKING",
+      "label": "Banking",
+      "type": "sector",
+      "description": "Financial sector potentially exposed to one or more mapped threat patterns.",
+      "source_url": ""
+    },
+    {
+      "id": "SEC-CAPITAL-MARKETS",
+      "label": "Capital markets",
+      "type": "sector",
+      "description": "Financial sector potentially exposed to one or more mapped threat patterns.",
+      "source_url": ""
+    },
+    {
+      "id": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "label": "Financial market infrastructure",
+      "type": "sector",
+      "description": "Financial sector potentially exposed to one or more mapped threat patterns.",
+      "source_url": ""
+    },
+    {
+      "id": "SEC-PAYMENTS",
+      "label": "Payments",
+      "type": "sector",
+      "description": "Financial sector potentially exposed to one or more mapped threat patterns.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-01",
+      "label": "Identity & access",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-02",
+      "label": "Human oversight & approvals",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-03",
+      "label": "Input & data protection",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-04",
+      "label": "Tool & execution security",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-05",
+      "label": "Monitoring & auditability",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-06",
+      "label": "Resilience & containment",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-07",
+      "label": "Supply-chain assurance",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    },
+    {
+      "id": "CTL-08",
+      "label": "Governance & testing",
+      "type": "control",
+      "description": "Control domain synthesised from mitigation themes across the threat taxonomy.",
+      "source_url": ""
+    }
+  ],
+  "edges": [
+    {
+      "source": "MON-THR-001",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "CTL-02",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "CTL-03",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "CTL-07",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "CTL-08",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "MON-REG-EU-001",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-001",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-002",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-002",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-002",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-002",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-002",
+      "target": "CTL-02",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-002",
+      "target": "CTL-04",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-002",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-003",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-003",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-003",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-003",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-003",
+      "target": "CTL-01",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-003",
+      "target": "CTL-05",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-003",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "CTL-03",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "CTL-04",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "CTL-07",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-004",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "CTL-01",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "CTL-04",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "MON-REG-EU-001",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-005",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "CTL-03",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "CTL-07",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "MON-REG-EU-001",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-006",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "CTL-01",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "CTL-05",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "MON-REG-EU-001",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-007",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-008",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-008",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-008",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-008",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-008",
+      "target": "CTL-05",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-008",
+      "target": "CTL-06",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-008",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-009",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-009",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-009",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-009",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-009",
+      "target": "CTL-02",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-009",
+      "target": "MON-REG-EU-001",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-009",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "CTL-04",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "CTL-05",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "CTL-08",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "MON-REG-EU-001",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-010",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-011",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-011",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-011",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-011",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-011",
+      "target": "CTL-05",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-011",
+      "target": "MON-REG-EU-001",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-011",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    },
+    {
+      "source": "MON-THR-012",
+      "target": "SEC-BANKING",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-012",
+      "target": "SEC-CAPITAL-MARKETS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-012",
+      "target": "SEC-PAYMENTS",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-012",
+      "target": "SEC-FINANCIAL-MARKET-INFRASTRUCTURE",
+      "relationship": "potential exposure",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-012",
+      "target": "CTL-05",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-012",
+      "target": "CTL-06",
+      "relationship": "mitigated by control theme",
+      "evidence": "MONAISEC analytical mapping"
+    },
+    {
+      "source": "MON-THR-012",
+      "target": "MON-REG-EU-002",
+      "relationship": "regulatory relevance to assess",
+      "evidence": "Analytical cross-reference; not a legal determination that the instrument specifically regulates this threat."
+    }
+  ]
+}

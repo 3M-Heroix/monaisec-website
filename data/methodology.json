@@ -1,0 +1,78 @@
+{
+  "title": "Research methodology and evidence standards",
+  "version": "1.0.0",
+  "last_reviewed": "2026-11-08",
+  "principles": [
+    [
+      "Primary-source first",
+      "Prefer legislation, regulator publications, standards-body documents, official incident disclosures and original research. Secondary reporting is contextual and must not replace the underlying source where accessible."
+    ],
+    [
+      "Separate fact from analysis",
+      "Label what the source explicitly states separately from MONAISEC interpretation, threat modelling and scenario construction. Never present analytical extrapolation as a documented event."
+    ],
+    [
+      "Jurisdiction and applicability",
+      "Record jurisdiction, issuer, legal status, effective dates, covered actors and scope. Applicability is context-dependent; no single global strictness score is used."
+    ],
+    [
+      "Evidence maturity",
+      "Use consistent evidence labels and retain provenance. A framework taxonomy is evidence of a recognised risk pattern, not proof that a particular financial institution experienced it."
+    ],
+    [
+      "Traceable relationships",
+      "Graph edges and cross-register links must identify whether they are directly stated by a source or analytically mapped by MONAISEC."
+    ],
+    [
+      "Versioned research",
+      "Keep stable record IDs, ISO dates, version numbers and review notes. Corrections should be traceable; never silently rewrite the historical basis of a claim."
+    ]
+  ],
+  "evidence_classes": [
+    [
+      "Primary source",
+      "Official legal text, regulator/supervisor publication, standards-body publication, original dataset or first-party incident disclosure."
+    ],
+    [
+      "Independently corroborated",
+      "A claim supported by a primary source and one or more credible independent sources."
+    ],
+    [
+      "Secondary source",
+      "Credible analysis or reporting used for context where primary evidence is unavailable or incomplete."
+    ],
+    [
+      "Unverified claim",
+      "A claim not yet sufficiently substantiated. Do not use as a factual conclusion."
+    ],
+    [
+      "Analytical hypothesis",
+      "A plausible inference, threat pathway or scenario developed by MONAISEC; not an observed fact."
+    ]
+  ],
+  "event_types": [
+    [
+      "Observed incident",
+      "A real event with credible public evidence. Include date, affected entity (only if publicly confirmed), source, impact evidence and confidence."
+    ],
+    [
+      "Demonstrated attack / proof of concept",
+      "A technique shown in a controlled test or research demonstration; not necessarily seen in production."
+    ],
+    [
+      "Known vulnerability / weakness",
+      "A disclosed technical weakness, with identifier and affected component where available."
+    ],
+    [
+      "Threat pattern",
+      "A recognised attack or failure class from a framework or research taxonomy."
+    ],
+    [
+      "Analytical scenario",
+      "A constructed exercise used to explore possible consequences and controls."
+    ]
+  ],
+  "risk_method": "MONAISEC currently uses qualitative pathways and contextual indicators, not calibrated probability, expected-loss or systemic-risk estimates. Do not interpret labels as quantitative scores.",
+  "review_cycle": "Review high-impact legal and supervisory changes at least monthly; review technical frameworks and threat intelligence monthly; re-check record URLs and status before external publication or decision use.",
+  "limitations": "This is an independent research initiative, not a regulator, law firm, audit firm or financial adviser. Content is not legal, investment, supervisory or operational advice. Coverage is curated and incomplete."
+}

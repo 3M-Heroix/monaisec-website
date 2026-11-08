@@ -1,0 +1,415 @@
+{
+  "dataset_title": "MONAISEC Source Registry",
+  "dataset_version": "1.0.0",
+  "generated_from": "URLs explicitly present in the regulatory, threat and financial-risk registers",
+  "last_reviewed": "2026-11-08",
+  "methodology": "Registry of source links already cited by MONAISEC records. Inclusion is not an endorsement or independent validation. Record-level verification notes and dates remain authoritative. URLs are deduplicated; records are linked by stable IDs. Review status is inherited and must not be interpreted as current live verification.",
+  "records": [
+    {
+      "id": "SRC-B10097F1",
+      "title": "Agent goal hijack",
+      "publisher_or_issuer": "Framework / publisher",
+      "source_type": "Technical framework or research",
+      "source_url": "https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-THR-001",
+        "MON-THR-002",
+        "MON-THR-003",
+        "MON-THR-004",
+        "MON-THR-005",
+        "MON-THR-006",
+        "MON-THR-007",
+        "MON-THR-008",
+        "MON-THR-009",
+        "MON-THR-010",
+        "MON-THR-011",
+        "MON-THR-012"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Threat pattern established in agentic security guidance. Financial example is an analytical scenario, not a claimed incident."
+    },
+    {
+      "id": "SRC-6E70AE63",
+      "title": "AI Adoption Plan: Financial Services",
+      "publisher_or_issuer": "HM Treasury — AI Champions report",
+      "source_type": "Official government publication",
+      "source_url": "https://www.gov.uk/government/publications/ai-adoption-plan-financial-services",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-UK-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "GOV.UK publication page checked."
+    },
+    {
+      "id": "SRC-F8FD13E7",
+      "title": "AI Agent Standards Initiative for Interoperable and Secure Innovation",
+      "publisher_or_issuer": "NIST Center for AI Standards and Innovation (CAISI)",
+      "source_type": "Official standards initiative announcement",
+      "source_url": "https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-US-003"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "NIST official announcement checked."
+    },
+    {
+      "id": "SRC-1111E4C3",
+      "title": "AI in financial services: good practice and areas for improvement",
+      "publisher_or_issuer": "Financial Conduct Authority (FCA)",
+      "source_type": "Official supervisory publication",
+      "source_url": "https://www.fca.org.uk/publications/good-poor-practice/ai-financial-services",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-UK-001"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "FCA publication page and publication/update dates checked."
+    },
+    {
+      "id": "SRC-4E8DD1CF",
+      "title": "AI Risk Management Framework (AI RMF 1.0)",
+      "publisher_or_issuer": "National Institute of Standards and Technology (NIST)",
+      "source_type": "Official technical framework",
+      "source_url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-US-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "NIST official AI RMF page checked; voluntary status and revision note confirmed."
+    },
+    {
+      "id": "SRC-9B1DA45A",
+      "title": "Artificial Intelligence Act — Regulation (EU) 2024/1689",
+      "publisher_or_issuer": "European Parliament and Council",
+      "source_type": "Official legislation and Commission guidance",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-EU-001"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Official European Commission policy page and EUR-Lex legislation checked. Application dates reflect the Commission's current implementation timeline at verification date."
+    },
+    {
+      "id": "SRC-40BDC44A",
+      "title": "Artificial Intelligence Act — Regulation (EU) 2024/1689",
+      "publisher_or_issuer": "European Parliament and Council",
+      "source_type": "Official legislation and Commission guidance",
+      "source_url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-EU-001"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Official European Commission policy page and EUR-Lex legislation checked. Application dates reflect the Commission's current implementation timeline at verification date."
+    },
+    {
+      "id": "SRC-69A06CF5",
+      "title": "Digital Operational Resilience Act — Regulation (EU) 2022/2554",
+      "publisher_or_issuer": "European Parliament and Council; supervised by European Supervisory Authorities and competent authorities",
+      "source_type": "Official legislation",
+      "source_url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-EU-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "EUR-Lex official regulation and application date checked."
+    },
+    {
+      "id": "SRC-D10EF7B5",
+      "title": "Digital Operational Resilience Act — Regulation (EU) 2022/2554",
+      "publisher_or_issuer": "European Parliament and Council; supervised by European Supervisory Authorities and competent authorities",
+      "source_type": "Official legislation",
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-EU-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "EUR-Lex official regulation and application date checked."
+    },
+    {
+      "id": "SRC-8F06352C",
+      "title": "Financial Services AI Risk Management Framework (FS AI RMF)",
+      "publisher_or_issuer": "U.S. Department of the Treasury",
+      "source_type": "Official government framework announcement",
+      "source_url": "https://home.treasury.gov/news/press-releases/sb0401",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-US-001"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "U.S. Treasury official announcement checked."
+    },
+    {
+      "id": "SRC-867FD545",
+      "title": "Guidelines on Artificial Intelligence Risk Management for Financial Institutions",
+      "publisher_or_issuer": "Monetary Authority of Singapore (MAS)",
+      "source_type": "Official supervisory guidelines",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-artificial-intelligence-risk-management-for-financial-institutions",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-SG-001"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "MAS official guidelines page and stated effective date checked."
+    },
+    {
+      "id": "SRC-EFA6375A",
+      "title": "In data we trust? Emerging policy and supervisory approaches to AI data use in financial services",
+      "publisher_or_issuer": "Bank for International Settlements — Financial Stability Institute",
+      "source_type": "International supervisory research publication",
+      "source_url": "https://www.bis.org/fsi/publ/insights73.htm",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-INT-003"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "BIS official publication page checked."
+    },
+    {
+      "id": "SRC-7E1DA045",
+      "title": "OWASP Top 10 for Agentic Applications",
+      "publisher_or_issuer": "OWASP Foundation / community project",
+      "source_type": "Technical security guidance",
+      "source_url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-INT-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "OWASP official resource page and 9 Dec 2025 publication date checked."
+    },
+    {
+      "id": "SRC-43A96352",
+      "title": "Safeguards for Agentic Finance at Runtime (SAFR)",
+      "publisher_or_issuer": "Industry participants under MAS BuildFin.ai initiative",
+      "source_type": "Official MAS-hosted industry information paper",
+      "source_url": "https://www.mas.gov.sg/publications/monographs-or-information-paper/2026/safeguards-for-agentic-finance-at-runtime",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-SG-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "MAS publication record checked; framework described as jointly developed by industry under BuildFin.ai."
+    },
+    {
+      "id": "SRC-D2918FC4",
+      "title": "Sound Practices for Responsible Adoption of Artificial Intelligence (AI): Final Report",
+      "publisher_or_issuer": "Financial Stability Board (FSB)",
+      "source_type": "International standard-setting / policy report",
+      "source_url": "https://www.fsb.org/2026/10/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-final-report/",
+      "authority_class": "Primary source",
+      "linked_record_ids": [
+        "MON-REG-INT-001"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "FSB official final report page checked."
+    },
+    {
+      "id": "SRC-62ECD354",
+      "title": "Agent goal hijack",
+      "publisher_or_issuer": "Framework / publisher",
+      "source_type": "Technical framework or research",
+      "source_url": "https://atlas.mitre.org/",
+      "authority_class": "Secondary source",
+      "linked_record_ids": [
+        "MON-THR-001",
+        "MON-THR-002",
+        "MON-THR-003",
+        "MON-THR-004",
+        "MON-THR-005",
+        "MON-THR-006",
+        "MON-THR-007",
+        "MON-THR-008",
+        "MON-THR-009",
+        "MON-THR-011",
+        "MON-THR-012"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Threat pattern established in agentic security guidance. Financial example is an analytical scenario, not a claimed incident."
+    },
+    {
+      "id": "SRC-330BFF4A",
+      "title": "Rogue or misaligned agent behaviour",
+      "publisher_or_issuer": "Framework / publisher",
+      "source_type": "Technical framework or research",
+      "source_url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
+      "authority_class": "Secondary source",
+      "linked_record_ids": [
+        "MON-THR-010"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "The threat class is in OWASP. The portfolio example is a hypothetical financial manifestation."
+    },
+    {
+      "id": "SRC-01489722",
+      "title": "Bank of England — Financial Stability Report, June 2024",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.bankofengland.co.uk/financial-stability-report/2024/june-2024",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-7D985849",
+      "title": "BIS — Financial stability implications of artificial intelligence: Executive Summary",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.bis.org/publications/fsi-summary-financial-stability-implications-artificial-intelligence-executive-summary",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-005",
+        "MON-FR-009"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-DC4DD1A0",
+      "title": "European Commission — Digital Operational Resilience Act (DORA)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://finance.ec.europa.eu/digital-finance/digital-operational-resilience-act_en",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-003"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-91F3DE46",
+      "title": "FCA — AI in financial services: good practice and areas for improvement (19 Oct 2026)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.fca.org.uk/publications/multi-firm-reviews/ai-financial-services-good-practice-areas-improvement",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-008"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-6908BC67",
+      "title": "FSB — Monitoring Adoption of AI and Related Vulnerabilities in the Financial Sector (10 Oct 2025)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.fsb.org/2025/10/monitoring-adoption-of-artificial-intelligence-and-related-vulnerabilities-in-the-financial-sector/",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-006",
+        "MON-FR-010"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-4C67CB8F",
+      "title": "FSB — Sound Practices for the Responsible Adoption of AI in the Financial Sector (15 Oct 2026)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.fsb.org/2026/10/sound-practices-for-the-responsible-adoption-of-ai-in-the-financial-sector/",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-008"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-F7095CDB",
+      "title": "FSB — The Financial Stability Implications of Artificial Intelligence (14 Nov 2024)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-001",
+        "MON-FR-004",
+        "MON-FR-005",
+        "MON-FR-006",
+        "MON-FR-009"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-AB728351",
+      "title": "IMF — Artificial Intelligence and Cybersecurity in the Financial Sector (30 Jun 2026)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.imf.org/en/publications/imf-notes/issues/2026/06/29/artificial-intelligence-and-cybersecurity-in-the-financial-sector-576706",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-003",
+        "MON-FR-007"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-DC78B446",
+      "title": "IMF — Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks (7 May 2026)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-007"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-1F7DC6E6",
+      "title": "IMF — Global Financial Stability Report, October 2024, Chapter 3",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.imf.org/en/Publications/GFSR/Issues/2024/10/22/global-financial-stability-report-october-2024",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-001",
+        "MON-FR-002"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-8DEB670B",
+      "title": "IMF — How Central Banks Can Contain Financial Stability Risks as AI Accelerates Change (23 Jul 2026)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.imf.org/en/blogs/articles/2026/07/23/how-central-banks-can-contain-financial-stability-risks-as-ai-accelerates-change",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-010"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    },
+    {
+      "id": "SRC-3A5F8AC0",
+      "title": "MAS — Guidelines on AI Risk Management for Financial Institutions (7 Oct 2026)",
+      "publisher_or_issuer": "Publisher to verify",
+      "source_type": "Research / official reference",
+      "source_url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-artificial-intelligence-risk-management",
+      "authority_class": "Unclassified",
+      "linked_record_ids": [
+        "MON-FR-004"
+      ],
+      "verification_status": "Inherited from linked record; re-check before relying",
+      "verification_note": "Not independently re-verified in this build; see originating record."
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "dataset_title": "MONAISEC Financial Risk Observatory",
+  "dataset_version": "1.0.0",
+  "last_reviewed": "2026-11-08",
+  "scope": "Analytical mapping of potential financial-stability and institutional risk channels arising from autonomous or agentic AI use in financial services. This is not a register of confirmed agent-caused losses.",
+  "methodology": "Risk channels are grounded in official financial-stability publications on AI and financial-sector vulnerabilities. Agent-specific pathways are MONAISEC analytical extensions unless a source explicitly discusses agentic systems. No probability, severity or aggregate risk score is assigned. Impact depends on deployment context, autonomy, permissions, transaction scale, market conditions, substitutability, concentration and controls.",
+  "records": [
+    {
+      "id": "MON-FR-001",
+      "title": "Market integrity and correlated behaviour",
+      "category": "Market integrity",
+      "agent_exposure": "High relevance",
+      "summary": "Multiple agents using similar models, signals, data or optimisation objectives may converge on comparable actions. Under stressed conditions, automated responses could reinforce price moves, reduce diversity of liquidity provision or accelerate disorderly market dynamics.",
+      "agent_pathway": "Autonomous trading or portfolio agents independently react to the same news, risk thresholds or model outputs, creating correlated orders or feedback loops.",
+      "financial_functions": [
+        "Trading and execution",
+        "Asset management",
+        "Market making"
+      ],
+      "transmission": "Common signals or model behaviour \u2192 correlated orders \u2192 price impact and volatility \u2192 liquidity deterioration or market disruption.",
+      "potential_consequences": [
+        "Price dislocation",
+        "Volatility amplification",
+        "Reduced market depth",
+        "Losses for market participants"
+      ],
+      "monitoring_indicators": [
+        "Similarity of model/provider use across firms",
+        "Order-flow concentration during stress",
+        "Cancellation and execution patterns",
+        "Liquidity and price-impact measures"
+      ],
+      "control_themes": [
+        "Pre-trade limits and kill switches",
+        "Independent model validation",
+        "Diversity and correlation monitoring",
+        "Stress testing under common-shock scenarios",
+        "Human escalation for exceptional market conditions"
+      ],
+      "evidence_class": "Officially identified AI vulnerability; agent-specific pathway is analytical",
+      "evidence_note": "The FSB identifies market correlations as a potential AI-related vulnerability. The autonomous multi-agent pathway described here is a MONAISEC scenario, not a claim of a documented agent-caused market event.",
+      "sources": [
+        {
+          "title": "FSB \u2014 The Financial Stability Implications of Artificial Intelligence (14 Nov 2024)",
+          "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+        },
+        {
+          "title": "IMF \u2014 Global Financial Stability Report, October 2024, Chapter 3",
+          "url": "https://www.imf.org/en/Publications/GFSR/Issues/2024/10/22/global-financial-stability-report-october-2024"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-001",
+        "MON-THR-002"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-FR-002",
+      "title": "Liquidity stress and automated deleveraging",
+      "category": "Liquidity and funding",
+      "agent_exposure": "High relevance",
+      "summary": "Agents that manage collateral, treasury, margin or portfolios may respond rapidly to liquidity thresholds. If many systems de-risk simultaneously, local funding pressure can become broader asset sales, collateral calls or reduced market liquidity.",
+      "agent_pathway": "Treasury, collateral or portfolio agents trigger withdrawals, asset sales, margin actions or credit-line changes in response to shared signals or incomplete state information.",
+      "financial_functions": [
+        "Treasury and liquidity management",
+        "Collateral and margin",
+        "Portfolio management"
+      ],
+      "transmission": "Trigger or forecast shock \u2192 simultaneous automated de-risking \u2192 asset sales and funding demand \u2192 price pressure and liquidity stress.",
+      "potential_consequences": [
+        "Funding shortfalls",
+        "Fire-sale dynamics",
+        "Margin and collateral pressure",
+        "Disruption to market functioning"
+      ],
+      "monitoring_indicators": [
+        "Concentration of liquidity-management providers",
+        "Automated action thresholds",
+        "Intraday liquidity buffers",
+        "Correlated asset-sale patterns",
+        "Margin-call sensitivity"
+      ],
+      "control_themes": [
+        "Liquidity stress testing",
+        "Rate limits and staged execution",
+        "Independent treasury oversight",
+        "Scenario-based circuit breakers",
+        "Contingency funding plans"
+      ],
+      "evidence_class": "Financial-stability transmission channel supported; agent-specific pathway is analytical",
+      "evidence_note": "Official financial-stability analysis documents how leverage, liquidity mismatches and correlated actions can amplify shocks. The use of autonomous agents as the trigger is a scenario for testing.",
+      "sources": [
+        {
+          "title": "IMF \u2014 Global Financial Stability Report, October 2024",
+          "url": "https://www.imf.org/en/Publications/GFSR/Issues/2024/10/22/global-financial-stability-report-october-2024"
+        },
+        {
+          "title": "Bank of England \u2014 Financial Stability Report, June 2024",
+          "url": "https://www.bankofengland.co.uk/financial-stability-report/2024/june-2024"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-002",
+        "MON-THR-009"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-002",
+        "MON-REG-EU-001"
+      ]
+    },
+    {
+      "id": "MON-FR-003",
+      "title": "Operational disruption of critical financial services",
+      "category": "Operational resilience",
+      "agent_exposure": "High relevance",
+      "summary": "An agent failure, unsafe tool call, compromised dependency or runaway workflow may disrupt payments, trading, customer servicing, reconciliation or other critical operations. The impact depends on service criticality, containment and recovery capability.",
+      "agent_pathway": "An agent with write access invokes a faulty or malicious workflow across payment, ledger, trading or case-management systems, or exhausts shared service capacity.",
+      "financial_functions": [
+        "Payments",
+        "Trading infrastructure",
+        "Banking operations",
+        "Clearing and settlement"
+      ],
+      "transmission": "Agent or dependency failure \u2192 process interruption or corrupted state \u2192 service outage and backlogs \u2192 client, counterparty or infrastructure disruption.",
+      "potential_consequences": [
+        "Payment delays or failures",
+        "Trading or settlement interruption",
+        "Operational losses",
+        "Customer access disruption"
+      ],
+      "monitoring_indicators": [
+        "Agent actions against critical systems",
+        "Failed and retried transactions",
+        "Service availability and recovery time",
+        "Exception and reconciliation backlogs"
+      ],
+      "control_themes": [
+        "Least-privilege tool access",
+        "Transaction-level authorisation",
+        "Segmentation and rollback",
+        "Fail-safe manual fallback",
+        "Recovery and resilience testing"
+      ],
+      "evidence_class": "Established operational-resilience concern; agent-specific pathway is analytical",
+      "evidence_note": "DORA establishes requirements for ICT risk management, incident handling, testing and third-party risk in the EU financial sector. This record analyses how agentic systems could enter those operational risk pathways; it does not assert a confirmed agent-caused outage.",
+      "sources": [
+        {
+          "title": "European Commission \u2014 Digital Operational Resilience Act (DORA)",
+          "url": "https://finance.ec.europa.eu/digital-finance/digital-operational-resilience-act_en"
+        },
+        {
+          "title": "IMF \u2014 Artificial Intelligence and Cybersecurity in the Financial Sector (30 Jun 2026)",
+          "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/06/29/artificial-intelligence-and-cybersecurity-in-the-financial-sector-576706"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-002",
+        "MON-THR-003",
+        "MON-THR-005"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-002",
+        "MON-REG-EU-001"
+      ]
+    },
+    {
+      "id": "MON-FR-004",
+      "title": "Fraud, unauthorised transactions and financial crime",
+      "category": "Fraud and financial crime",
+      "agent_exposure": "High relevance",
+      "summary": "Agents may be manipulated into initiating payments, changing beneficiary details, approving refunds, generating fraudulent instructions or facilitating synthetic identity and social-engineering schemes. The risk increases when identity, intent and transaction authority are not independently verified.",
+      "agent_pathway": "Prompt injection, compromised credentials or deceptive content persuades an agent to execute a payment or alter a customer or counterparty record.",
+      "financial_functions": [
+        "Payments",
+        "Customer onboarding",
+        "Trade finance",
+        "Fraud operations"
+      ],
+      "transmission": "Manipulated instruction or identity \u2192 agent action \u2192 unauthorised transfer or control bypass \u2192 direct loss and downstream disputes.",
+      "potential_consequences": [
+        "Direct financial loss",
+        "Customer harm",
+        "AML and sanctions-control failures",
+        "Reputational and legal exposure"
+      ],
+      "monitoring_indicators": [
+        "Agent-initiated payment volumes",
+        "Beneficiary changes",
+        "Override rates",
+        "Transaction anomalies",
+        "Identity-verification exceptions"
+      ],
+      "control_themes": [
+        "Strong identity and intent verification",
+        "Dual control for high-value actions",
+        "Out-of-band confirmation",
+        "Transaction limits",
+        "Immutable audit trails and fraud monitoring"
+      ],
+      "evidence_class": "AI-enabled fraud risk identified by official sources; agent scenario is analytical",
+      "evidence_note": "The FSB identifies AI-enabled fraud and disinformation as financial-sector vulnerabilities. The specific autonomous payment scenario is a MONAISEC analytical test case.",
+      "sources": [
+        {
+          "title": "FSB \u2014 The Financial Stability Implications of Artificial Intelligence (14 Nov 2024)",
+          "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+        },
+        {
+          "title": "MAS \u2014 Guidelines on AI Risk Management for Financial Institutions (7 Oct 2026)",
+          "url": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-artificial-intelligence-risk-management"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-001",
+        "MON-THR-003",
+        "MON-THR-006"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-FR-005",
+      "title": "Credit, underwriting and exposure misallocation",
+      "category": "Credit and underwriting",
+      "agent_exposure": "Medium relevance",
+      "summary": "Agents supporting origination, underwriting, limit management or collections may propagate inaccurate, manipulated or biased information into credit decisions. If widely deployed models share data or assumptions, errors may become correlated across portfolios or institutions.",
+      "agent_pathway": "An agent gathers evidence, updates borrower records, recommends limits or triggers decisions using poisoned, stale or incomplete data and insufficient human review.",
+      "financial_functions": [
+        "Retail and corporate lending",
+        "Credit risk",
+        "Insurance underwriting",
+        "Collections"
+      ],
+      "transmission": "Data or reasoning error \u2192 incorrect risk assessment or action \u2192 mispriced credit and concentrated exposures \u2192 losses or unfair outcomes.",
+      "potential_consequences": [
+        "Credit losses",
+        "Risk concentration",
+        "Mispricing of exposures",
+        "Discriminatory or unfair outcomes"
+      ],
+      "monitoring_indicators": [
+        "Override and appeal rates",
+        "Data lineage and freshness",
+        "Model drift",
+        "Decision dispersion across institutions",
+        "Portfolio concentration"
+      ],
+      "control_themes": [
+        "Data quality controls",
+        "Independent validation",
+        "Explainability and reason codes",
+        "Human review for material decisions",
+        "Fairness and outcome monitoring"
+      ],
+      "evidence_class": "AI model and data risk supported by official analysis; agent workflow is analytical",
+      "evidence_note": "FSB and IMF publications identify model risk, data quality and governance as relevant financial-sector vulnerabilities. The agent-mediated workflow is a proposed risk pathway, not a documented loss event.",
+      "sources": [
+        {
+          "title": "FSB \u2014 The Financial Stability Implications of Artificial Intelligence (14 Nov 2024)",
+          "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+        },
+        {
+          "title": "BIS \u2014 Financial stability implications of artificial intelligence: Executive Summary",
+          "url": "https://www.bis.org/publications/fsi-summary-financial-stability-implications-artificial-intelligence-executive-summary"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-006",
+        "MON-THR-008"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-001"
+      ]
+    },
+    {
+      "id": "MON-FR-006",
+      "title": "Third-party concentration and common-provider dependency",
+      "category": "Third-party concentration",
+      "agent_exposure": "High relevance",
+      "summary": "Financial institutions may depend on a small set of model, cloud, compute, data, orchestration or agent-platform providers. A shared provider outage, compromise, policy change or capacity constraint can affect multiple institutions at once.",
+      "agent_pathway": "Several firms deploy agents built on the same model APIs, orchestration platforms, MCP/tool providers or cloud infrastructure, creating correlated operational dependencies.",
+      "financial_functions": [
+        "Cross-sector technology infrastructure",
+        "Cloud and model services",
+        "Payments",
+        "Trading and risk management"
+      ],
+      "transmission": "Common provider disruption or compromise \u2192 simultaneous loss or degradation of agent capability \u2192 multi-firm operational stress \u2192 potential systemic spillovers.",
+      "potential_consequences": [
+        "Multiple-firm service disruption",
+        "Concentration of operational risk",
+        "Reduced substitutability",
+        "Cross-border contagion"
+      ],
+      "monitoring_indicators": [
+        "Provider and sub-provider concentration",
+        "Critical service substitutability",
+        "Shared model and infrastructure dependencies",
+        "Exit and portability readiness"
+      ],
+      "control_themes": [
+        "Third-party due diligence",
+        "Dependency mapping",
+        "Concentration monitoring",
+        "Exit and contingency plans",
+        "Resilience testing with providers"
+      ],
+      "evidence_class": "Explicitly identified systemic AI vulnerability",
+      "evidence_note": "The FSB explicitly identifies third-party dependencies and service-provider concentration as potential systemic vulnerabilities, and its 2025 monitoring report discusses indicators and data gaps. Agent-platform concentration is a MONAISEC extension of this issue.",
+      "sources": [
+        {
+          "title": "FSB \u2014 Monitoring Adoption of AI and Related Vulnerabilities in the Financial Sector (10 Oct 2025)",
+          "url": "https://www.fsb.org/2025/10/monitoring-adoption-of-artificial-intelligence-and-related-vulnerabilities-in-the-financial-sector/"
+        },
+        {
+          "title": "FSB \u2014 The Financial Stability Implications of Artificial Intelligence (14 Nov 2024)",
+          "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-004",
+        "MON-THR-005",
+        "MON-THR-010"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-FR-007",
+      "title": "Cyber compromise and cross-institution propagation",
+      "category": "Cyber and contagion",
+      "agent_exposure": "High relevance",
+      "summary": "Agent-enabled cyber activity may accelerate vulnerability discovery, exploitation, credential abuse or lateral movement. Shared infrastructure and interconnected financial services can turn a local compromise into a broader disruption if containment is weak.",
+      "agent_pathway": "A compromised agent, tool connector or service identity is used to access sensitive systems, exfiltrate data or execute actions across connected environments.",
+      "financial_functions": [
+        "Core banking",
+        "Payments",
+        "Market infrastructure",
+        "Cybersecurity operations"
+      ],
+      "transmission": "Compromise \u2192 privileged access or data exfiltration \u2192 lateral movement or service disruption \u2192 counterparties and shared infrastructure affected.",
+      "potential_consequences": [
+        "Data breaches",
+        "Operational outage",
+        "Funding and confidence pressure",
+        "System-wide disruption in severe scenarios"
+      ],
+      "monitoring_indicators": [
+        "Agent identity anomalies",
+        "Cross-system tool calls",
+        "Privilege escalation events",
+        "Time to detect and contain",
+        "Shared-provider incidents"
+      ],
+      "control_themes": [
+        "Zero-trust identity",
+        "Network and tool segmentation",
+        "Continuous monitoring",
+        "Blast-radius limitation",
+        "Incident coordination and recovery exercises"
+      ],
+      "evidence_class": "Officially identified AI-amplified cyber and systemic channel; agent scenario is analytical",
+      "evidence_note": "IMF 2026 analysis warns that AI can increase the speed and scale of cyber risk and emphasises limiting blast radius. This entry applies those findings to agent identities and tool chains as a research scenario.",
+      "sources": [
+        {
+          "title": "IMF \u2014 Artificial Intelligence and Cybersecurity in the Financial Sector (30 Jun 2026)",
+          "url": "https://www.imf.org/en/publications/imf-notes/issues/2026/06/29/artificial-intelligence-and-cybersecurity-in-the-financial-sector-576706"
+        },
+        {
+          "title": "IMF \u2014 Financial Stability Risks Mount as Artificial Intelligence Fuels Cyberattacks (7 May 2026)",
+          "url": "https://www.imf.org/en/blogs/articles/2026/05/07/financial-stability-risks-mount-as-artificial-intelligence-fuels-cyberattacks"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-003",
+        "MON-THR-004",
+        "MON-THR-005"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-FR-008",
+      "title": "Conduct, consumer protection and accountability failure",
+      "category": "Conduct and consumer harm",
+      "agent_exposure": "Medium relevance",
+      "summary": "Customer-facing or decision-support agents may provide misleading information, make unauthorised commitments, apply unsuitable recommendations or obscure responsibility for decisions. Failures can scale rapidly across customers and channels.",
+      "agent_pathway": "An agent communicates with customers, changes account settings or makes product recommendations without adequate disclosure, suitability checks, escalation or accountable ownership.",
+      "financial_functions": [
+        "Customer service",
+        "Advice and distribution",
+        "Claims and complaints",
+        "Product governance"
+      ],
+      "transmission": "Inaccurate or unauthorised agent interaction \u2192 customer reliance or harmful decision \u2192 complaints, remediation and conduct exposure.",
+      "potential_consequences": [
+        "Customer financial harm",
+        "Mis-selling or unsuitable outcomes",
+        "Compensation and remediation costs",
+        "Loss of trust"
+      ],
+      "monitoring_indicators": [
+        "Complaint and remediation rates",
+        "Human escalation rates",
+        "Agent statements and commitments",
+        "Suitability exceptions",
+        "Customer outcome testing"
+      ],
+      "control_themes": [
+        "Clear disclosure of agent role",
+        "Approved knowledge sources",
+        "Human escalation",
+        "Decision and conversation records",
+        "Outcome monitoring"
+      ],
+      "evidence_class": "General AI governance and conduct concern; agent pathway is analytical",
+      "evidence_note": "Regulatory and supervisory frameworks continue to apply to financial firms using AI. This entry is a MONAISEC analysis of how agent autonomy may complicate existing accountability and consumer-outcome obligations.",
+      "sources": [
+        {
+          "title": "FCA \u2014 AI in financial services: good practice and areas for improvement (19 Oct 2026)",
+          "url": "https://www.fca.org.uk/publications/multi-firm-reviews/ai-financial-services-good-practice-areas-improvement"
+        },
+        {
+          "title": "FSB \u2014 Sound Practices for the Responsible Adoption of AI in the Financial Sector (15 Oct 2026)",
+          "url": "https://www.fsb.org/2026/10/sound-practices-for-the-responsible-adoption-of-ai-in-the-financial-sector/"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-001",
+        "MON-THR-006",
+        "MON-THR-008"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-001"
+      ]
+    },
+    {
+      "id": "MON-FR-009",
+      "title": "Data confidentiality, integrity and decision contamination",
+      "category": "Data and model integrity",
+      "agent_exposure": "High relevance",
+      "summary": "Agents can access, transform, retain and transmit sensitive information across multiple tools. Prompt injection, memory poisoning or unsafe retrieval may cause disclosure, corruption of records or decisions based on manipulated information.",
+      "agent_pathway": "An agent retrieves confidential customer or market data, stores it in persistent memory, or sends it to an unauthorised endpoint after following malicious instructions embedded in content.",
+      "financial_functions": [
+        "Customer data management",
+        "Market data",
+        "Risk analytics",
+        "Regulatory reporting"
+      ],
+      "transmission": "Compromised context or data path \u2192 unauthorised disclosure or corrupted record \u2192 privacy, integrity and decision failures \u2192 legal and financial consequences.",
+      "potential_consequences": [
+        "Confidentiality breach",
+        "Incorrect risk or compliance decisions",
+        "Regulatory remediation",
+        "Loss of market-sensitive information"
+      ],
+      "monitoring_indicators": [
+        "Sensitive-data access by agent identity",
+        "Outbound data flows",
+        "Retrieval-source integrity",
+        "Memory write and deletion events",
+        "Data lineage exceptions"
+      ],
+      "control_themes": [
+        "Data minimisation",
+        "Context and retrieval validation",
+        "Output filtering and DLP",
+        "Memory governance",
+        "Tool-level access policies"
+      ],
+      "evidence_class": "Established AI data/model governance concerns; agent pathway is analytical",
+      "evidence_note": "FSB identifies model risk, data quality and governance as AI-related vulnerabilities. The agent memory and tool-mediated exfiltration pathways are analytical applications of recognised agentic threat patterns.",
+      "sources": [
+        {
+          "title": "BIS \u2014 Financial stability implications of artificial intelligence: Executive Summary",
+          "url": "https://www.bis.org/publications/fsi-summary-financial-stability-implications-artificial-intelligence-executive-summary"
+        },
+        {
+          "title": "FSB \u2014 The Financial Stability Implications of Artificial Intelligence (14 Nov 2024)",
+          "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-006",
+        "MON-THR-007",
+        "MON-THR-011"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-001",
+        "MON-REG-EU-002"
+      ]
+    },
+    {
+      "id": "MON-FR-010",
+      "title": "Systemic contagion and confidence effects",
+      "category": "Systemic and confidence risk",
+      "agent_exposure": "Scenario-dependent",
+      "summary": "A severe agent-related event could propagate through interconnected institutions, shared service providers, common trading strategies or confidence-sensitive channels. The systemic outcome is conditional and should be tested rather than presumed.",
+      "agent_pathway": "A common model or provider failure, cyber compromise or correlated autonomous response affects multiple institutions or critical infrastructure during an already stressed market environment.",
+      "financial_functions": [
+        "Financial market infrastructure",
+        "Banking system",
+        "Asset management",
+        "Payments and settlement"
+      ],
+      "transmission": "Common shock \u2192 correlated institutional response or service interruption \u2192 counterparty and market spillovers \u2192 confidence and financial-stability effects.",
+      "potential_consequences": [
+        "Cross-institution disruption",
+        "Confidence deterioration",
+        "Market-wide liquidity stress",
+        "Potential financial-stability impairment"
+      ],
+      "monitoring_indicators": [
+        "Cross-firm common dependencies",
+        "Concentration and interconnectedness",
+        "Critical service substitutability",
+        "Market stress and confidence indicators",
+        "Incident propagation speed"
+      ],
+      "control_themes": [
+        "System-wide scenario exercises",
+        "Cross-sector information sharing",
+        "Concentration and dependency oversight",
+        "Crisis coordination",
+        "Recovery and resolution preparedness"
+      ],
+      "evidence_class": "Systemic transmission channels supported; agent-triggered event is hypothetical",
+      "evidence_note": "The FSB and IMF identify channels through which AI-related vulnerabilities and cyber incidents could affect financial stability. This record is a conditional scenario, not a claim that an agentic event has caused systemic contagion.",
+      "sources": [
+        {
+          "title": "FSB \u2014 Monitoring Adoption of AI and Related Vulnerabilities in the Financial Sector (10 Oct 2025)",
+          "url": "https://www.fsb.org/2025/10/monitoring-adoption-of-artificial-intelligence-and-related-vulnerabilities-in-the-financial-sector/"
+        },
+        {
+          "title": "IMF \u2014 How Central Banks Can Contain Financial Stability Risks as AI Accelerates Change (23 Jul 2026)",
+          "url": "https://www.imf.org/en/blogs/articles/2026/07/23/how-central-banks-can-contain-financial-stability-risks-as-ai-accelerates-change"
+        }
+      ],
+      "related_threats": [
+        "MON-THR-004",
+        "MON-THR-009",
+        "MON-THR-010"
+      ],
+      "related_regulations": [
+        "MON-REG-EU-002"
+      ]
+    }
+  ]
+}
