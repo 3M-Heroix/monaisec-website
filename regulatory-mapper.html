@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10251f">
+  <meta name="description" content="MONAISEC Regulatory Compliance Mapper — evidence-led regulatory scoping for AI agents in financial services.">
+  <title>Regulatory Compliance Mapper | MONAISEC</title>
+  <link rel="stylesheet" href="assets/css/regulatory-mapper.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html">MON<span>AI</span>SEC</a>
+  <nav><a href="index.html">Home</a><a href="regulatory.html">Regulatory Intelligence</a><a class="active" href="regulatory-mapper.html">Compliance Mapper</a><a href="methodology.html">Methodology</a></nav>
+  <span class="top-tag">RESEARCH TOOL · V1</span>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">MONAISEC / REGULATORY INTELLIGENCE / TOOL 03</div>
+    <div class="hero-grid">
+      <div>
+        <h1>Map the regulatory exposure of an AI agent.</h1>
+        <p class="lead">Build a jurisdiction- and use-case-specific shortlist of potentially relevant financial-sector rules, supervisory guidance and technical frameworks. Every result explains why it surfaced and what must be verified.</p>
+        <div class="hero-pills"><span>Global research scope</span><span>Primary-source first</span><span>Human-reviewed mappings</span></div>
+      </div>
+      <div class="hero-note">
+        <div class="note-label">IMPORTANT</div>
+        <p>This is a research scoping aid, not a legal opinion, compliance certification or automated determination of applicability.</p>
+        <a href="methodology.html">Read the evidence methodology ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="workspace">
+    <div class="section-head">
+      <div><div class="eyebrow">01 / DEPLOYMENT PROFILE</div><h2>Describe the system</h2></div>
+      <button class="btn btn-quiet" id="reset">Reset profile</button>
+    </div>
+    <div class="profile-grid">
+      <label class="field"><span>Primary jurisdiction</span>
+        <select id="jurisdiction">
+          <option value="European Union">European Union</option><option value="United Kingdom">United Kingdom</option>
+          <option value="United States">United States</option><option value="Singapore">Singapore</option>
+          <option value="Morocco">Morocco</option><option value="Other / cross-border">Other / cross-border</option>
+        </select>
+      </label>
+      <label class="field"><span>Financial activity</span>
+        <select id="sector">
+          <option value="Banking">Banking</option><option value="Payments">Payments</option>
+          <option value="Investment services">Investment services / trading</option><option value="Insurance">Insurance</option>
+          <option value="Asset management">Asset management</option><option value="Financial market infrastructure">Financial market infrastructure</option>
+          <option value="Fintech / other financial services">Fintech / other financial services</option>
+        </select>
+      </label>
+      <label class="field"><span>Agent use case</span>
+        <select id="usecase">
+          <option value="Customer support">Customer support / communications</option>
+          <option value="Credit decisioning">Creditworthiness / underwriting</option>
+          <option value="Trading">Trading / investment decisions</option>
+          <option value="Payment execution">Payment initiation / execution</option>
+          <option value="Compliance operations">AML / KYC / compliance operations</option>
+          <option value="Internal operations">Internal operations / workflow automation</option>
+          <option value="Research">Research / information retrieval</option>
+        </select>
+      </label>
+      <label class="field"><span>Organisation's regulatory status</span>
+        <select id="regulated"><option value="yes">Regulated financial entity</option><option value="provider">AI / technology provider to finance</option><option value="both">Both provider and deployer</option><option value="no">Not known / not regulated</option></select>
+      </label>
+      <label class="field"><span>Agent autonomy</span>
+        <select id="autonomy"><option value="assist">Assistant — recommends, human executes</option><option value="approve">Conditional — acts after approval</option><option value="bounded">Bounded autonomy — acts within limits</option><option value="high">High autonomy — plans and executes multi-step tasks</option></select>
+      </label>
+      <label class="field"><span>Decision / action authority</span>
+        <select id="authority"><option value="read">Read-only / retrieval</option><option value="recommend">Recommendations only</option><option value="write">Can modify records or initiate workflows</option><option value="transact">Can execute payments, trades or other transactions</option></select>
+      </label>
+    </div>
+
+    <div class="checks">
+      <label><input type="checkbox" id="personalData" checked><span><b>Personal data</b><small>Processes personal or customer data</small></span></label>
+      <label><input type="checkbox" id="euData"><span><b>EU data subjects / EU establishment</b><small>Possible EU GDPR territorial connection</small></span></label>
+      <label><input type="checkbox" id="thirdParty" checked><span><b>External AI / cloud provider</b><small>Uses third-party models, APIs or infrastructure</small></span></label>
+      <label><input type="checkbox" id="customerImpact"><span><b>Material customer impact</b><small>May affect access, pricing, eligibility or treatment</small></span></label>
+      <label><input type="checkbox" id="humanOversight" checked><span><b>Human oversight</b><small>Named person can review, stop or reverse actions</small></span></label>
+      <label><input type="checkbox" id="euMarket"><span><b>EU market / users</b><small>System placed on market or used in the EU</small></span></label>
+    </div>
+    <div class="actions"><button class="btn btn-primary" id="mapBtn">Map regulatory exposure <span>↗</span></button><span class="muted" id="profileHint">Your profile is processed locally in this browser.</span></div>
+  </section>
+
+  <section class="results" id="results" hidden>
+    <div class="section-head">
+      <div><div class="eyebrow">02 / MAPPING OUTPUT</div><h2>Regulatory landscape</h2><p class="muted" id="resultIntro"></p></div>
+      <button class="btn btn-quiet" id="export">Export assessment JSON</button>
+    </div>
+    <div class="summary-strip">
+      <div><strong id="candidateCount">0</strong><span>Candidate instruments</span></div>
+      <div><strong id="bindingCount">0</strong><span>Binding instruments</span></div>
+      <div><strong id="reviewCount">0</strong><span>Contextual references</span></div>
+    </div>
+    <div class="legend"><span class="tag tag-direct">Potentially applicable</span><span class="tag tag-context">Contextual / verify</span><span class="tag tag-voluntary">Voluntary reference</span></div>
+    <div id="mappedRecords" class="mapped-list"></div>
+
+    <div class="control-panel">
+      <div class="eyebrow">03 / CONTROL DISCUSSION</div><h2>Evidence and control checklist</h2>
+      <p class="muted">Mark the evidence you already have. This is a coverage discussion aid, not a compliance score.</p>
+      <div id="controlList" class="control-list"></div>
+      <div class="coverage"><div class="coverage-bar"><span id="coverageFill"></span></div><span id="coverageText">0 of 0 addressed</span></div>
+    </div>
+  </section>
+
+  <section class="watch">
+    <div class="section-head"><div><div class="eyebrow">04 / LIVE SOURCE WATCH</div><h2>Regulatory update monitor</h2><p class="muted">Official feeds are checked by the scheduled GitHub workflow. New items enter a review queue; they do not automatically change legal mappings.</p></div><span class="status" id="watchStatus">Loading watchlist…</span></div>
+    <div class="watch-grid"><div class="watch-stat"><strong id="watchCount">—</strong><span>Review candidates</span></div><div class="watch-stat"><strong id="sourceCount">—</strong><span>Configured official sources</span></div><div class="watch-stat"><strong id="watchUpdated">—</strong><span>Last collection run</span></div></div>
+    <div id="watchItems" class="watch-items"></div>
+    <div class="source-links" id="sourceLinks"></div>
+  </section>
+  <section class="method-note"><b>Research boundary.</b> A jurisdiction match does not establish legal applicability. Instrument scope, territorial nexus, entity type, system purpose, provider/deployer role, risk classification, exemptions and commencement dates must be checked against the primary text. MONAISEC mappings are analyst-authored hypotheses until reviewed and approved.</section>
+</main>
+<footer><span>© MONAISEC · Independent research initiative</span><span>Evidence-led intelligence · Not legal advice</span></footer>
+<script src="assets/js/regulatory-mapper.js"></script>
+</body></html>
