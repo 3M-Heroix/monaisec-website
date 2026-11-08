@@ -1,0 +1,304 @@
+{
+  "dataset_title": "MONAISEC Regulatory Mapper Rules",
+  "dataset_version": "1.0.0",
+  "last_reviewed": "2026-11-08",
+  "methodology": "These are analyst-authored screening rules, not legal determinations. Candidate matches require primary-text review and a qualified jurisdiction-specific assessment.",
+  "controls": [
+    {
+      "id": "governance",
+      "title": "Accountability and governance",
+      "prompt": "Named accountable owner, approved purpose, inventory entry, risk owner and change approval are documented."
+    },
+    {
+      "id": "human_oversight",
+      "title": "Human oversight and intervention",
+      "prompt": "Human review, escalation, stop, override and reversal paths are tested and recorded."
+    },
+    {
+      "id": "auditability",
+      "title": "Logging, records and traceability",
+      "prompt": "Inputs, outputs, tool calls, decisions, approvals, versions and exceptions are logged with retention controls."
+    },
+    {
+      "id": "security",
+      "title": "Security and access controls",
+      "prompt": "Identity, least privilege, secrets, tool allowlists, sandboxing, prompt-injection defences and monitoring are tested."
+    },
+    {
+      "id": "resilience",
+      "title": "Operational resilience and incident response",
+      "prompt": "Failure modes, fallback, recovery, incident classification, reporting and resilience testing are documented."
+    },
+    {
+      "id": "third_party",
+      "title": "Third-party and concentration risk",
+      "prompt": "Provider due diligence, subcontractors, exit plans, concentration, data location and contractual rights are assessed."
+    },
+    {
+      "id": "data_protection",
+      "title": "Privacy and data governance",
+      "prompt": "Lawful basis, purpose limitation, minimisation, retention, rights, DPIA screening and data-subject transparency are assessed."
+    },
+    {
+      "id": "model_validation",
+      "title": "Model/system validation",
+      "prompt": "Intended use, validation, performance limits, drift, testing, monitoring and change management are documented."
+    },
+    {
+      "id": "consumer_outcomes",
+      "title": "Customer outcomes and conduct",
+      "prompt": "Customer impact, explainability, complaints, fair treatment, disclosure and human escalation are assessed."
+    },
+    {
+      "id": "transaction_controls",
+      "title": "Transaction and delegated-action controls",
+      "prompt": "Transaction limits, beneficiary allowlists, dual control, step-up approval, idempotency and kill switch are tested."
+    }
+  ],
+  "mappings": [
+    {
+      "id": "MAP-EU-AIA",
+      "regulation_id": "MON-REG-EU-001",
+      "rank": 1,
+      "classification": "contextual",
+      "triggers": {
+        "jurisdictions": [
+          "European Union"
+        ],
+        "allowEuMarket": true
+      },
+      "reason": "The EU AI Act may be relevant where the system is placed on the EU market or put into service in the EU. Applicability depends on the actor's role, intended purpose, system classification and the Act's territorial scope. A financial-services use is not automatically high-risk.",
+      "review_questions": [
+        "Identify provider, deployer, importer and distributor roles.",
+        "Assess Annex III high-risk categories, including natural-person creditworthiness and certain life/health insurance risk assessment or pricing use cases.",
+        "Check prohibited practices, transparency, GPAI and phased application provisions against the current consolidated text and amendments."
+      ],
+      "control_ids": [
+        "governance",
+        "human_oversight",
+        "auditability",
+        "security",
+        "model_validation",
+        "data_protection"
+      ]
+    },
+    {
+      "id": "MAP-EU-DORA",
+      "regulation_id": "MON-REG-EU-002",
+      "rank": 2,
+      "classification": "potential",
+      "triggers": {
+        "jurisdictions": [
+          "European Union"
+        ],
+        "regulated": [
+          "yes",
+          "both"
+        ],
+        "sectors": [
+          "Banking",
+          "Payments",
+          "Investment services",
+          "Insurance",
+          "Asset management",
+          "Financial market infrastructure",
+          "Fintech / other financial services"
+        ]
+      },
+      "reason": "DORA is potentially relevant to an in-scope EU financial entity where the AI agent, model, API, cloud service or supporting platform forms part of its ICT environment or ICT third-party arrangements. It is not an AI-agent-specific law.",
+      "review_questions": [
+        "Confirm the entity is within DORA's financial-entity scope.",
+        "Map the agent and its dependencies into the ICT asset, service and third-party inventories.",
+        "Review ICT risk management, incident handling, resilience testing and third-party contractual obligations; assess criticality and proportionality."
+      ],
+      "control_ids": [
+        "governance",
+        "auditability",
+        "security",
+        "resilience",
+        "third_party",
+        "transaction_controls"
+      ]
+    },
+    {
+      "id": "MAP-EU-GDPR",
+      "regulation_id": "MON-REG-EU-003",
+      "rank": 3,
+      "classification": "potential",
+      "triggers": {
+        "jurisdictions": [
+          "European Union"
+        ],
+        "allowEuMarket": true,
+        "any": [
+          "personalData",
+          "euData"
+        ]
+      },
+      "reason": "GDPR may apply where personal data is processed in the context of an EU establishment or where its territorial scope otherwise reaches the processing, including certain processing related to people in the EU. Personal data processing alone does not establish the full set of applicable obligations.",
+      "review_questions": [
+        "Establish the controller/processor roles and territorial nexus.",
+        "Identify lawful basis, purposes, data categories, recipients, retention and international transfers.",
+        "Assess DPIA requirements, data-subject rights and any solely automated decision-making with legal or similarly significant effects; examine Article 22 only where its conditions are met."
+      ],
+      "control_ids": [
+        "governance",
+        "auditability",
+        "data_protection",
+        "security",
+        "human_oversight"
+      ]
+    },
+    {
+      "id": "MAP-UK-FCA",
+      "regulation_id": "MON-REG-UK-001",
+      "rank": 4,
+      "classification": "contextual",
+      "triggers": {
+        "jurisdictions": [
+          "United Kingdom"
+        ],
+        "regulated": [
+          "yes",
+          "both",
+          "provider"
+        ]
+      },
+      "reason": "The FCA's AI good-practice publication explains how existing UK requirements apply to firms' AI use. It is supervisory material, not a standalone AI statute. A provider's position depends on its role and contractual/regulatory perimeter.",
+      "review_questions": [
+        "Identify the regulated firm and applicable FCA/PRA permissions and rules.",
+        "Map governance, accountability, outsourcing, operational resilience, consumer outcomes and human oversight to the firm's actual rulebook obligations.",
+        "Distinguish FCA observations and good practice from binding Handbook rules."
+      ],
+      "control_ids": [
+        "governance",
+        "human_oversight",
+        "auditability",
+        "resilience",
+        "third_party",
+        "consumer_outcomes",
+        "security"
+      ]
+    },
+    {
+      "id": "MAP-SG-MAS",
+      "regulation_id": "MON-REG-SG-001",
+      "rank": 5,
+      "classification": "contextual",
+      "triggers": {
+        "jurisdictions": [
+          "Singapore"
+        ],
+        "regulated": [
+          "yes",
+          "both"
+        ]
+      },
+      "reason": "MAS has issued AI risk-management guidelines for financial institutions with a future effective date of 7 October 2027, according to the current MONAISEC seed record. They are a forward-looking supervisory reference and must not be presented as already effective.",
+      "review_questions": [
+        "Confirm the entity and activity fall within the guideline's intended scope.",
+        "Check the official MAS publication for amendments, commencement and any subsequent agentic-AI consultation.",
+        "Prepare governance, inventory, materiality, testing, human oversight, cybersecurity and third-party controls ahead of commencement."
+      ],
+      "control_ids": [
+        "governance",
+        "human_oversight",
+        "auditability",
+        "security",
+        "third_party",
+        "model_validation",
+        "data_protection"
+      ]
+    },
+    {
+      "id": "MAP-GLOBAL-FSB",
+      "regulation_id": "MON-REG-INT-001",
+      "rank": 6,
+      "classification": "voluntary",
+      "triggers": {
+        "jurisdictions": [
+          "European Union",
+          "United Kingdom",
+          "United States",
+          "Singapore",
+          "Morocco",
+          "Other / cross-border"
+        ]
+      },
+      "reason": "The FSB sound practices are a non-binding international policy reference for responsible AI adoption in financial services. They can inform governance and supervisory gap analysis but do not themselves create directly enforceable obligations.",
+      "review_questions": [
+        "Check whether the relevant domestic authority has adopted, referenced or translated these practices into local expectations.",
+        "Map each practice to existing binding requirements and internal controls.",
+        "Record gaps as governance recommendations unless a separate binding rule applies."
+      ],
+      "control_ids": [
+        "governance",
+        "human_oversight",
+        "auditability",
+        "security",
+        "third_party",
+        "model_validation",
+        "resilience"
+      ]
+    },
+    {
+      "id": "MAP-GLOBAL-NIST",
+      "regulation_id": "MON-REG-US-002",
+      "rank": 7,
+      "classification": "voluntary",
+      "triggers": {
+        "jurisdictions": [
+          "European Union",
+          "United Kingdom",
+          "United States",
+          "Singapore",
+          "Morocco",
+          "Other / cross-border"
+        ]
+      },
+      "reason": "NIST AI RMF is a voluntary cross-sector risk-management framework. It is useful as a structured reference, but should not be represented as a binding financial-services regulation unless incorporated by another applicable requirement or contract.",
+      "review_questions": [
+        "Identify whether the organisation, regulator, contract or policy has adopted the framework.",
+        "Use its Govern, Map, Measure and Manage functions as a gap-analysis structure.",
+        "Supplement with agent-specific security and financial-sector obligations."
+      ],
+      "control_ids": [
+        "governance",
+        "human_oversight",
+        "model_validation",
+        "data_protection",
+        "security",
+        "auditability"
+      ]
+    },
+    {
+      "id": "MAP-GLOBAL-OWASP",
+      "regulation_id": "MON-REG-INT-002",
+      "rank": 8,
+      "classification": "voluntary",
+      "triggers": {
+        "jurisdictions": [
+          "European Union",
+          "United Kingdom",
+          "United States",
+          "Singapore",
+          "Morocco",
+          "Other / cross-border"
+        ]
+      },
+      "reason": "OWASP Agentic Applications guidance is a technical security reference rather than legislation. It helps identify agent-specific failure and attack patterns for threat modelling and control design.",
+      "review_questions": [
+        "Map the selected agent architecture and tool permissions to the current OWASP taxonomy.",
+        "Test controls against the actual deployment and threat model.",
+        "Do not equate framework alignment with legal compliance or certified security."
+      ],
+      "control_ids": [
+        "security",
+        "auditability",
+        "human_oversight",
+        "transaction_controls",
+        "third_party"
+      ]
+    }
+  ]
+}

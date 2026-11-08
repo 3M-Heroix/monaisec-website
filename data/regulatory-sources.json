@@ -1,0 +1,138 @@
+{
+  "dataset_title": "MONAISEC Official Regulatory Source Watch",
+  "dataset_version": "1.0.0",
+  "last_reviewed": "2026-11-08",
+  "collection_frequency": "Daily via GitHub Actions; feed discovery only. No automatic legal interpretation or dataset mutation.",
+  "sources": [
+    {
+      "id": "SRC-EURLEX-CELLAR",
+      "name": "EU Publications Office / Cellar notifications",
+      "publisher": "Publications Office of the European Union",
+      "type": "official_document_change_feed",
+      "url": "https://op.europa.eu/en/web/cellar/cellar-data/rss-and-atom-feeds",
+      "feed_url": "https://publications.europa.eu/webapi/notification/ingestion",
+      "scope": "EU legal-document metadata creation and update notifications",
+      "status": "automated",
+      "notes": "The collector requests CREATE and UPDATE notifications for legal works since the previous check. Cellar is the EU Publications Office's notification infrastructure."
+    },
+    {
+      "id": "SRC-BIS-FSI",
+      "name": "BIS and FSI publications",
+      "publisher": "Bank for International Settlements",
+      "type": "rss",
+      "url": "https://www.bis.org/rss",
+      "feed_url": "https://www.bis.org/doclist/bis_fsi_publs.rss",
+      "scope": "BIS / FSI policy research and publications",
+      "status": "automated",
+      "notes": "Official BIS RSS endpoint."
+    },
+    {
+      "id": "SRC-BIS-PRESS",
+      "name": "BIS press releases",
+      "publisher": "Bank for International Settlements",
+      "type": "rss",
+      "url": "https://www.bis.org/rss",
+      "feed_url": "https://www.bis.org/doclist/all_pressrels.rss",
+      "scope": "BIS press releases and institutional announcements",
+      "status": "automated",
+      "notes": "Official BIS RSS endpoint."
+    },
+    {
+      "id": "SRC-FSB-PUB",
+      "name": "FSB publications",
+      "publisher": "Financial Stability Board",
+      "type": "rss",
+      "url": "https://www.fsb.org/rss-feeds/",
+      "feed_url": "https://www.fsb.org/wordpress/content_type/publications/feed/",
+      "scope": "FSB publications",
+      "status": "automated",
+      "notes": "Official FSB publications feed."
+    },
+    {
+      "id": "SRC-FSB-POLICY",
+      "name": "FSB policy documents",
+      "publisher": "Financial Stability Board",
+      "type": "rss",
+      "url": "https://www.fsb.org/rss-feeds/",
+      "feed_url": "https://www.fsb.org/wordpress/content_type/policy-documents/feed/",
+      "scope": "FSB policy documents",
+      "status": "automated",
+      "notes": "Official FSB policy-document feed."
+    },
+    {
+      "id": "SRC-FED-BANKREG",
+      "name": "Federal Reserve banking and consumer regulatory policy",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "type": "rss",
+      "url": "https://www.federalreserve.gov/feeds/feeds.htm",
+      "feed_url": "https://www.federalreserve.gov/feeds/press_bcreg.xml",
+      "scope": "US banking and consumer regulatory policy press releases",
+      "status": "automated",
+      "notes": "Official Federal Reserve RSS endpoint."
+    },
+    {
+      "id": "SRC-FCA-NEWS",
+      "name": "FCA news and warnings",
+      "publisher": "Financial Conduct Authority",
+      "type": "rss",
+      "url": "https://www.fca.org.uk/what-we-publish",
+      "feed_url": "https://www.fca.org.uk/news/rss.xml",
+      "scope": "FCA news and warnings; not a complete feed of all policy publications",
+      "status": "automated",
+      "notes": "Supplement with FCA publication pages and Handbook change notices during human review."
+    },
+    {
+      "id": "SRC-ECB-PRESS",
+      "name": "ECB press releases and speeches",
+      "publisher": "European Central Bank",
+      "type": "rss",
+      "url": "https://www.ecb.europa.eu/press/pr/html/index.en.html",
+      "feed_url": "https://www.ecb.europa.eu/rss/press.html",
+      "scope": "ECB press releases and speeches",
+      "status": "automated",
+      "notes": "Official ECB RSS feed."
+    },
+    {
+      "id": "SRC-ESMA",
+      "name": "ESMA publications and news",
+      "publisher": "European Securities and Markets Authority",
+      "type": "rss",
+      "url": "https://www.esma.europa.eu/",
+      "feed_url": "https://www.esma.europa.eu/rss.xml",
+      "scope": "ESMA publications and news",
+      "status": "automated",
+      "notes": "Official ESMA RSS endpoint; candidates are keyword-filtered."
+    },
+    {
+      "id": "SRC-BOE",
+      "name": "Bank of England news",
+      "publisher": "Bank of England",
+      "type": "rss",
+      "url": "https://www.bankofengland.co.uk/",
+      "feed_url": "https://www.bankofengland.co.uk/rss/news",
+      "scope": "Bank of England news",
+      "status": "automated",
+      "notes": "News feed; supplement with Financial Stability Report, policy and PRA publication pages."
+    },
+    {
+      "id": "SRC-MAS-PUB",
+      "name": "MAS publications directory",
+      "publisher": "Monetary Authority of Singapore",
+      "type": "directory",
+      "url": "https://www.mas.gov.sg/publications",
+      "scope": "MAS consultations, guidelines, information papers and financial stability publications",
+      "status": "manual_review",
+      "notes": "Official publication directory; no feed endpoint is assumed in this release. Review manually or add a verified machine interface later."
+    },
+    {
+      "id": "SRC-NIST-AI",
+      "name": "NIST AI Risk Management and Agent Standards",
+      "publisher": "National Institute of Standards and Technology",
+      "type": "directory",
+      "url": "https://www.nist.gov/artificial-intelligence",
+      "scope": "AI risk management, agent standards and technical guidance",
+      "status": "manual_review",
+      "notes": "Official directory; monitor initiative and publication pages during monthly review."
+    }
+  ]
+}
