@@ -1,0 +1,496 @@
+[
+  {
+    "id": "OBL-EU-AIA-9",
+    "instrumentId": "REG-EU-AIA-001",
+    "basis": "AI Act · Article 9",
+    "title": "Risk management system",
+    "domains": [
+      "risk-management",
+      "model-validation",
+      "resilience"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "customer-service",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "European Union"
+    ],
+    "roles": [
+      "provider",
+      "deployer",
+      "both"
+    ],
+    "condition": "Only where the system is classified as high-risk under the Act; classification must be established from intended purpose and Annex III / product-safety route.",
+    "requirement": "Establish, implement, document and maintain a continuous risk-management system across the high-risk AI system lifecycle.",
+    "evidence": [
+      "AI system inventory and intended-purpose statement",
+      "Risk register and risk acceptance",
+      "Testing and residual-risk records",
+      "Post-market monitoring and incident feedback"
+    ],
+    "controls": [
+      "model-risk-governance",
+      "risk-assessment",
+      "continuous-monitoring"
+    ],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+    "force": "binding",
+    "agentRelevance": "technology-neutral / AI-specific"
+  },
+  {
+    "id": "OBL-EU-AIA-14",
+    "instrumentId": "REG-EU-AIA-001",
+    "basis": "AI Act · Article 14",
+    "title": "Human oversight",
+    "domains": [
+      "human-oversight",
+      "execution-controls"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "customer-service"
+    ],
+    "jurisdictions": [
+      "European Union"
+    ],
+    "roles": [
+      "provider",
+      "deployer",
+      "both"
+    ],
+    "condition": "Applies to high-risk AI systems. The nature of oversight depends on system design, intended purpose and risk.",
+    "requirement": "Design the system so natural persons can effectively oversee it, understand limitations, monitor anomalies, disregard or reverse outputs, and stop the system where appropriate.",
+    "evidence": [
+      "Named accountable overseers",
+      "Override / pause / kill-switch test results",
+      "Escalation procedures",
+      "Human-factors testing"
+    ],
+    "controls": [
+      "human-approval-gates",
+      "kill-switch",
+      "exception-escalation"
+    ],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+    "force": "binding",
+    "agentRelevance": "AI-specific"
+  },
+  {
+    "id": "OBL-EU-AIA-26",
+    "instrumentId": "REG-EU-AIA-001",
+    "basis": "AI Act · Article 26",
+    "title": "Deployer obligations",
+    "domains": [
+      "governance",
+      "human-oversight",
+      "logging"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "customer-service",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "European Union"
+    ],
+    "roles": [
+      "deployer",
+      "both"
+    ],
+    "condition": "Only where deploying a high-risk AI system; confirm applicable dates, role allocation and exceptions in the consolidated text.",
+    "requirement": "Use the system in accordance with instructions, assign competent human oversight, monitor operation, retain logs under applicable conditions and inform relevant parties of serious risks or incidents.",
+    "evidence": [
+      "Deployment instructions and training",
+      "Oversight assignment",
+      "Operational monitoring records",
+      "Log retention and incident process"
+    ],
+    "controls": [
+      "deployment-governance",
+      "logging",
+      "incident-management"
+    ],
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+    "force": "binding",
+    "agentRelevance": "AI-specific"
+  },
+  {
+    "id": "OBL-EU-DORA-9",
+    "instrumentId": "REG-EU-DORA-001",
+    "basis": "DORA · Article 9",
+    "title": "Protection and prevention",
+    "domains": [
+      "ict-security",
+      "resilience"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "European Union"
+    ],
+    "roles": [
+      "regulated-financial-entity",
+      "provider",
+      "both"
+    ],
+    "condition": "For financial entities within DORA scope; assess entity category and ICT service arrangements. Third-party providers are addressed through separate DORA provisions and oversight regimes.",
+    "requirement": "Maintain appropriate ICT security policies, procedures, protocols and tools to protect systems and data, including resilience, availability, authenticity, integrity and confidentiality.",
+    "evidence": [
+      "ICT asset and dependency inventory",
+      "Access-control and secrets-management records",
+      "Security testing and vulnerability remediation",
+      "Resilience test outcomes"
+    ],
+    "controls": [
+      "identity-and-access",
+      "secure-configuration",
+      "resilience-testing"
+    ],
+    "source": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+    "force": "binding",
+    "agentRelevance": "technology-neutral"
+  },
+  {
+    "id": "OBL-EU-DORA-17",
+    "instrumentId": "REG-EU-DORA-001",
+    "basis": "DORA · Article 17",
+    "title": "ICT-related incident management",
+    "domains": [
+      "incident-management",
+      "logging"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "European Union"
+    ],
+    "roles": [
+      "regulated-financial-entity",
+      "both"
+    ],
+    "condition": "For financial entities within DORA scope; classification and reporting thresholds are governed by DORA and related technical standards.",
+    "requirement": "Establish and implement an ICT-related incident management process to detect, manage and notify ICT-related incidents.",
+    "evidence": [
+      "Agent incident taxonomy",
+      "Detection and response playbooks",
+      "Incident logs and root-cause analysis",
+      "Regulatory notification decision records"
+    ],
+    "controls": [
+      "incident-response",
+      "telemetry",
+      "forensic-readiness"
+    ],
+    "source": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+    "force": "binding",
+    "agentRelevance": "technology-neutral"
+  },
+  {
+    "id": "OBL-EU-MIFID-17",
+    "instrumentId": "REG-EU-MIFID-ART17-001",
+    "basis": "MiFID II · Article 17",
+    "title": "Algorithmic trading systems and controls",
+    "domains": [
+      "pre-trade-controls",
+      "market-integrity",
+      "resilience",
+      "logging"
+    ],
+    "activities": [
+      "trading"
+    ],
+    "jurisdictions": [
+      "European Union"
+    ],
+    "roles": [
+      "regulated-financial-entity",
+      "deployer",
+      "both"
+    ],
+    "condition": "Where an investment firm engages in algorithmic trading. Determine whether the agent's functionality meets the legal definition of algorithmic trading and consider national competent-authority requirements.",
+    "requirement": "Maintain resilient trading systems, trading thresholds and limits, controls against erroneous orders and disorderly markets, business continuity, testing, monitoring and required records.",
+    "evidence": [
+      "Pre-trade risk-control configuration",
+      "Price / size / credit limits",
+      "Algorithm testing and change approvals",
+      "Order and event logs",
+      "Kill-switch and continuity test"
+    ],
+    "controls": [
+      "pre-trade-risk-gates",
+      "rate-limits",
+      "kill-switch",
+      "change-management"
+    ],
+    "source": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mifid-ii/article-17-algorithmic-trading",
+    "force": "binding",
+    "agentRelevance": "technology-neutral"
+  },
+  {
+    "id": "OBL-UK-SYSC",
+    "instrumentId": "REG-UK-FCA-AI-001",
+    "basis": "FCA Handbook · SYSC (relevant provisions; verify firm category and current rule text)",
+    "title": "Systems, controls and governance",
+    "domains": [
+      "governance",
+      "outsourcing",
+      "operational-resilience"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "customer-service",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "United Kingdom"
+    ],
+    "roles": [
+      "regulated-financial-entity",
+      "deployer",
+      "both"
+    ],
+    "condition": "Depends on FCA/PRA perimeter, permissions, firm category and the specific SYSC provisions in force.",
+    "requirement": "Maintain governance, systems and controls proportionate to the firm's regulated activities, including oversight of outsourced and technology-enabled processes where applicable.",
+    "evidence": [
+      "Governance map and accountable owners",
+      "Risk and control self-assessment",
+      "Outsourcing register",
+      "Management information and oversight minutes"
+    ],
+    "controls": [
+      "governance",
+      "third-party-risk",
+      "control-testing"
+    ],
+    "source": "https://www.handbook.fca.org.uk/handbook/SYSC/",
+    "force": "binding",
+    "agentRelevance": "technology-neutral"
+  },
+  {
+    "id": "OBL-SG-MAS-AI",
+    "instrumentId": "GUIDE-SG-MAS-AI-001",
+    "basis": "MAS Guidelines on AI Risk Management for Financial Institutions (7 October 2026)",
+    "title": "Financial-institution AI risk management expectations",
+    "domains": [
+      "governance",
+      "risk-management",
+      "data-governance",
+      "human-oversight",
+      "third-party-risk",
+      "cybersecurity"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "customer-service",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "Singapore"
+    ],
+    "roles": [
+      "regulated-financial-entity",
+      "deployer",
+      "both"
+    ],
+    "condition": "MAS states the guidelines apply to all financial institutions and all forms of AI; effective 7 October 2027. Confirm institution type and exact guideline text.",
+    "requirement": "Establish risk governance and lifecycle controls proportionate to AI use, including oversight, data, performance, cybersecurity and third-party dependencies.",
+    "evidence": [
+      "AI use-case inventory",
+      "Board / senior management oversight",
+      "Lifecycle risk assessments",
+      "Human oversight and validation evidence",
+      "Third-party AI due diligence"
+    ],
+    "controls": [
+      "ai-governance",
+      "lifecycle-validation",
+      "human-oversight",
+      "third-party-risk"
+    ],
+    "source": "https://www.mas.gov.sg/regulation/guidelines/guidelines-on-artificial-intelligence-risk-management-for-financial-institutions",
+    "force": "supervisory-guidance",
+    "agentRelevance": "AI-specific"
+  },
+  {
+    "id": "OBL-INT-FSB-2026",
+    "instrumentId": "GUIDE-INT-FSB-AI-001",
+    "basis": "FSB Sound Practices for Responsible Adoption of AI · 15 October 2026",
+    "title": "Responsible AI sound practices for financial institutions",
+    "domains": [
+      "governance",
+      "risk-management",
+      "data-governance",
+      "explainability",
+      "performance",
+      "human-oversight",
+      "cybersecurity",
+      "third-party-risk"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "trading",
+      "payments",
+      "aml",
+      "customer-service",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "International"
+    ],
+    "roles": [
+      "regulated-financial-entity",
+      "provider",
+      "deployer",
+      "both"
+    ],
+    "condition": "Non-binding international sound practices. The FSB encourages boards and senior management to reference them; they are not directly enforceable law by themselves.",
+    "requirement": "Consider 12 sound practices covering strategy and oversight, governance, risk integration, adaptability, materiality, selection, data, explainability, performance, human oversight, cyber/ICT and third-party risk.",
+    "evidence": [
+      "Board AI strategy and risk appetite",
+      "AI inventory and risk assessments",
+      "Data lineage and quality controls",
+      "Performance monitoring",
+      "Human oversight and third-party assurance"
+    ],
+    "controls": [
+      "ai-governance",
+      "risk-assessment",
+      "data-quality",
+      "performance-monitoring",
+      "third-party-risk"
+    ],
+    "source": "https://www.fsb.org/2026/10/sound-practices-for-responsible-adoption-of-artificial-intelligence-ai-final-report/",
+    "force": "voluntary-standard",
+    "agentRelevance": "explicit-agentic-AI"
+  },
+  {
+    "id": "OBL-US-SEC-MA",
+    "instrumentId": "REG-US-SEC-15C3-5-001",
+    "basis": "17 CFR § 240.15c3-5 · Market Access Rule",
+    "title": "Market-access risk controls",
+    "domains": [
+      "pre-trade-controls",
+      "identity-access",
+      "surveillance",
+      "logging"
+    ],
+    "activities": [
+      "trading"
+    ],
+    "jurisdictions": [
+      "United States"
+    ],
+    "roles": [
+      "regulated-financial-entity",
+      "deployer",
+      "both"
+    ],
+    "condition": "For broker-dealers with market access or providing access through their MPID or otherwise; agent participation does not change the perimeter test.",
+    "requirement": "Establish, document and maintain risk-management controls and supervisory procedures, including pre-set credit/capital thresholds, erroneous-order controls, restricted securities controls and authorized access restrictions.",
+    "evidence": [
+      "Pre-trade credit/capital thresholds",
+      "Price/size and duplicate-order controls",
+      "Authorized-user and account approvals",
+      "Supervisory review and exception records"
+    ],
+    "controls": [
+      "pre-trade-risk-gates",
+      "identity-and-access",
+      "surveillance"
+    ],
+    "source": "https://www.ecfr.gov/current/title-17/section-240.15c3-5",
+    "force": "binding",
+    "agentRelevance": "technology-neutral"
+  },
+  {
+    "id": "OBL-GDPR-22",
+    "instrumentId": "REG-EU-GDPR-001",
+    "basis": "GDPR · Articles 5, 22, 25, 32 (depending on processing)",
+    "title": "Personal data, automated decisions and security",
+    "domains": [
+      "privacy",
+      "data-governance",
+      "security",
+      "human-review"
+    ],
+    "activities": [
+      "credit",
+      "insurance",
+      "payments",
+      "aml",
+      "customer-service",
+      "internal-operations",
+      "asset-management"
+    ],
+    "jurisdictions": [
+      "European Union"
+    ],
+    "roles": [
+      "controller",
+      "processor",
+      "provider",
+      "deployer",
+      "both"
+    ],
+    "condition": "Where personal data processing falls within GDPR territorial scope. Article 22 is narrower than all automated processing and requires a decision based solely on automated processing with legal or similarly significant effects, subject to exceptions.",
+    "requirement": "Apply data protection principles and privacy by design; implement appropriate security; assess lawful basis, transparency, rights, DPIA triggers and Article 22 safeguards where conditions are met.",
+    "evidence": [
+      "Data flow and lawful-basis records",
+      "DPIA / screening",
+      "Privacy notices and rights workflow",
+      "Security measures and access logs",
+      "Meaningful human intervention records where Article 22 applies"
+    ],
+    "controls": [
+      "privacy-by-design",
+      "data-minimisation",
+      "encryption",
+      "human-review"
+    ],
+    "source": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "force": "binding",
+    "agentRelevance": "technology-neutral"
+  }
+]

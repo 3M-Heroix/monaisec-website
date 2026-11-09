@@ -1,0 +1,122 @@
+[
+  {
+    "Risk ID": "RISK-01",
+    "Agent failure mode": "Prompt injection / goal hijack",
+    "Financial / monetary impact": "Agent changes trading/payment objective, leaks client data or issues unauthorized instructions",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "AI Act Arts 9, 10, 15, 26 where applicable; DORA Arts 9-10, 17-19; MiFID II Art 17; GDPR Arts 5, 25, 32 where personal data involved",
+    "US mapping": "SEC Rule 15c3-5 for broker-dealer market access controls; GLBA safeguards for customer information",
+    "China / Asia mapping": "PIPL Art 24/51; CAC agent implementation opinions (policy); GenAI Measures if service in scope",
+    "Technical reference": "OWASP 2026 Agentic AI exploit roundup; MITRE ATLAS",
+    "Evidence status / research note": "Legal applicability depends on regulated actor and service. Prompt injection is a technical failure mode, not a named offence in most laws."
+  },
+  {
+    "Risk ID": "RISK-02",
+    "Agent failure mode": "Excessive agency / unauthorized execution",
+    "Financial / monetary impact": "Unapproved trades, payments, account changes, transfers or position changes",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "MiFID II Art 17; RTS 6; DORA ICT risk controls; AI Act human oversight Art 14 for high-risk systems; MAR Arts 12/15 if manipulative conduct occurs",
+    "US mapping": "SEC Rule 15c3-5; FINRA supervision rules; applicable payment/consumer protection laws",
+    "China / Asia mapping": "PIPL automated decision rules where relevant; China agent guidelines emphasize safety/controllability but legal force requires analysis",
+    "Technical reference": "OWASP Top 10 LLM 2025/2026; OWASP Agent Control Standard",
+    "Evidence status / research note": "Map actual permissions, tool scopes, confirmation boundaries, transaction limits and kill-switch capability."
+  },
+  {
+    "Risk ID": "RISK-03",
+    "Agent failure mode": "Identity / credential / privilege abuse",
+    "Financial / monetary impact": "Agent uses employee or customer session to exceed authority, place orders or access accounts",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "DORA Arts 9-10; GDPR Arts 25/32; MiFID II Art 17 and RTS 6 for trading access",
+    "US mapping": "SEC Rule 15c3-5 access controls; GLBA Safeguards Rule access-control expectations",
+    "China / Asia mapping": "Cybersecurity Law; PIPL security measures; CAC agent policy",
+    "Technical reference": "MITRE ATLAS; OWASP 2026 Agentic risks",
+    "Evidence status / research note": "Distinguish agent identity, human identity, delegated authority and machine credentials."
+  },
+  {
+    "Risk ID": "RISK-04",
+    "Agent failure mode": "Tool / connector misuse and supply-chain compromise",
+    "Financial / monetary impact": "Compromised market data, broker API, cloud model, payment gateway or third-party agent triggers losses",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "DORA Arts 28-44 third-party risk; AI Act provider/deployer obligations where applicable; GDPR Art 28/32; RTS 6 controls",
+    "US mapping": "GLBA service-provider oversight; SEC/FINRA supervisory controls; Rule 15c3-5 for market access",
+    "China / Asia mapping": "China Cybersecurity Law, Data Security Law and PIPL; GenAI measures where in scope",
+    "Technical reference": "OWASP LLM supply-chain and tool misuse; MITRE ATLAS",
+    "Evidence status / research note": "Record provider concentration, subcontractors, data location, API scopes, incident notification and exit strategy."
+  },
+  {
+    "Risk ID": "RISK-05",
+    "Agent failure mode": "Runaway / erroneous algorithmic trading",
+    "Financial / monetary impact": "Excessive orders, erroneous pricing, volatility amplification, disorderly market",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "MiFID II Art 17; RTS 6; MAR Arts 12/15; DORA resilience and incident duties",
+    "US mapping": "SEC Rule 15c3-5; Regulation SCI for covered infrastructure; FINRA supervision",
+    "China / Asia mapping": "Applicable securities/derivatives rules and exchange controls in each jurisdiction",
+    "Technical reference": "ESMA Article 17; RTS 6; MITRE ATLAS",
+    "Evidence status / research note": "Key controls include pre-trade limits, real-time monitoring, testing, kill functionality and post-trade surveillance."
+  },
+  {
+    "Risk ID": "RISK-06",
+    "Agent failure mode": "Market manipulation / coordinated agent activity",
+    "Financial / monetary impact": "Spoofing, layering, wash trading, collusive strategies or manipulation via multiple agents",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "MAR Arts 12 and 15; MiFID II and venue rules; AI Act does not replace market-abuse law",
+    "US mapping": "US Exchange Act anti-fraud/anti-manipulation provisions and SEC/CFTC rules depending on instrument",
+    "China / Asia mapping": "China securities/derivatives market laws and exchange rules; verify jurisdiction-specific provisions",
+    "Technical reference": "MITRE ATLAS; regulator enforcement databases",
+    "Evidence status / research note": "Do not assume autonomous intent is required for market-abuse liability; assess conduct, attribution and applicable legal tests."
+  },
+  {
+    "Risk ID": "RISK-07",
+    "Agent failure mode": "Data leakage / memory poisoning",
+    "Financial / monetary impact": "Agent reveals customer records, portfolio data, strategy, keys or persistent memory instructions",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "GDPR Arts 5, 25, 32, 35 and Art 22 if conditions met; DORA incident reporting; AI Act logging/security provisions where applicable",
+    "US mapping": "GLBA and Safeguards Rule; state privacy laws; SEC Regulation S-P where applicable",
+    "China / Asia mapping": "PIPL Arts 24, 51, 55; Data Security Law",
+    "Technical reference": "OWASP prompt injection, sensitive information disclosure, memory poisoning",
+    "Evidence status / research note": "Track data classes, memory retention, retrieval permissions, logs, cross-border transfer and breach notification."
+  },
+  {
+    "Risk ID": "RISK-08",
+    "Agent failure mode": "Model/data poisoning and corrupted market inputs",
+    "Financial / monetary impact": "Manipulated market data or model context causes false valuation, risk or credit decisions",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "AI Act Art 10 data governance for high-risk systems; DORA ICT risk; GDPR where personal data; MiFID controls if trading system affected",
+    "US mapping": "Model governance and supervisory requirements; GLBA where customer data affected",
+    "China / Asia mapping": "PIPL/Data Security Law; sectoral data and cyber controls",
+    "Technical reference": "NIST AI RMF; OWASP; MITRE ATLAS",
+    "Evidence status / research note": "Separate training-data poisoning, retrieval corpus poisoning, live market-data manipulation and persistent agent-memory poisoning."
+  },
+  {
+    "Risk ID": "RISK-09",
+    "Agent failure mode": "Model drift / unvalidated updates",
+    "Financial / monetary impact": "Agent behavior changes after model, prompt, tool or data update; trading/risk limits no longer effective",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "AI Act lifecycle/risk management where applicable; DORA change management and testing; RTS 6; MiFID II Art 17",
+    "US mapping": "OSFI E-23 for federally regulated Canadian institutions (effective 2027); SEC/FINRA controls by activity",
+    "China / Asia mapping": "South Korea AI Basic Act where scope; sectoral model-risk rules; China policies and financial regulations",
+    "Technical reference": "NIST AI RMF; MITRE ATLAS",
+    "Evidence status / research note": "Need versioned change approvals, regression tests, drift monitoring, rollback and post-deployment review."
+  },
+  {
+    "Risk ID": "RISK-10",
+    "Agent failure mode": "Cascading failure / shared provider concentration",
+    "Financial / monetary impact": "Common model/cloud/API outage or compromise affects multiple firms or market infrastructure",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "DORA concentration and critical ICT third-party oversight; incident reporting; AI Act not a substitute for resilience duties",
+    "US mapping": "Regulation SCI for covered entities; prudential third-party risk expectations",
+    "China / Asia mapping": "Cybersecurity and critical information infrastructure regimes",
+    "Technical reference": "IMF 2026 AI and Cybersecurity in the Financial Sector; IMF GFSR Oct 2026",
+    "Evidence status / research note": "Systemic risk evidence should be supported by financial stability analysis, not solely individual technical incidents."
+  },
+  {
+    "Risk ID": "RISK-11",
+    "Agent failure mode": "Insufficient human oversight / automation bias",
+    "Financial / monetary impact": "Staff approve or rely on agent decisions without meaningful review; errors go undetected",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "AI Act Art 14 for high-risk systems; FSB 2026 Sound Practice 10; MAS AI Guidelines; MiFID/market conduct accountability",
+    "US mapping": "FINRA supervision; SEC obligations; applicable consumer/financial laws",
+    "China / Asia mapping": "South Korea AI Basic Act high-impact provisions; China agent policy principles",
+    "Technical reference": "FSB 2026; FCA 2026 good/poor practice; OWASP overreliance",
+    "Evidence status / research note": "Distinguish legal human-oversight requirement from supervisory best practice and internal policy."
+  },
+  {
+    "Risk ID": "RISK-12",
+    "Agent failure mode": "Untraceable actions / inadequate audit trail",
+    "Financial / monetary impact": "Cannot reconstruct why agent accessed data, changed strategy, initiated transaction or called a tool",
+    "EU AI Act / GDPR / DORA / MiFID / MAR mapping": "AI Act Art 12/19 where high-risk; DORA logging/monitoring and incident evidence; MiFID records; RTS 6",
+    "US mapping": "SEC/FINRA books-and-records and supervisory controls; Rule 15c3-5 documentation",
+    "China / Asia mapping": "PIPL/data security obligations and applicable financial-sector recordkeeping rules",
+    "Technical reference": "FSB 2026; NIST AI RMF; OWASP Agent Control Standard",
+    "Evidence status / research note": "Store event provenance, model/version, prompt/context references where appropriate, tool calls, actor identity, approvals and transaction IDs."
+  }
+]

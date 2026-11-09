@@ -1,0 +1,74 @@
+[
+  {
+    "id": "SRC-EURLEX-CELLAR",
+    "name": "EUR-Lex / Publications Office Cellar",
+    "jurisdiction": "European Union",
+    "class": "Primary legal source / metadata",
+    "mode": "manual",
+    "endpoint": "https://publications.europa.eu/webapi/rdf/sparql",
+    "note": "Official legal source. Cellar notification / SPARQL integration is a planned connector; this prototype does not yet poll this endpoint."
+  },
+  {
+    "id": "SRC-FSB-PUB",
+    "name": "Financial Stability Board publications",
+    "jurisdiction": "International",
+    "class": "Official standard-setter",
+    "mode": "automated",
+    "endpoint": "https://www.fsb.org/wordpress/content_type/publications/feed/",
+    "note": "Review publication itself and classify force as non-binding unless implemented domestically."
+  },
+  {
+    "id": "SRC-BIS-FSI",
+    "name": "BIS Financial Stability Institute publications",
+    "jurisdiction": "International",
+    "class": "Official standard-setter / research",
+    "mode": "automated",
+    "endpoint": "https://www.bis.org/doclist/bis_fsi_publs.rss",
+    "note": "Research and supervisory analysis; not automatically binding law."
+  },
+  {
+    "id": "SRC-MAS",
+    "name": "Monetary Authority of Singapore publications",
+    "jurisdiction": "Singapore",
+    "class": "Official regulator",
+    "mode": "manual",
+    "endpoint": "https://www.mas.gov.sg/publications",
+    "note": "Monitor guidelines, notices, consultation responses and commencement dates; verify document-level applicability."
+  },
+  {
+    "id": "SRC-NIST",
+    "name": "NIST AI and cybersecurity publications",
+    "jurisdiction": "United States / International",
+    "class": "Official technical standards",
+    "mode": "manual",
+    "endpoint": "https://www.nist.gov/artificial-intelligence",
+    "note": "Voluntary unless incorporated by law, contract or supervisory expectation."
+  },
+  {
+    "id": "SRC-ESMA",
+    "name": "ESMA Interactive Single Rulebook",
+    "jurisdiction": "European Union",
+    "class": "Official supervisory / legal reference",
+    "mode": "manual",
+    "endpoint": "https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook",
+    "note": "Useful provision-level references and Q&A; verify underlying Official Journal text."
+  },
+  {
+    "id": "SRC-SEC",
+    "name": "US Securities and Exchange Commission rules and guidance",
+    "jurisdiction": "United States",
+    "class": "Official regulator",
+    "mode": "manual",
+    "endpoint": "https://www.sec.gov/rules-regulations",
+    "note": "Check current CFR text, SEC releases, staff guidance and enforcement separately."
+  },
+  {
+    "id": "SRC-FCA",
+    "name": "Financial Conduct Authority Handbook and publications",
+    "jurisdiction": "United Kingdom",
+    "class": "Official regulator",
+    "mode": "manual",
+    "endpoint": "https://www.handbook.fca.org.uk/",
+    "note": "RSS/news feeds are not a complete policy-rule change detector; use Handbook versioning and consultation/final-notice pages."
+  }
+]
