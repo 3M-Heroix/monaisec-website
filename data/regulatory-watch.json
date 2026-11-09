@@ -1,7 +1,534 @@
 {
   "dataset_title": "MONAISEC Regulatory Watch Queue",
   "dataset_version": "1.0.0",
-  "last_checked_at": null,
-  "items": [],
-  "note": "New feed items are leads for human review, not confirmed regulatory changes."
+  "last_checked_at": "2026-11-09T13:56:03.031082+00:00",
+  "window_start": "2026-11-06T13:55:56.905396+00:00",
+  "items": [
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "UK financial regulators to begin overseeing Critical Third Parties announced by HM Treasury",
+      "url": "https://www.bankofengland.co.uk/news/2026/july/uk-financial-regulators-to-begin-overseeing-critical-third-parties-announced-by-hmt",
+      "summary": "The Bank of England, the Prudential Regulation Authority and the Financial Conduct Authority will start overseeing the first Critical Third Parties on Monday 13 July 2026, following designation by HM Treasury.",
+      "published": "Fri, 10 Jul 2026 10:15:00 +0100",
+      "matched_terms": [
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.031035+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "PRA fines HDI Global SE £4,165,000 for inaccurate reporting of FSCS Liabilities and FSCS Fee Tariff data",
+      "url": "https://www.bankofengland.co.uk/news/2026/july/pra-fines-hdi-global-se-4165000-for-inaccurate-reporting",
+      "summary": "The Prudential Regulation Authority (PRA) has imposed a financial penalty of £4,165,000 on HDI Global SE in connection with the submission of incorrect data to the PRA.",
+      "published": "Mon, 20 Jul 2026 10:00:00 +0100",
+      "matched_terms": [
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030975+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "PRA consults on updated guidance for friendly society amalgamations and transfers",
+      "url": "https://www.bankofengland.co.uk/news/2026/july/pra-consults-on-updated-guidance-for-friendly-society-amalgamations-and-transfers",
+      "summary": "The proposals would provide more detail on the PRA’s approach to Part VIII transactions, helping firms plan amalgamations and transfers more efficiently.",
+      "published": "Wed, 22 Jul 2026 10:00:00 +0100",
+      "matched_terms": [
+        "guidance"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030950+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "Letter from the Governor to the Daily Mail",
+      "url": "https://www.bankofengland.co.uk/letter/2026/letter-from-the-governor-to-the-daily-mail",
+      "summary": "Letter from Governor Andrew Bailey to the Daily Mail on the subject of AI and cyber-attacks",
+      "published": "Thu, 23 Jul 2026 17:00:00 +0100",
+      "matched_terms": [
+        "cyber"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030926+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "Artificial Intelligence Consortium minutes – June 2026",
+      "url": "https://www.bankofengland.co.uk/minutes/2026/june/ai-consortium-minutes-3-june-2026",
+      "summary": "The Artificial Intelligence Consortium (AIC) aims to provide a platform for public-private engagement to further dialogue on the capabilities, development, deployment, use, and potential risks of artificial intelligence (AI) in UK financial services.",
+      "published": "Wed, 05 Aug 2026 11:51:26 +0100",
+      "matched_terms": [
+        "artificial intelligence"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030853+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "Delay to the November 2026 RTGS standards release",
+      "url": "https://www.bankofengland.co.uk/news/2026/august/delay-to-the-november-2026-rtgs-standards-release",
+      "summary": "Bank of England statement",
+      "published": "Thu, 27 Aug 2026 14:16:29 +0100",
+      "matched_terms": [
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030788+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "Statistical Notice 2026/08 - Changes to the criteria for monthly form BT reporting",
+      "url": "https://www.bankofengland.co.uk/statistics/notice/2026/statistical-notice-2026-08",
+      "summary": "Statistical Notices update the definitions and guidance contained in the Banking Statistics Yellow Folder",
+      "published": "Tue, 15 Sep 2026 10:21:31 +0100",
+      "matched_terms": [
+        "guidance"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030737+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "Financial Policy Committee Record – September 2026",
+      "url": "https://www.bankofengland.co.uk/financial-policy-committee-record/2026/september-2026",
+      "summary": "Our Financial Policy Committee (FPC) meets to identify risks to financial stability and agree policy actions aimed at safeguarding the resilience of the UK financial system.",
+      "published": "Wed, 30 Sep 2026 10:30:00 +0100",
+      "matched_terms": [
+        "financial stability"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030493+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "CMORG holds sector-wide cloud outage simulation exercise",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/cmorg-holds-sector-wide-cloud-outage-simulation-exercise",
+      "summary": "The Cross-Market Operational Resilience Group (CMORG) yesterday (8 October 2026) completed its biennial simulation exercise, known as SIMEX26, focused this year on a global cloud services disruption.",
+      "published": "Fri, 09 Oct 2026 10:00:00 +0100",
+      "matched_terms": [
+        "operational resilience"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030275+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "Bank of England sets out approach to tokenised collateral in central clearing",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/bank-of-england-sets-out-approach-to-tokenised-collateral-in-central-clearing",
+      "summary": "The Bank of England has today launched a consultation supporting central counterparties (CCPs) acceptance of tokenised forms of eligible collateral.",
+      "published": "Thu, 29 Oct 2026 10:00:00 Z",
+      "matched_terms": [
+        "consultation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030129+00:00"
+    },
+    {
+      "source_id": "SRC-BOE",
+      "publisher": "Bank of England",
+      "title": "Regulators explore credit union reforms to support growth, innovation and better outcomes for members",
+      "url": "https://www.bankofengland.co.uk/news/2026/november/regulators-explore-credit-union-reforms-to-support-growth-innovation-and-better-outcomes-for-members",
+      "summary": "Credit unions could benefit from several ideas put forward today by the Prudential Regulation Authority and Financial Conduct Authority aimed at helping the sector grow, innovate and meet the changing needs of their members.",
+      "published": "Tue, 03 Nov 2026 10:00:00 Z",
+      "matched_terms": [
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:03.030070+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "ESMA's third Sanctions Report highlights the need for greater convergence in enforcement",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esmas-third-sanctions-report-highlights-need-greater-convergence-enforcement",
+      "summary": " ESMA's third Sanctions Report highlights the need for greater convergence in enforcement \n  \n  15 October 2026 \n \n\n       \n               Market Abuse \n               Supervisory convergence \n               Transparency \n           \n  \n               The European Securities and Markets Authority (ESMA), the EU's financial markets regulator and supervisor, published today its    consolidated report on sanctions and measures    imposed across the European Economic Area (EEA) in 2025, enhancing the transparency of sanctions data reported under EU financial acts within its remit.  \n \n      \n               In 2025, national authorities across the EEA imposed more than 950 administrative sanctions and measures, a stable number compared with the past two years. The aggregated value of administrative fines amounted to almost €82 million. The report also highlights an increased use of settlements.  \n  As in previous years, activity remained focused mainly on breaches of the Market Abuse Regulation and the Markets in Financial Instruments Directive and Regulation. Enforcement activity remained concentrated in a small number of jurisdictions, with Germany, France and Spain accounting for two",
+      "published": "",
+      "matched_terms": [
+        "market abuse",
+        "supervisory",
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.483179+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "ESMA updates its manual on transparency with new guidance for OTC derivatives and tick-size regime",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esma-updates-its-manual-transparency-new-guidance-otc-derivatives-and-tick",
+      "summary": " ESMA updates its manual on transparency with new guidance for OTC derivatives and tick-size regime \n  \n  15 October 2026 \n \n\n       \n               Trading \n           \n  \n              The European Securities and Markets Authority (ESMA), the EU regulator and supervisor, has updated its  manual on transparency  to provide further guidance on the identification of over-the-counter (OTC) derivatives subject to transparency requirements and to enhance supervisory convergence on the application of the tick-size regime. \n \n      \n               The update also clarifies how the identifying reference data for OTC derivatives should be provided for transparency purposes, supporting greater consistency in the data reported to and published through the consolidated tape.&nbsp;  \n  The manual finally includes several published    Q&amp;As    on the tick size regime, as well as the addition of recommendations on the application of the tick-size regime, comprising when trading venues and national competent authorities may intervene in specific circumstances.  \n  Next steps  \n With regard to the guidance on OTC identifying reference data, the updated manual should be considered a draft until ",
+      "published": "",
+      "matched_terms": [
+        "trading",
+        "supervisory",
+        "guidance",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.482898+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "One year to go for T+1 settlement: the regulatory framework is complete, now let’s make it happen",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/one-year-go-t1-settlement-regulatory-framework-complete-now-lets-make-it",
+      "summary": " One year to go for T+1 settlement: the regulatory framework is complete, now let’s make it happen \n  \n  16 October 2026 \n \n\n       \n               Guidelines and Technical standards \n               Post Trading \n               Press Releases \n           \n  \n               The European Union (EU) will switch to T+1 settlement on 11 October 2027. Ahead of the transition, the European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, calls on market participants to finalise technical preparations, assess readiness across their entire ecosystems and begin testing as soon as possible throughout the trading and settlement chain.  \n \n      \n               With the publication of the&nbsp;   RTS    and    ESMA Guidelines on standardised procedures and messaging protocols   , the regulatory framework is now ready. The first deadline is for investment firms and their clients to comply with the new requirements on allocations and confirmations from &nbsp; 7 December 2026.  \n   Verena Ross, ESMA’s chair, said:&nbsp;   \n  “The transition to T+1 is one of the most impactful recent market structure initiatives. It will fundamentally improve the efficie",
+      "published": "",
+      "matched_terms": [
+        "trading",
+        "guideline",
+        "guidance",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.482766+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "ESMA finalises the review of guidelines on the delay in disclosure of inside information",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esma-finalises-review-guidelines-delay-disclosure-inside-information",
+      "summary": " ESMA finalises the review of guidelines on the delay in disclosure of inside information \n  \n  16 October 2026 \n \n\n       \n               Guidelines and Technical standards \n               Market Abuse \n               Market Integrity \n               Simplification and Burden Reduction \n           \n  \n              The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has updated and streamlined its  Market Abuse Regulation (MAR) guidelines on the delay in the disclosure of inside information , completing the revised regulatory framework. \n \n      \n              Under MAR, issuers are required to disclose as soon as possible the inside information concerning them, to ensure that investors are informed and to prevent insider dealing. In specific circumstances, issuers may delay public disclosure to avoid prejudicing their legitimate interests.&nbsp; \n These guidelines help issuers in their decision to delay disclosure by providing a non-exhaustive list of legitimate interests that could justify such delay. Following a public consultation, ESMA has identified five additional legitimate interests for delaying disclosures, covering ",
+      "published": "",
+      "matched_terms": [
+        "market abuse",
+        "consultation",
+        "guideline",
+        "regulation",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.482521+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "New Q&As available",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/new-qas-available-27",
+      "summary": " New Q&amp;As available \n  \n  16 October 2026 \n \n\n       \n               CCP \n               Digital Finance and Innovation \n           \n  \n              \n \n \n The European Securities and Markets Authority (ESMA), the EU's securities markets regulator, has published the following question and answer: \n \n \n \n \n      \n                European crowdfunding service providers for business   \n \n   Crowdfunding service providers that charge registration, membership, or other access fees (\"investment club\" crowdfunding platforms)    (2950)  \n \n   Markets in Crypto-Assets Regulation (MiCA)   \n \n   Use by CASPs of payment accounts provided by non-bank payment service providers for holding clients’ funds    (2949)  \n \n   OTC derivatives, central counterparties and trade repositories (EMIR) - CCPs   \n \n   AAR 85% exemption    (2936)  \n   AAR thresholds calculation    (2937)  \n   AAR representativeness obligation    (2938)  \n \n \n  Questions and Answers section  \n \n ",
+      "published": "",
+      "matched_terms": [
+        "payment",
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.482309+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "ESMA specifies requirements to facilitate safe use of post-trade risk reduction services",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esma-specifies-requirements-facilitate-safe-use-post-trade-risk-reduction",
+      "summary": " ESMA specifies requirements to facilitate safe use of post-trade risk reduction services \n  \n  20 October 2026 \n \n\n       \n               Guidelines and Technical standards \n               Post Trading \n           \n  \n              The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has outlined the conditions that providers and users of post-trade risk reduction (PTRR) services need to meet for certain OTC derivative transactions to be exempt from the clearing obligation under EMIR 3. The new rules, published in its latest  final report,  also establish safeguards for the provision of these services and the monitoring of the use of the exemption. \n \n      \n               With these new rules in place, the goal is to facilitate the use of PTRR services and ensure that the exemption is used under the conditions laid down in EMIR 3 and does not lead to the misuse of the clearing obligation.  \n  The final report specifies the elements and requirements of PTRR services, including the information to be provided to participants, how exercises are carried out, the controls that providers should have in place, record-keeping and how t",
+      "published": "",
+      "matched_terms": [
+        "trading",
+        "guideline",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.482191+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "ESMA streamlines several Q&As as part of simplification efforts",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esma-streamlines-several-qas-part-simplification-efforts",
+      "summary": " ESMA streamlines several Q&amp;As as part of simplification efforts \n  \n  22 October 2026 \n \n\n       \n               Market Abuse \n               MiFID - Secondary Markets \n               Short Selling \n               Simplification and Burden Reduction \n           \n  \n               The European Securities and Markets Authority (ESMA), the EU regulator and supervisor, has updated its Questions and Answers (Q&amp;As) on    market structure under MiFID II   , the    Market Abuse Regulation (MAR)    and the    Short Selling Regulation (SSR)   , removing outdated, duplicative and no longer relevant guidance as part of its&nbsp;   Simplification and Burden Reduction (SBR) initiative   .&nbsp;  \n \n      \n               The exercise focused on identifying Q&amp;As that are no longer relevant due to legislative amendments that are reflected in established market practices, or that are covered by other ESMA guidance. As a result, several Q&amp;As have been withdrawn or amended, including instances where the same issues are addressed in other ESMA publications such as supervisory briefings and opinions.&nbsp;  \n  The goal of the initiative is to reduce unnecessary complexity, remove obsole",
+      "published": "",
+      "matched_terms": [
+        "market abuse",
+        "supervisory",
+        "guidance",
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.481994+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "ESMA proposes simpler EU Taxonomy reporting",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esma-proposes-simpler-eu-taxonomy-reporting",
+      "summary": " ESMA proposes simpler EU Taxonomy reporting \n  \n  29 October 2026 \n \n\n       \n               Issuer disclosure \n               Sustainable finance \n           \n  \n              The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has published its  Final Report providing technical advice to the European Commission  on simplifying key performance indicators under the Taxonomy Disclosures Delegated Act. \n \n      \n              ESMA recommends narrowing the mandatory operating expenditure (OpEx) KPI to non-capitalised research and development expenditure. It also proposes simpler group Taxonomy reporting, including removing the weighted-average KPI, and targeted measures to make disclosures more proportionate, clearer and easier to use.&nbsp; \n The Technical Advice was coordinated with the other European Supervisory Authorities, in particular on the voluntary use of counterparties’ OpEx information and group-level Taxonomy reporting.&nbsp; \n The proposals support ESMA’s simplification and burden reduction objectives, while focussing reporting on information that is useful for decision-making, and preserving the relevance, comparab",
+      "published": "",
+      "matched_terms": [
+        "supervisory"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.481865+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "ESMA publishes latest edition of its newsletter",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/esma-publishes-latest-edition-its-newsletter-45",
+      "summary": " ESMA publishes latest edition of its newsletter \n  \n  29 October 2026 \n \n\n       \n               ESMA newsletter \n           \n  \n              The European Securities and Markets Authority (ESMA), the EU’s financial markets regulator and supervisor, has published today the  latest edition of its  Spotlight on Markets newsletter  , covering key activities and publications from September and October 2026. \n \n      \n              This edition opens with the  appointment of Carlo Comporti as ESMA’s next Chair . His appointment was confirmed by the Council of the European Union, and he will take up his position on 1 November 2026. \n Top news highlights include  ESMA’s 2027 Annual Work Programme , setting out priorities for stronger, simpler and more integrated EU capital markets; the new  Union Strategic Supervisory Priority  on digital innovation; and the  European Supervisory Authorities’ priorities for 2027 . \n Other key publications featured in this edition include: \n \n  the preparations for the transition to T+1 settlement , \n  the ESAs’ call for vigilance over external dependencies, cyber threats and private markets ,&nbsp; \n  ESMA’s proposals to make MiCA clearer, safer and read",
+      "published": "",
+      "matched_terms": [
+        "cyber",
+        "supervisory"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.481685+00:00"
+    },
+    {
+      "source_id": "SRC-ESMA",
+      "publisher": "European Securities and Markets Authority",
+      "title": "EU seeks nominations for stakeholder group on tokenisation standards in finance",
+      "url": "https://www.esma.europa.eu/press-news/esma-news/eu-seeks-nominations-stakeholder-group-tokenisation-standards-finance",
+      "summary": " EU seeks nominations for stakeholder group on tokenisation standards in finance \n  \n  09 November 2026 \n \n\n       \n               Digital Finance and Innovation \n           \n  \n              The European Central Bank (ECB), together with the European Commission and the European Securities and Markets Authority (ESMA), is calling upon wholesale financial industry stakeholders to express their interest in joining the European Tokenisation Standards Group (ETSG). The group will bring together industry stakeholders to develop common standards for an interconnected tokenised financial ecosystem. \n \n      \n              The group aims to establish a framework for monitoring compliance with the agreed standards and may formulate recommendations for EU authorities on how to incentivise compliance with those standards.  Its work will be market-driven and shaped by the contributions and consensus of industry stakeholders.  \n To this end, the ETSG will be chaired by participants from the industry, with the ECB, the Commission and ESMA acting as observers. Participation in the ETSG is open to a wide range of stakeholders, including EU associations, private entities, global institutions, finte",
+      "published": "",
+      "matched_terms": [
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:02.481398+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "Market integrity in a digital age",
+      "url": "https://www.fca.org.uk/news/speeches/market-integrity-digital-age",
+      "summary": "Speech by Nikhil Rathi, FCA chief executive at the Corporation of the City of London’s annual City Dinner, Mansion House.\n\nThe success of the UK’s financial servicesIn August, flight cancellations left my sons and I with an extra day in Boston. A Red Sox game, perhaps?No, the Rathi boys – naturally – headed straight to…the Museum of American Finance.Funded by industry, the museum celebrates the role of finance in American life.Illuminating the powerful benefits of informed risk taking.Three sceptical boys engrossed for nearly 2 hours. I quite enjoyed it too.It struck me though how right George Bernard Shaw was: Britain and America are 2 countries separated by a common language.On this side of the pond, we’re perhaps more reserved, embarrassed even, talking about why finance matters.Yet there’s plenty to cheer.We are the world’s biggest cross-border banking, foreign exchange (FX) and derivatives trading centre. We’re second in investment management … And our commercial insurance sector has doubled in size over a decade…A financial services sector built on trust and one the whole United Kingdom should be proud of… Even more so as new technologies, so many owing to our research base, ",
+      "published": "Thursday, October 22, 2026 - 20:01",
+      "matched_terms": [
+        "artificial intelligence",
+        "trading"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.560269+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "FCA restricts 6 firms following concerns over anti-money laundering controls",
+      "url": "https://www.fca.org.uk/news/press-releases/fca-restricts-6-firms-following-concerns-over-anti-money-laundering-controls",
+      "summary": "Restrictions have been placed on 6 unregulated lenders, known as Annex 1 firms, after the FCA raised concerns about their anti-money laundering policies, controls and procedures while assessing their applications.\n\nThe restrictions were imposed by the FCA on each firm’s request and limit their ability to take on new customers or do new business with existing customers, including extending existing credit.This action forms part of the FCA’s enhanced oversight of Annex 1 firms. These firms operate in sectors that can present a heightened risk of money laundering and other financial crime and are required to register with the FCA for supervision under the Money Laundering Regulations. They are not authorised or subject to wider FCA regulation.The FCA has previously warned Annex 1 firms that they will be subject to increased scrutiny. They must be able to demonstrate they understand the financial crime risks they face and have effective systems and controls in place to manage those risks, or face action.More widely, the FCA is assessing responses to an information request sent to around 900 registered Annex 1 firms to identify and disrupt financial crime risks and determine where furth",
+      "published": "Friday, October 23, 2026 - 09:47",
+      "matched_terms": [
+        "payment",
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.560201+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "FCA calls on private market firms to manage conflicts of interest in line with rapid growth",
+      "url": "https://www.fca.org.uk/news/press-releases/fca-calls-private-market-firms-manage-conflicts-interest-line-rapid-growth",
+      "summary": "Private market firms vary in how well they identify and manage conflicts of interest, according to an FCA review.\n\nPrivate markets refer to investments in assets, companies, or debt not listed or traded on public exchanges. They’ve grown significantly in recent years, and the UK is a leading international centre. Private markets play an increasingly important role in providing capital to businesses and opportunities for returns to investors. Private markets can give rise to conflicts that differ from those in public markets, and effective disclosure is important to enable investors to assess whether their interests are being protected.The FCA found examples of good practice by firms across private equity, private credit and real estate asset classes. These included strong governance arrangements, effective oversight and independent challenge. It also identified some areas where firms could strengthen governance, oversight and conflicts management arrangements to support fair investor outcomes.As private markets grow and business models become more complex, the FCA found that some firms were failing to identify conflicts adequately or keep their controls up to date. Recurring weakne",
+      "published": "Friday, October 23, 2026 - 11:31",
+      "matched_terms": [
+        "supervisory",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.560026+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "Defence SMEs need banking services that work",
+      "url": "https://www.fca.org.uk/news/blogs/defence-smes-need-banking-services-work",
+      "summary": "The UK's most innovative businesses often start small.Before they can develop new technologies, win contracts or expand into new markets, they need access to banking services to help them operate, invest and grow.Access to financial services can be easy to take for granted. When those services work well they're almost invisible. However, when access becomes difficult or delayed, the effects can extend far beyond a single business.Small-to-medium sized enterprises (SMEs) operating in or providing services to the defence sector play an important role in innovation and growth.But these businesses do more than contribute to economic growth. Many are helping to develop the technologies, expertise and capabilities that support the UK's national resilience and security.Banking services are part of that story. They help businesses secure contracts, invest in new opportunities and grow. They are one of the key links between innovation and capability, and between economic growth and national resilience.That's why we wanted to understand whether defence SMEs were able to access banking services efficiently and consistently.The challenge for defence SMEs is friction and delay, not exclusionThe",
+      "published": "Monday, October 26, 2026 - 11:01",
+      "matched_terms": [
+        "risk management"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.559887+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "What does 'fair value' look like in practice? Three years into the Consumer Duty, here’s what we’ve learned.",
+      "url": "https://www.fca.org.uk/news/blogs/fair-value-look-practice-three-years-consumer-duty",
+      "summary": "Fair value is a simple yet important principle at the heart of the Consumer Duty: the price customers pay should be reasonable, relative to the benefits they get. But applying that principle in practice requires judgement.Three years into the Consumer Duty, we’re seeing clear differences between firms that have embedded fair value into their approach and those that still need to strengthen their assessments, evidence and monitoring.We recently reviewed how firms across the consumer finance market assess, evidence and monitor fair value. We also carried out focused work on fees and charges across a range of credit products, and supervisory work on consumer hire and third-party ownership agreements for home energy infrastructure.Many firms are getting it right, building fair value into how they design, price and monitor their products. Others are missing things that, in hindsight, could have been avoidable. Where firms fell short, a recurring issue was the evidence supporting their conclusions.Here are 3 areas that separated the 2, and questions firms can use to challenge their approach to assessing and monitoring fair value.Does your evidence actually tell you something, or just des",
+      "published": "Thursday, October 29, 2026 - 10:03",
+      "matched_terms": [
+        "third-party",
+        "consumer duty",
+        "supervisory"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.559612+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "Demands for disguised remuneration scheme loan repayments",
+      "url": "https://www.fca.org.uk/news/statements/demands-disguised-remuneration-scheme-loan-repayments",
+      "summary": "We have seen demands being made for people to repay loans, or purported loans, provided as part of disguised remuneration schemes.\n\nDisguised remuneration schemes saw people – often contractors, consultants and agency workers – paid for their work through loans instead of regular salaries as a way to avoid tax. HMRC has sought to tackle this tax avoidance through what has been termed the loan charge and published guidance for those affected.Questions have been raised about the regulatory status of these loans and whether they were ever intended to be repaid.Some of those affected dispute liability for the amounts being claimed and challenge whether the debts can be legally enforced. If they’re unenforceable, borrowers cannot be forced to pay the money back or have any of their assets seized against the debt without a specific order.Some consumers are, however being sent legal letters threatening potential court action and asking for immediate repayment of the loan. Repayment is being sought after these disguised remuneration loans were sold by the original provider to a third party.Those seeking payment may ask the FCA to agree to a Validation Order. This is the formal permission n",
+      "published": "Monday, November 2, 2026 - 12:12",
+      "matched_terms": [
+        "payment",
+        "guidance"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.559238+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "New FCA rules bring ESG rating providers into UK regulation for the first time",
+      "url": "https://www.fca.org.uk/news/press-releases/new-fca-rules-bring-esg-rating-providers-uk-regulation-first-time",
+      "summary": "New UK rules for environmental, social and governance (ESG) rating providers will raise standards in the market, helping investors to make better informed decisions.\n\nThe new framework brings ESG rating providers into FCA regulation for the first time, covering a market that plays an important role in investment decisions. The rules are designed to improve the transparency, reliability and comparability of ESG ratings, helping build confidence in the information investors rely on. The regime applies to firms or organisations providing ESG ratings and assessments to ensure reliability across the market. The FCA has published guidance to help firms understand whether they may be in scope. Laura Dawes, director of authorisations and sustainable finance at the FCA, said: 'Trusted information is essential for well-functioning markets. These rules will help improve transparency and raise standards across the ESG ratings market while supporting competition, innovation and growth. 'Firms should check now whether they are in scope and start preparing for authorisation. We'll continue to provide practical support to help them prepare.'The new framework introduces requirements covering transp",
+      "published": "Tuesday, November 3, 2026 - 10:03",
+      "matched_terms": [
+        "consultation",
+        "guidance",
+        "regulation",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.559035+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "Act now to be resilient in the quantum future",
+      "url": "https://www.fca.org.uk/news/blogs/act-now-be-resilient-quantum-future",
+      "summary": "Quantum computing will bring significant opportunities to the UK financial sector, but firms need to act now to prepare for a world where a viable hostile quantum computer could break today’s widely used cryptography standards.The financial sector depends on secure information and communication. Cryptography – of which encryption is just one part – helps firms protect their clients’ data, verify who they are dealing with, and maintain trust in their systems.Sufficiently powerful quantum computers pose a real threat to that security. Without trustworthy cryptography, consumers would face fraud, firms would suffer operational disruption, and the integrity of financial transactions and markets would be put at risk.That’s why we are talking to firms about preparing for post-quantum cryptography (PQC) now. We don’t know for certain when a viable quantum computer will emerge, but the coming years will likely see the technology advance at a rapid pace.Preparing for this new world requires firms to understand where and how they use cryptography and to be able to migrate all hardware and software to PQC, while managing operational risks.Realistically, for most firms, this will require signi",
+      "published": "Wednesday, November 4, 2026 - 10:01",
+      "matched_terms": [
+        "operational resilience",
+        "cyber",
+        "supervisory",
+        "guidance",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.558908+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "FCA to explore quantum computing to tackle financial crime",
+      "url": "https://www.fca.org.uk/news/press-releases/fca-explore-quantum-computing-tackle-financial-crime",
+      "summary": "A new initiative will bring together firms, quantum technology providers, and national research labs to explore practical applications of quantum computing.\n\nThe FCA will bring together financial services firms, quantum technology providers and national research laboratories to explore how quantum computing could help tackle financial crime.The Quantum Experimentation Group, the first of its kind for a regulator, will initially explore how quantum machine learning could help detect money laundering and fraud. It will launch in the first quarter of 2027.Participants will use an FCA synthetic dataset – artificially generated data – to help overcome a key barrier to testing: access to suitable data.The group will help firms explore practical uses of quantum computing in financial services and share findings to guide future testing. It will also help the FCA understand the technology’s opportunities and limitations, barriers to experimentation and what these could mean for regulation.Jessica Rusu, chief data, information and intelligence officer at the FCA, said: 'We want to help firms explore where quantum could make a meaningful difference, and early experimentation is essential to u",
+      "published": "Thursday, November 5, 2026 - 09:03",
+      "matched_terms": [
+        "machine learning",
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.558789+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "FCA acts to protect consumers facing demands for disguised remuneration scheme loan repayments",
+      "url": "https://www.fca.org.uk/news/statements/fca-acts-protect-consumers-demands-disguised-remuneration-scheme-loan-repayments",
+      "summary": "We've intervened and Ethica Resolve Limited (Ethica), an FCA authorised firm that services and collects debt on behalf of creditors, has agreed to restrictions. These follow demands it made for people to repay loans, or purported loans, provided as part of disguised remuneration schemes.\n\nEthica is acting on behalf of West 28th Street Limited (West 28), which bought disguised remuneration loans from a third party. West 28 is not authorised or regulated by the FCA.Disguised remuneration schemes saw people – often contractors, consultants and agency workers – paid for their work through loans instead of regular salaries. HMRC has published guidance for those affected.Some of those affected dispute liability for the amounts being claimed and challenge whether the debts can be legally enforced. If they're unenforceable, borrowers cannot be forced to pay the money back or have any of their assets seized against the debt without a specific order.Under the requirements we’ve agreed, Ethica:Will write to affected consumers, explaining that they do not have an enforceable obligation to make payment at this stage. (This means they do not need to pay now while regulatory and legal issues rela",
+      "published": "Thursday, November 5, 2026 - 13:46",
+      "matched_terms": [
+        "payment",
+        "guidance"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.558667+00:00"
+    },
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "The not-so-fine print: making consumer contracts fair",
+      "url": "https://www.fca.org.uk/news/blogs/not-so-fine-print-making-consumer-contracts-fair",
+      "summary": "How many of us read the terms and conditions of a contract before buying a financial product?Contracts hold the detail that shapes everyone's financial life, whether you're taking out a loan, insuring your holiday, or signing up for a crypto wallet.All firms are responsible for making sure that terms in their consumer contracts comply with the fairness and transparency requirements of the Consumer Rights Act (CRA) 2015. When those terms don’t comply, our Consumer Contracts team has powers to challenge firms directly.This work shows how we use the full range of powers Parliament has given us, not only those in financial services legislation, to tackle harm.Here's why it matters: if a term is found to be unfair, it's not just unenforceable – consumers may be due redress too. That's why it pays for firms to get this right from the start.We review contract terms identified through our supervision of firms, information on social media, and referrals from consumers and other external stakeholders. When we take action We consider our rules and guidance, including the Consumer Duty, when deciding whether to act and which of our regulatory tools to use. Where we raise concerns about the fai",
+      "published": "Friday, November 6, 2026 - 10:02",
+      "matched_terms": [
+        "consumer duty",
+        "guidance",
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.558558+00:00"
+    },
+    {
+      "source_id": "SRC-FED-BANKREG",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Federal Reserve Board announces final rule that establishes data standards for certain information collections",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260611a.htm",
+      "summary": "Federal Reserve Board announces final rule that establishes data standards for certain information collections",
+      "published": "Thu, 11 Jun 2026 15:00:00 GMT",
+      "matched_terms": [
+        "standard"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.497198+00:00"
+    },
+    {
+      "source_id": "SRC-FED-BANKREG",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Federal Reserve Board requests comment on proposal to require certain payment stablecoin issuers to maintain an effective customer identification program",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260618a.htm",
+      "summary": "Federal Reserve Board requests comment on proposal to require certain payment stablecoin issuers to maintain an effective customer identification program",
+      "published": "Thu, 18 Jun 2026 13:00:00 GMT",
+      "matched_terms": [
+        "payment"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.497174+00:00"
+    },
+    {
+      "source_id": "SRC-FED-BANKREG",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260911a.htm",
+      "summary": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
+      "published": "Fri, 11 Sep 2026 14:00:00 GMT",
+      "matched_terms": [
+        "third-party",
+        "guidance",
+        "risk management"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.497010+00:00"
+    },
+    {
+      "source_id": "SRC-FED-BANKREG",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260924a.htm",
+      "summary": "Federal Reserve Board requests public comment on two proposals related to establishing a regulatory framework for Board-supervised payment stablecoin issuers under the GENIUS Act",
+      "published": "Thu, 24 Sep 2026 18:30:00 GMT",
+      "matched_terms": [
+        "payment"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.496983+00:00"
+    },
+    {
+      "source_id": "SRC-FED-BANKREG",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm",
+      "summary": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
+      "published": "Fri, 2 Oct 2026 20:00:00 GMT",
+      "matched_terms": [
+        "regulation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-09T13:56:01.496897+00:00"
+    }
+  ],
+  "source_failures": [
+    {
+      "source_id": "SRC-EURLEX-CELLAR",
+      "error": "name 'matched' is not defined"
+    }
+  ],
+  "note": "Feed items are discovery leads. A researcher must inspect the primary source, classify legal status and amend curated records manually."
 }
