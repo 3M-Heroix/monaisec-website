@@ -1,8 +1,8 @@
 {
   "dataset_title": "MONAISEC Regulatory Watch Queue",
   "dataset_version": "1.0.0",
-  "last_checked_at": "2026-11-09T13:56:03.031082+00:00",
-  "window_start": "2026-11-06T13:55:56.905396+00:00",
+  "last_checked_at": "2026-11-10T13:29:40.173421+00:00",
+  "window_start": "2026-11-09T13:56:03.031082+00:00",
   "items": [
     {
       "source_id": "SRC-BOE",
