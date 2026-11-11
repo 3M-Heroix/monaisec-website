@@ -1,9 +1,24 @@
 {
   "dataset_title": "MONAISEC Regulatory Watch Queue",
   "dataset_version": "1.0.0",
-  "last_checked_at": "2026-11-10T13:29:40.173421+00:00",
-  "window_start": "2026-11-09T13:56:03.031082+00:00",
+  "last_checked_at": "2026-11-11T12:44:50.397603+00:00",
+  "window_start": "2026-11-10T13:29:40.173421+00:00",
   "items": [
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "Man sentenced over £154m fake takeover bid targeting UK-listed company",
+      "url": "https://www.fca.org.uk/news/press-releases/man-sentenced-over-154m-fake-takeover-bid-targeting-uk-listed-company",
+      "summary": "Christopher Woolcott has today been given a 2-year prison sentence, suspended for 2 years, after staging a £154m fake takeover bid for Touchstone Exploration Inc.\n\nHe was also ordered to complete 200 hours of unpaid work and to pay costs of £4,627.73.Mr Woolcott built a sizeable stake in Touchstone, an oil and gas listed company. He then launched a bogus bid to drive up its share price. To give the bid credibility, Mr Woolcott invented several identities, forged takeover documents using Chat GPT and met Touchstone’s chief executive at a central London hotel under a false name. Touchstone ultimately determined that the bid was not legitimate.Had his plan succeeded, he stood to gain as much as £70,000 through the sale of his shares.The Financial Conduct Authority (FCA) used a combination of its transaction reporting data, phone records, receipts, CCTV footage and evidence seized to identify Mr Woolcott as the person behind the fraud.Investigators traced three phone numbers used by different supposed individuals to contact Touchstone, to the same handset, and combined voter-register, open source research and FCA trading data to narrow down potential suspects. A parking payment also pl",
+      "published": "Tuesday, November 10, 2026 - 17:12",
+      "matched_terms": [
+        "payment",
+        "trading",
+        "market abuse"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-11T12:44:48.822951+00:00"
+    },
     {
       "source_id": "SRC-BOE",
       "publisher": "Bank of England",
