@@ -1,9 +1,22 @@
 {
   "dataset_title": "MONAISEC Regulatory Watch Queue",
   "dataset_version": "1.0.0",
-  "last_checked_at": "2026-11-11T12:44:50.397603+00:00",
-  "window_start": "2026-11-10T13:29:40.173421+00:00",
+  "last_checked_at": "2026-11-12T13:47:25.807807+00:00",
+  "window_start": "2026-11-11T12:44:50.397603+00:00",
   "items": [
+    {
+      "source_id": "SRC-FCA-NEWS",
+      "publisher": "Financial Conduct Authority",
+      "title": "FCA proposes greater pension investment flexibility to support long-term value for savers",
+      "url": "https://www.fca.org.uk/news/press-releases/fca-proposes-greater-pension-investment-flexibility-support-long-term-value-savers",
+      "summary": "Workplace pension providers could have greater flexibility to invest for the long term under proposals from the FCA, helping them deliver better outcomes for savers while ensuring savers' interests remain protected.\n\nThe FCA is consulting on excluding certain performance-linked fees from the charge cap for default funds in workplace pensions it regulates.Performance-linked fees are common in private markets, including private equity, venture capital and private credit. The proposed change would give providers greater flexibility to access a broader range of investments where this could help improve long-term returns and value for savers.The FCA is clear that greater flexibility is not a licence to charge more. Providers should carefully weigh potential returns, risks and costs when making investment decisions, and any higher charges should be justified by the additional value delivered to savers.Alongside the proposed flexibility, the FCA is proposing safeguards covering transparency, fair allocation of fees between savers and scrutiny of how private assets are valued. Providers and Independent Governance Committees would need access to the information necessary to assess whether p",
+      "published": "Thursday, November 12, 2026 - 10:05",
+      "matched_terms": [
+        "consultation"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-12T13:47:24.374025+00:00"
+    },
     {
       "source_id": "SRC-FCA-NEWS",
       "publisher": "Financial Conduct Authority",
