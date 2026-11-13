@@ -1,8 +1,8 @@
 {
   "dataset_title": "MONAISEC Regulatory Watch Queue",
   "dataset_version": "1.0.0",
-  "last_checked_at": "2026-11-12T13:47:25.807807+00:00",
-  "window_start": "2026-11-11T12:44:50.397603+00:00",
+  "last_checked_at": "2026-11-13T13:09:04.777070+00:00",
+  "window_start": "2026-11-12T13:47:25.807807+00:00",
   "items": [
     {
       "source_id": "SRC-FCA-NEWS",
