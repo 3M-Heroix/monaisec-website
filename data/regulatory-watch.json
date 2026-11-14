@@ -1,9 +1,24 @@
 {
   "dataset_title": "MONAISEC Regulatory Watch Queue",
   "dataset_version": "1.0.0",
-  "last_checked_at": "2026-11-13T13:09:04.777070+00:00",
-  "window_start": "2026-11-12T13:47:25.807807+00:00",
+  "last_checked_at": "2026-11-14T12:13:46.387415+00:00",
+  "window_start": "2026-11-13T13:09:04.777070+00:00",
   "items": [
+    {
+      "source_id": "SRC-FED-BANKREG",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Agencies extend comment period for proposed third-party risk management guidance",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+      "summary": "Agencies extend comment period for proposed third-party risk management guidance",
+      "published": "Fri, 13 Nov 2026 21:15:00 GMT",
+      "matched_terms": [
+        "third-party",
+        "guidance",
+        "risk management"
+      ],
+      "status": "needs_review",
+      "discovered_at": "2026-11-14T12:13:44.796330+00:00"
+    },
     {
       "source_id": "SRC-FCA-NEWS",
       "publisher": "Financial Conduct Authority",
