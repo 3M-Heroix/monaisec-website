@@ -1,8 +1,8 @@
 {
   "dataset_title": "MONAISEC Regulatory Watch Queue",
   "dataset_version": "1.0.0",
-  "last_checked_at": "2026-11-14T12:13:46.387415+00:00",
-  "window_start": "2026-11-13T13:09:04.777070+00:00",
+  "last_checked_at": "2026-11-15T12:45:45.418453+00:00",
+  "window_start": "2026-11-14T12:13:46.387415+00:00",
   "items": [
     {
       "source_id": "SRC-FED-BANKREG",
