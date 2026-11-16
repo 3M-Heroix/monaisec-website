@@ -1,5 +1,10 @@
 # Changelog
 
+## V2.0.1-preview — 2026-11-16
+- Restore GitHub Pages asset and dataset loading.
+- Keep excluded profiles and international guidance in contextual references, with unresolved conditions flagged for review.
+- Repair scheduled source discovery and process both configured automated feeds.
+
 ## V2.0.0-preview — 2026-11-09
 - Added a deployment-context profile with 12 inputs.
 - Added a structured provision-level obligation schema and 11 initial obligation rules.

@@ -6,6 +6,8 @@ MONAISEC is an independent research initiative examining security, reliability, 
 
 - `index.html` — institutional homepage and research navigation.
 - `regulatory.html` — Regulatory Intelligence register.
+- `regulatory-intelligence-v2/` — Regulatory Mapper V2 preview.
+- `regulatory-mapper.html` — V1 instrument mapper, discussion checklist and source watch.
 - `threats.html` — Threat & Vulnerability Intelligence taxonomy.
 - `knowledge-graph.html` — cross-register relationship explorer.
 - `financial-risks.html` — Financial Risk Observatory.
@@ -45,4 +47,4 @@ Legal force and agent relevance are separate dimensions. Cross-links and graph e
 
 ## Current limitations
 
-No backend, login, database service, editor interface, automated source monitoring, incident submission pipeline or alerting is included. Dataset coverage is curated and incomplete. This is not legal, investment, supervisory, audit or operational advice.
+No backend, login, database service, editor interface, incident submission pipeline or alerting is included. Scheduled source discovery creates queues for editorial review. Dataset coverage is curated and incomplete. This is not legal, investment, supervisory, audit or operational advice.

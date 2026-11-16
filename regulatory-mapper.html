@@ -11,7 +11,7 @@
 <body>
 <header class="topbar">
   <a class="brand" href="index.html">MON<span>AI</span>SEC</a>
-  <nav><a href="index.html">Home</a><a href="regulatory.html">Regulatory Intelligence</a><a class="active" href="regulatory-mapper.html">Compliance Mapper</a><a href="methodology.html">Methodology</a></nav>
+  <nav><a href="index.html">Home</a><a href="regulatory.html">Regulatory Intelligence</a><a class="active" href="regulatory-mapper.html">Compliance Mapper</a><a href="regulatory-intelligence-v2/index.html">Mapper V2</a><a href="methodology.html">Methodology</a></nav>
   <span class="top-tag">RESEARCH TOOL · V1</span>
 </header>
 
@@ -94,7 +94,7 @@
     <div class="summary-strip">
       <div><strong id="candidateCount">0</strong><span>Candidate instruments</span></div>
       <div><strong id="bindingCount">0</strong><span>Binding instruments</span></div>
-      <div><strong id="reviewCount">0</strong><span>Contextual references</span></div>
+      <div><strong id="reviewCount">0</strong><span>Contextual and voluntary references</span></div>
     </div>
     <div class="legend"><span class="tag tag-direct">Potentially applicable</span><span class="tag tag-context">Contextual / verify</span><span class="tag tag-voluntary">Voluntary reference</span></div>
     <div id="mappedRecords" class="mapped-list"></div>
@@ -110,6 +110,7 @@
   <section class="watch">
     <div class="section-head"><div><div class="eyebrow">04 / LIVE SOURCE WATCH</div><h2>Regulatory update monitor</h2><p class="muted">Official feeds are checked by the scheduled GitHub workflow. New items enter a review queue; they do not automatically change legal mappings.</p></div><span class="status" id="watchStatus">Loading watchlist…</span></div>
     <div class="watch-grid"><div class="watch-stat"><strong id="watchCount">—</strong><span>Review candidates</span></div><div class="watch-stat"><strong id="sourceCount">—</strong><span>Configured official sources</span></div><div class="watch-stat"><strong id="watchUpdated">—</strong><span>Last collection run</span></div></div>
+    <p id="watchFailures" class="muted" role="status" hidden></p>
     <div id="watchItems" class="watch-items"></div>
     <div class="source-links" id="sourceLinks"></div>
   </section>
