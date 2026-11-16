@@ -11,6 +11,15 @@
     $('records').innerHTML=filtered.length?filtered.map(r=>`<article class="risk-card"><div class="risk-card-top"><span class="risk-tag">${esc(r.category)}</span><span class="risk-exposure">${esc(r.agent_exposure)}</span></div><h3>${esc(r.title)}</h3><p>${esc(r.summary)}</p><div class="risk-chips">${r.financial_functions.slice(0,3).map(x=>`<span>${esc(x)}</span>`).join('')}</div><div class="risk-card-foot"><span>${esc(r.id)} · ${r.sources.length} sources</span><button class="risk-open" data-id="${esc(r.id)}">Explore risk ↗</button></div></article>`).join(''):'<div class="empty-state">No risk channels match these filters. Try a broader search or reset the filters.</div>';
     $('records').querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>openRecord(b.dataset.id)));
   }
+  function openFromHash() {
+    try {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (id) openRecord(id);
+    } catch (error) {
+      if (!(error instanceof URIError)) throw error;
+    }
+  }
+  window.addEventListener('hashchange', openFromHash);
   function openRecord(id){
     const r=records.find(x=>x.id===id); if(!r)return;
     $('modalId').textContent=r.id; $('modalTitle').textContent=r.title; $('modalSubtitle').textContent=`${r.category} · ${r.agent_exposure}`;
@@ -28,7 +37,7 @@
       $('totalCount').textContent=records.length; $('categoryCount').textContent=unique(records.map(r=>r.category)).length; $('functionCount').textContent=unique(records.flatMap(r=>r.financial_functions)).length; $('sourceCount').textContent=unique(records.flatMap(r=>r.sources.map(s=>s.url))).length;
       unique(records.map(r=>r.category)).forEach(v=>$('category').insertAdjacentHTML('beforeend',`<option value="${esc(v)}">${esc(v)}</option>`));
       $('datasetMeta').textContent=`${data.dataset_title} · v${data.dataset_version} · Last reviewed ${data.last_reviewed}. ${data.scope}`;
-      $('year').textContent=new Date().getFullYear(); render();
+      $('year').textContent=new Date().getFullYear(); render(); openFromHash();
     }catch(e){$('records').innerHTML=`<div class="empty-state">The risk dataset could not be loaded. Run this website through a local HTTP server or check that data/financial-risks.json is deployed. (${esc(e.message)})</div>`;$('resultCount').textContent='Dataset unavailable';}
   }
   ['query','category','exposure'].forEach(id=>$(id).addEventListener(id==='query'?'input':'change',render));

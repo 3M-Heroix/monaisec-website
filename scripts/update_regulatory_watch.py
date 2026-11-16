@@ -42,7 +42,7 @@ def local_text(el, paths):
 
 def parse_feed(xml_bytes: bytes, source: dict) -> list[dict]:
     root = ET.fromstring(xml_bytes)
-    items = root.findall(".//item")
+    items = root.findall(".//{*}item")
     if not items:
         items = root.findall(".//atom:entry", NS)
     out = []
@@ -91,7 +91,7 @@ def cellar_items(source: dict, since: str) -> list[dict]:
                     "source_id": source["id"], "publisher": source.get("publisher", source["name"]),
                     "title": title + (": " + ", ".join(ids[:3]) if ids else ""),
                     "url": url, "summary": "Cellar notification: " + action + ". Identifiers: " + ", ".join(ids),
-                    "published": date, "matched_terms": matched or ["EU legal document update"],
+                    "published": date, "matched_terms": ["EU legal document update"],
                     "cellar_id": cellar_id, "status": "needs_review",
                     "discovered_at": dt.datetime.now(dt.timezone.utc).isoformat()
                 })
@@ -101,6 +101,9 @@ def main():
     sources_doc = json.loads(SOURCES_FILE.read_text(encoding="utf-8"))
     previous = json.loads(WATCH_FILE.read_text(encoding="utf-8")) if WATCH_FILE.exists() else {"items":[]}
     since = previous.get("last_checked_at") or (dt.datetime.now(dt.timezone.utc)-dt.timedelta(days=3)).isoformat()
+    source_windows = previous.get("source_next_window_start", {})
+    previous_failures = {failure["source_id"] for failure in previous.get("source_failures", [])}
+    checked_at = dt.datetime.now(dt.timezone.utc).isoformat()
     old = previous.get("items", [])
     known = {x.get("url") for x in old}
     collected, failures = [], []
@@ -109,7 +112,11 @@ def main():
             continue
         try:
             if source.get("type") == "official_document_change_feed":
-                items = cellar_items(source, since)
+                source_id = source["id"]
+                fallback = previous.get("window_start") if source_id in previous_failures else since
+                window = source_windows.setdefault(source_id, fallback or since)
+                items = cellar_items(source, window)
+                source_windows[source_id] = checked_at
             else:
                 items = parse_feed(fetch(source["feed_url"]), source)
             for item in items:
@@ -124,8 +131,8 @@ def main():
     merged.sort(key=lambda x: x.get("discovered_at",""), reverse=True)
     output = {
         "dataset_title":"MONAISEC Regulatory Watch Queue", "dataset_version":"1.0.0",
-        "last_checked_at":dt.datetime.now(dt.timezone.utc).isoformat(),
-        "window_start":since, "items":merged[:300], "source_failures":failures,
+        "last_checked_at":checked_at,
+        "window_start":since, "items":merged[:300], "source_failures":failures, "source_next_window_start":source_windows,
         "note":"Feed items are discovery leads. A researcher must inspect the primary source, classify legal status and amend curated records manually."
     }
     WATCH_FILE.write_text(json.dumps(output,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")

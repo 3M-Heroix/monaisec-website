@@ -68,7 +68,14 @@
     $("watchCount").textContent=items.length;
     $("sourceCount").textContent=state.sources.length;
     $("watchUpdated").textContent=w.last_checked_at ? new Date(w.last_checked_at).toLocaleString() : "Not run yet";
-    $("watchStatus").textContent=w.last_checked_at ? "COLLECTION SNAPSHOT" : "AWAITING FIRST RUN";
+    const failures = w.source_failures || [];
+    const failureNotice = $("watchFailures");
+    failureNotice.hidden = failures.length === 0;
+    failureNotice.textContent = failures.length
+      ? `Collection incomplete. Could not check: ${failures.map(f => state.sources.find(s => s.id === f.source_id)?.name || f.source_id).join(", ")}.`
+      : "";
+    $("watchStatus").textContent = failures.length ? "PARTIAL COLLECTION"
+      : w.last_checked_at ? "COLLECTION SNAPSHOT" : "AWAITING FIRST RUN";
     $("watchItems").innerHTML=items.slice(0,12).map(i=>`<div class="watch-item"><div><a href="${esc(i.url)}" target="_blank" rel="noopener">${esc(i.title)}</a><small>${esc(i.publisher||i.source_id)} · ${esc(i.published||"Date not supplied")} · ${esc((i.matched_terms||[]).join(", "))}</small></div><span class="tag tag-context">Needs review</span></div>`).join("") || `<div class="record"><p class="muted">No review candidates yet. Run the scheduled GitHub workflow after integration, or trigger it manually from the repository Actions tab.</p></div>`;
     $("sourceLinks").innerHTML=state.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)} ↗</a>`).join("");
   }
@@ -83,7 +90,7 @@
       state.regulations=[...(db.records||[]),...(additions.records||[])];state.rules=rules.mappings||[];state.controls=rules.controls||[];state.sources=feeds.sources||[];state.watch=watch;
       renderWatch();
       $("mapBtn").addEventListener("click",runMapping);
-      $("reset").addEventListener("click",()=>{document.querySelectorAll(".profile-grid select").forEach((s,i)=>s.selectedIndex=0);document.querySelectorAll(".checks input").forEach((c,i)=>c.checked=[true,false,true,false,true,false][i]);$("results").hidden=true;});
+      $("reset").addEventListener("click",()=>{document.querySelectorAll(".profile-grid select").forEach((s,i)=>s.selectedIndex=0);document.querySelectorAll(".checks input").forEach((c,i)=>c.checked=[true,false,true,false,true,false][i]);$("results").hidden=true;state.lastAssessment=null;});
       $("export").addEventListener("click",exportAssessment);
       $("mapBtn").click();
     }catch(err){

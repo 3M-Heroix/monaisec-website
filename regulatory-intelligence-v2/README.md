@@ -8,30 +8,20 @@
 - Imported V0.2 workbook records: 26 regulatory-register entries, 14 research/evidence entries and 12 agent-risk crosswalk entries.
 - Official-source discovery registry and a conservative GitHub Actions collector for the FSB and BIS RSS feeds that creates a human-review queue; it never rewrites legal records. EUR-Lex, MAS, NIST, ESMA, SEC and FCA are listed for manual verification; their complete change APIs are not yet integrated.
 
-## Install
-Copy the package contents into the root of the existing MONAISEC GitHub Pages repository. Keep the existing `data/regulations.json`, `regulatory.html`, threat, graph and other research modules intact. The new engine uses its own files with `-v2` suffixes to avoid overwriting existing datasets.
+## Repository layout and deployment
 
-Add a navigation link to the existing homepage and regulatory page:
+Serve the repository root with `python -m http.server 8000` and open
+`http://localhost:8000/regulatory-intelligence-v2/`. GitHub Pages serves the same
+layout. Keep the page in `regulatory-intelligence-v2/`, the shared files under
+`assets/` and `data/`, and the collector at `scripts/review_feed.py`.
 
-```html
-<a href="regulatory-intelligence-v2/index.html">Regulatory Mapper V2</a>
-```
-
-If copying package contents directly into repository root, instead link to `regulatory-intelligence-v2/index.html` only if you preserve the folder. To host at root, move `index.html`, `assets`, `data`, `scripts` and `.github/workflows/regulatory-watch-v2.yml` into root carefully, renaming assets/data files to avoid collisions.
-
-Recommended safe deployment: keep this package in a dedicated `regulatory-intelligence-v2/` folder. Copy `.github/workflows/regulatory-watch-v2.yml` to the repository-root `.github/workflows/` directory (GitHub only discovers workflows there). The workflow is already configured to execute `regulatory-intelligence-v2/scripts/review_feed.py` and commit only the review queue. GitHub Pages can serve the app at `/regulatory-intelligence-v2/`.
-
-## Local test
-Run from the package folder:
-
-```bash
-python -m http.server 8000
-```
-Open `http://localhost:8000`. The page must be served over HTTP because it loads JSON using `fetch()`.
+The homepage and regulatory register link to the engine.
+`.github/workflows/regulatory-watch-v2.yml` runs the collector from the repository
+root and commits changes to `data/regulatory-watch-v2.json`.
 
 ## Current scope and limitations
 - This is a rule-based research triage prototype, not a legal expert system. It does not determine definitive applicability.
-- The 10 obligation rules are an initial curated subset, not a complete obligation corpus. The 26 source-register records are inherited from the V0.2 research workbook; not all have been independently re-verified in this build.
+- The 11 obligation rules are an initial curated subset, not a complete obligation corpus. The 26 source-register records are inherited from the V0.2 research workbook; not all have been independently re-verified in this build.
 - Applicability results are heuristic. Review each condition, underlying legal text, entity perimeter, territorial scope, role allocation, effective date, exemptions and national implementation.
 - “Potentially applicable” means the profile matches the configured screening conditions; it is not a legal opinion.
 - Source monitoring is discovery only. Some sources are manual. RSS absence is not evidence that no changes occurred.
