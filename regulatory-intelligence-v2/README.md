@@ -65,11 +65,12 @@ and email attachment for all visitors. To refresh the fixed PDF, run
    Worker. Review transactional log retention and preview settings.
 2. Create a Cloudflare Turnstile widget for `api.monaisec.com`. The widget
    is hosted in the Worker iframe on that hostname.
-3. From `workers/mapper-mail/`, set the public site key under `[vars]` as
-   `TURNSTILE_SITE_KEY` in Wrangler and use `wrangler secret put` for
-   `TURNSTILE_SECRET` and `BREVO_API_KEY`. Deploy with `wrangler deploy`.
-   The custom domain must be available in the Cloudflare DNS zone. If an
-   existing DNS record uses that hostname, resolve that conflict first.
+3. The public site key is set in `workers/mapper-mail/wrangler.toml`. If the
+   Worker is new, deploy it with `wrangler deploy` from `workers/mapper-mail/`
+   before adding secrets. In Cloudflare, open **Workers & Pages → monaisec-mapper-mail
+   → Settings → Variables and Secrets** and add `TURNSTILE_SECRET` and
+   `BREVO_API_KEY` as **Secret** variables. Enable email only after the PDF
+   is available on GitHub Pages. The Worker downloads that fixed public PDF.
 4. Open the Mapper on `https://monaisec.com`, run an assessment and request
    the PDF using an inbox you control. Check the visible From address,
    authentication headers, attachment and where a reply goes. An API

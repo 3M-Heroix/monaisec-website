@@ -35,7 +35,7 @@ function page(siteKey, message = '', status = 200, sent = false) {
 
 function available(env) {
   return Boolean(env.BREVO_API_KEY && env.TURNSTILE_SECRET &&
-    /^[A-Za-z0-9_-]+$/.test(env.TURNSTILE_SITE_KEY || '') && env.REPORT_LIMIT && env.ASSETS);
+    /^[A-Za-z0-9_-]+$/.test(env.TURNSTILE_SITE_KEY || '') && env.REPORT_LIMIT);
 }
 
 function base64(bytes) {
@@ -87,8 +87,11 @@ async function send(request, env, hostname) {
   if (!(await env.REPORT_LIMIT.limit({key: `recipient:${recipientKey}`})).success) {
     return page(siteKey, 'Too many requests. Try again in a minute or download the PDF.', 429);
   }
-  const report = await env.ASSETS.fetch(new URL(`/${filename}`, request.url));
-  if (!report.ok) throw new Error('Report asset unavailable');
+  const report = await fetch(`${origin}/assets/reports/${filename}`, {
+    redirect: 'error',
+    signal: AbortSignal.timeout(6000),
+  });
+  if (!report.ok || Number(report.headers.get('content-length')) > 150_000) throw new Error('Report asset unavailable');
   const bytes = await report.bytes();
   if (bytes.length < 5 || bytes.length > 150_000 ||
       new TextDecoder().decode(bytes.subarray(0, 5)) !== '%PDF-') {
