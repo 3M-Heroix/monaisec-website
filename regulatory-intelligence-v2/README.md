@@ -43,3 +43,40 @@ The workbook source files were `Monaisec_AI_Agent_Regulatory_Database_v0.2.xlsx`
 - US eCFR Rule 15c3-5: https://www.ecfr.gov/current/title-17/section-240.15c3-5
 
 Build date: 2026-11-09.
+
+## Document import and PDF delivery
+
+The browser loads the pinned PDF.js 6.5.438 parser from `assets/vendor/pdfjs/`
+when a visitor selects a PDF. It extracts text from up to 30 pages of a 10 MB
+PDF. The initial phrase matching supports English deployment briefs. The
+visitor reviews suggested fields, resolves conflicts and confirms the full
+profile. Original bytes, filenames and excerpts stay in the browser.
+Scanned files can use the paste or manual workflow.
+
+The standard PDF is served from `assets/reports/`. It is the same download
+and email attachment for all visitors. To refresh the fixed PDF, run
+`python scripts/build_scoping_brief.py` with ReportLab, Pillow and Liberation Sans installed. Set
+`MONAISEC_FONT_DIR` if your fonts use a different directory.
+
+### Activate email delivery
+
+1. In Brevo, verify that `monaisec.com` is authenticated and
+   `contact@monaisec.com` is an active sender. Create a Brevo API key for the
+   Worker. Review transactional log retention and preview settings.
+2. Create a Cloudflare Turnstile widget for `api.monaisec.com`. The widget
+   is hosted in the Worker iframe on that hostname.
+3. From `workers/mapper-mail/`, set the public site key under `[vars]` as
+   `TURNSTILE_SITE_KEY` in Wrangler and use `wrangler secret put` for
+   `TURNSTILE_SECRET` and `BREVO_API_KEY`. Deploy with `wrangler deploy`.
+   The custom domain must be available in the Cloudflare DNS zone. If an
+   existing DNS record uses that hostname, resolve that conflict first.
+4. Open the Mapper on `https://monaisec.com`, run an assessment and request
+   the PDF using an inbox you control. Check the visible From address,
+   authentication headers, attachment and where a reply goes. An API
+   acceptance is separate from receipt in the destination inbox.
+
+The worker accepts one email and one Turnstile token per request, uses the
+same fixed attachment for every visitor, and keeps no application database
+of addresses or documents. Brevo receives the address and standard
+attachment to deliver the message. The Worker uses Cloudflare's per-location
+request limits. The PDF download remains available if email is disabled.

@@ -2,7 +2,30 @@
 <header><a class="brand" href="../index.html">MON<span>AI</span>SEC <small>REGULATORY INTELLIGENCE</small></a><nav><a href="#assess">Assessment</a><a href="#results">Obligations</a><a href="#method">Methodology</a></nav><span class="version">ENGINE V2 · RESEARCH PREVIEW</span></header>
 <main id="top"><section class="hero"><div class="eyebrow">FINANCIAL AI · REGULATORY INTELLIGENCE</div><h1>From regulatory text<br><em>to operational obligations.</em></h1><p>Build an evidence-backed regulatory applicability assessment for an AI agent deployed in a financial or monetary system. Trace every result to a source, condition and control artefact.</p><div class="hero-meta"><span>26 source-register records</span><span>11 curated obligation rules</span><span>Global research scope</span><span>Human review required</span></div></section>
 <section id="assess" class="panel"><div class="section-head"><div><div class="eyebrow">01 / DEPLOYMENT PROFILE</div><h2>Describe the system</h2></div><p>Applicability is evaluated against the deployment context—not the label “AI agent” alone.</p></div>
-<div class="form-grid">
+<section class="brief-import" aria-labelledby="brief-heading">
+  <h3 id="brief-heading">Start with a deployment brief</h3>
+  <p>Use a text-based PDF or paste a short description of the agent. The brief and its excerpts stay in this browser.</p>
+  <div class="brief-drop" id="brief-drop">
+    <label for="brief-file">Drop a PDF here or choose a file</label>
+    <input id="brief-file" type="file" accept="application/pdf,.pdf" aria-describedby="brief-limit">
+    <small id="brief-limit">One PDF with selectable text, up to 10 MB and 30 pages.</small>
+  </div>
+  <details class="brief-paste"><summary>Paste a description</summary>
+    <label for="brief-text">Deployment description</label>
+    <textarea id="brief-text" rows="5" maxlength="30000" placeholder="Primary jurisdiction: European Union. The agent drafts payment instructions. A treasury analyst approves and submits them."></textarea>
+    <button type="button" class="secondary" id="brief-analyse">Find suggested settings</button>
+  </details>
+  <p id="brief-status" class="brief-status" role="status"></p>
+  <section id="brief-review" hidden aria-labelledby="brief-review-title">
+    <h4 id="brief-review-title" tabindex="-1">Review suggested settings</h4>
+    <ul id="brief-suggestions" class="brief-suggestions"></ul>
+    <div class="actions">
+      <button type="button" id="brief-apply" class="primary">Apply selected suggestions</button>
+      <button type="button" id="brief-clear" class="secondary">Clear brief</button>
+    </div>
+  </section>
+</section>
+<div class="form-grid" id="profile-fields">
 <label>Jurisdiction <select id="jurisdiction"><option value="European Union">European Union</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Singapore">Singapore</option><option value="China">China</option><option value="Morocco">Morocco</option><option value="International">Cross-border / international</option></select></label>
 <label>Organisation role <select id="role"><option value="regulated-financial-entity">Regulated financial entity</option><option value="provider">AI system provider / vendor</option><option value="deployer">AI system deployer</option><option value="both">Provider and deployer</option><option value="controller">Data controller</option><option value="processor">Data processor</option></select></label>
 <label>Financial activity <select id="activity"><option value="trading">Trading / investment services</option><option value="payments">Payments / money movement</option><option value="credit">Credit / lending / scoring</option><option value="insurance">Insurance / underwriting</option><option value="aml">AML / KYC / fraud</option><option value="customer-service">Customer-facing service</option><option value="asset-management">Asset / portfolio management</option><option value="internal-operations">Internal operations</option></select></label>
@@ -15,6 +38,21 @@
 <label>Trading classification <select id="algo"><option value="unknown">Not assessed</option><option value="yes">May constitute algorithmic trading</option><option value="no">Not algorithmic trading</option></select></label>
 <label>AI Act high-risk status <select id="highrisk"><option value="unknown">Not assessed</option><option value="yes">Assessed as high-risk</option><option value="no">Assessed as not high-risk</option></select></label>
 <label>Institutional perimeter <select id="regulated"><option value="yes">Regulated financial institution</option><option value="no">Not a regulated financial institution</option><option value="unknown">Unknown / confirm</option></select></label>
-</div><div class="actions"><button id="run" class="primary" disabled>Run applicability assessment ↗</button><span id="data-status" role="status">Loading regulatory data…</span><button id="reset" class="secondary">Reset profile</button></div><p class="disclaimer">Research support only. This tool does not provide legal advice, determine legal status conclusively, or replace qualified jurisdiction-specific counsel. Unknown profile fields are surfaced as review questions rather than silently assumed.</p></section>
-<section id="results" class="results hidden"><div class="section-head"><div><div class="eyebrow">02 / ANALYSIS OUTPUT</div><h2>Applicability & obligations</h2></div><div class="actions"><button id="export" class="secondary">Export assessment JSON ↓</button><button id="csv" class="secondary">Export obligations CSV ↓</button></div></div><div class="stats" id="stats"></div><div class="tabs"><button class="tab active" data-tab="applicable">Potentially applicable</button><button class="tab" data-tab="conditional">Conditional / verify</button><button class="tab" data-tab="reference">Contextual references</button></div><div id="obligation-list"></div><div class="review-box"><h3>Open legal and factual questions</h3><ul id="questions"></ul></div></section>
-<section id="method" class="method"><div class="eyebrow">03 / RESEARCH METHODOLOGY</div><h2>Traceable by design.</h2><div class="method-grid"><article><b>01 · Evidence hierarchy</b><p>Primary legislation and official regulator sources first; official supervisory materials and standard-setters next; research and security frameworks are contextual.</p></article><article><b>02 · Legal force is explicit</b><p>Binding law, supervisory guidance, voluntary standards and proposals are separate categories. They are never collapsed into a single score.</p></article><article><b>03 · Conditions are visible</b><p>Every rule carries scope conditions, role assumptions, source links and evidence prompts. “Potentially applicable” is not a legal conclusion.</p></article><article><b>04 · Version-aware updates</b><p>Official-source monitoring creates review candidates. Human verification is required before a source or obligation is marked current.</p></article></div><p class="footnote">Seed corpus imported from MONAISEC Regulatory Database v0.2 and extended with a structured obligation layer. The current rule library is deliberately selective—not an exhaustive global legal corpus. Last package build: 9 November 2026.</p></section></main><footer>MONAISEC · Independent research initiative · Regulatory Intelligence Engine V2</footer><script src="../assets/js/engine.js"></script></body></html>
+</div>
+<label id="brief-confirmation" class="brief-confirmation" hidden>
+  <input id="brief-confirm" type="checkbox">
+  I reviewed all profile fields, including those without a suggestion.
+</label>
+<div class="actions"><button id="run" class="primary" disabled>Run applicability assessment ↗</button><span id="data-status" role="status">Loading regulatory data…</span><button id="reset" class="secondary">Reset profile</button></div><p class="disclaimer">Research support only. This tool does not provide legal advice, determine legal status conclusively, or replace qualified jurisdiction-specific counsel. Unknown profile fields are surfaced as review questions rather than silently assumed.</p></section>
+<section id="results" class="results hidden"><div class="section-head"><div><div class="eyebrow">02 / ANALYSIS OUTPUT</div><h2>Applicability & obligations</h2></div><div class="actions"><button id="export" class="secondary">Export assessment JSON ↓</button><button id="csv" class="secondary">Export obligations CSV ↓</button></div></div><div class="stats" id="stats"></div><div class="tabs"><button class="tab active" data-tab="applicable">Potentially applicable</button><button class="tab" data-tab="conditional">Conditional / verify</button><button class="tab" data-tab="reference">Contextual references</button></div><div id="obligation-list"></div><div class="review-box"><h3>Open legal and factual questions</h3><ul id="questions"></ul></div>
+<section id="brief-report" class="report-panel" aria-labelledby="report-heading">
+  <h3 id="report-heading">Take the next steps with you</h3>
+  <p>Get the standard MONAISEC scoping brief, with evidence to gather and official sources to check.</p>
+  <div class="actions">
+    <a class="secondary" href="../assets/reports/monaisec-regulatory-scoping-brief.pdf" download>Download PDF</a>
+    <button class="secondary" id="report-email-open" type="button" aria-expanded="false">Email me the PDF</button>
+  </div>
+  <p id="report-email-status" class="brief-status" role="status"></p>
+  <div id="report-email-slot" hidden></div>
+</section></section>
+<section id="method" class="method"><div class="eyebrow">03 / RESEARCH METHODOLOGY</div><h2>Traceable by design.</h2><div class="method-grid"><article><b>01 · Evidence hierarchy</b><p>Primary legislation and official regulator sources first; official supervisory materials and standard-setters next; research and security frameworks are contextual.</p></article><article><b>02 · Legal force is explicit</b><p>Binding law, supervisory guidance, voluntary standards and proposals are separate categories. They are never collapsed into a single score.</p></article><article><b>03 · Conditions are visible</b><p>Every rule carries scope conditions, role assumptions, source links and evidence prompts. “Potentially applicable” is not a legal conclusion.</p></article><article><b>04 · Version-aware updates</b><p>Official-source monitoring creates review candidates. Human verification is required before a source or obligation is marked current.</p></article></div><p class="footnote">Seed corpus imported from MONAISEC Regulatory Database v0.2 and extended with a structured obligation layer. The current rule library is deliberately selective—not an exhaustive global legal corpus. Last package build: 9 November 2026.</p></section></main><footer>MONAISEC · Independent research initiative · Regulatory Intelligence Engine V2</footer><script src="../assets/js/engine.js"></script><script type="module" src="../assets/js/mapper-brief.mjs"></script></body></html>
