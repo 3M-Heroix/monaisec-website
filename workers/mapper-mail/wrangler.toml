@@ -1,0 +1,13 @@
+name = "monaisec-mapper-mail"
+main = "index.mjs"
+compatibility_date = "2026-11-17"
+workers_dev = false
+routes = [{ pattern = "api.monaisec.com", custom_domain = true }]
+
+[vars]
+TURNSTILE_SITE_KEY = "0x4AAAAAAGE6ijd8_V4iWsxb"
+
+[[ratelimits]]
+name = "REPORT_LIMIT"
+namespace_id = "1001"
+simple = { limit = 2, period = 60 }
