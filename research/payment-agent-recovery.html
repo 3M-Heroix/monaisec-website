@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b241c">
+  <title>AI Payment Agent Controls After a Lost Acknowledgement | MONAISEC</title>
+  <meta name="description" content="A synthetic payment-agent study tests duplicate transfers and unresolved payments after a provider acknowledgement is lost.">
+  <link rel="canonical" href="https://monaisec.com/research/payment-agent-recovery.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/governance.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Recovering AI agent payments after a lost acknowledgement",
+    "description": "A synthetic payment-agent study tests duplicate transfers and unresolved payments after a provider acknowledgement is lost.",
+    "datePublished": "2026-11-20",
+    "author": {
+      "@type": "Organization",
+      "name": "MONAISEC",
+      "url": "https://monaisec.com/#about"
+    },
+    "mainEntityOfPage": "https://monaisec.com/research/payment-agent-recovery.html",
+    "inLanguage": "en"
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="../">MON<b>AI</b>SEC</a>
+      <nav class="navlinks" aria-label="Research navigation">
+        <a href="../#research">Research</a>
+        <a href="../financial-risks.html">Financial Risk Observatory</a>
+        <a href="../methodology.html">Methodology</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <article>
+      <header class="hero">
+        <div class="container">
+          <div class="eyebrow">Research Pilot 001 · Synthetic experiment</div>
+          <h1>Recovering AI agent payments after a lost acknowledgement</h1>
+          <p>Can a sender recover the original provider transfer ID when an authorised payment’s acknowledgement is lost, without creating a second transfer?</p>
+          <p>MONAISEC · <time datetime="2026-11-20">20 November 2026</time> · Pilot v0.3</p>
+        </div>
+      </header>
+      <div class="container content">
+        <section class="panel" aria-labelledby="result">
+          <h2 id="result">Results from the simulated provider</h2>
+          <p>The guarded recovery policy created <strong>zero duplicate transfers in ten synthetic scenarios</strong>. Three scenarios ended with the payment still unresolved. Each of the two comparison cases produced a duplicate after the first transfer had already been accepted.</p>
+          <div class="grid">
+            <div class="item">
+              <h3>Retry and lookup</h3>
+              <p>A retry with the original idempotency key inside the simulated retention period returned the original transfer ID if the provider had already accepted the payment. After the automatic retry window closed, an available matching lookup also recovered the ID.</p>
+            </div>
+            <div class="item">
+              <h3>Unresolved outcomes</h3>
+              <p>Two cases with an unavailable lookup looked identical to the sender. In one, the provider had accepted the payment. In the other, it had never received the request. The third unresolved case returned no matching record. The sender made no new submission in these three cases.</p>
+            </div>
+            <div class="item">
+              <h3>Comparison cases</h3>
+              <p>After a lost acknowledgement, generating a new key or reusing the original key after its simulated expiry each created a second transfer in the corresponding comparison case.</p>
+            </div>
+            <div class="item">
+              <h3>Local rollback check</h3>
+              <p>When the outbox write failed, the local payment entry and approval consumption rolled back together. After the fault was removed, retrying the approval created one local payment entry and one outbound instruction.</p>
+            </div>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="method">
+          <h2 id="method">Experimental design</h2>
+          <p>Each scripted scenario started with one authorised payment and fresh local SQLite databases for the sender and the simulated provider. The sender committed approval consumption, its local ledger entry and a durable outbound instruction together. The harness checked transfer counts against the provider ledger. The sender saw only submission responses and the results of its configured lookup.</p>
+          <p>The simulated provider retained idempotency keys for 60 logical ticks. The guarded policy retried with the original key through tick 44. From tick 45, it checked for a matching provider transfer and held the instruction for review when the outcome remained unclear. The two comparison cases changed the key or extended retry past the retention boundary. Two local reruns of the same fixtures reproduced the recorded outcomes using Python 3.12.14 and SQLite 3.53.1.</p>
+        </section>
+        <section class="panel" aria-labelledby="limits">
+          <h2 id="limits">Scope and limitations</h2>
+          <p>The test used scripted payment instructions, sequential dispatch and a local provider lookup. Its scope ends at simulated provider acceptance and sender reconciliation. Live payment providers, concurrent dispatch, network behaviour, LLM performance and settlement remain outside the test. The counts describe these fixtures. The retry and retention windows are simulation parameters.</p>
+          <p>A follow-up experiment could delay when an accepted payment appears in the provider’s lookup and measure the time it takes to reconcile the instruction, alongside the number of duplicate transfers.</p>
+        </section>
+        <section class="panel" aria-labelledby="references">
+          <h2 id="references">References and related research</h2>
+          <ul>
+            <li><a href="https://www.bis.org/node/87745">BIS Innovation Hub, Project Agenti</a> explores agentic AI in wholesale payments simulation. It provides context for the research question.</li>
+            <li><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html">AWS guidance on transactional outboxes</a> explains how to persist an outbound instruction together with a local write.</li>
+            <li><a href="https://docs.stripe.com/api/idempotent_requests">Stripe API v1 documentation on idempotent requests</a> gives an example of a provider handling reused keys and key expiry. The pilot used a separate simulated provider.</li>
+          </ul>
+          <p>See the <a href="../financial-risks.html#risk-evidence-title">financial-risk examples</a> and the <a href="../methodology.html">MONAISEC methodology and evidence standards</a>. For regulatory scoping by deployment context, use the <a href="../regulatory-intelligence-v2/index.html">Regulatory Compliance Mapper</a>.</p>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer class="footer">
+    <div class="container footerin">
+      <span>© 2026 MONAISEC · Independent research initiative</span>
+      <a href="../#contact">Research enquiries</a>
+    </div>
+  </footer>
+</body>
+</html>

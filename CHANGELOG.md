@@ -1,5 +1,10 @@
 # MONAISEC changelog
 
+## 2026-11-20
+
+- Added static, source-linked examples to the Financial Risk Observatory and updated its search metadata.
+- Published Research Pilot 001 v0.3 on lost payment acknowledgements, with linked methodology, experimental results and limitations.
+
 ## V7 — 2026-11-08
 - Added public Methodology & Evidence Standards page.
 - Added a deduplicated source registry generated from URLs already cited in research registers.
