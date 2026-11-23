@@ -1,0 +1,7 @@
+/* Google Preferred Sources: reader-initiated deeplink, no Google script or tracking. */
+.preferred-source-row{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;padding:15px 0;margin-top:14px;border-top:1px solid rgba(220,235,223,.16)}
+.preferred-source-badge{display:inline-flex;align-items:center;gap:9px;max-width:100%;padding:9px 13px;border:1px solid rgba(168,223,189,.48);border-radius:999px;background:rgba(168,223,189,.08);color:#e2f4e9!important;font:700 .78rem/1.3 "DM Sans",sans-serif;text-decoration:none!important;transition:background .2s,border-color .2s}
+.preferred-source-badge:hover,.preferred-source-badge:focus-visible{background:rgba(168,223,189,.18);border-color:#a8dfbd}
+.preferred-source-badge:focus-visible{outline:2px solid #f1b9a5;outline-offset:3px}
+.preferred-source-star{color:#f1b9a5;font-size:1.13rem;line-height:1}
+.preferred-source-note{font-size:.73rem;color:#b7cfc0;line-height:1.5}
