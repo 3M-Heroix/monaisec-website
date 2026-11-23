@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "id": "WATCH-9f94e0a1d487b9cd",
+    "source_id": "SRC-BIS-FSI",
+    "title": "MaRCo@BIS: AI-agentic econometric analysis for central bankers",
+    "url": "https://www.bis.org/publications/working-paper-1395-marcobis-ai-agentic-econometric-analysis-central-bankers",
+    "discovered_at": "2026-11-23T16:13:23.328896+00:00",
+    "status": "needs_human_review",
+    "note": "Discovery candidate only. Verify the primary document, legal force, provisions, jurisdiction and dates."
+  },
+  {
+    "id": "WATCH-8b12dac0875db3bd",
+    "source_id": "SRC-BIS-FSI",
+    "title": "The gig economy and digital payments",
+    "url": "https://www.bis.org/publications/paper-177-gig-economy-and-digital-payments",
+    "discovered_at": "2026-11-23T16:13:23.328933+00:00",
+    "status": "needs_human_review",
+    "note": "Discovery candidate only. Verify the primary document, legal force, provisions, jurisdiction and dates."
+  },
+  {
+    "id": "WATCH-8573ed1219afc413",
+    "source_id": "SRC-BIS-FSI",
+    "title": "Building AI on credit: structures and spillovers",
+    "url": "https://www.bis.org/publications/bulletin-140-building-ai-credit--structures-and-spillovers",
+    "discovered_at": "2026-11-23T16:13:23.329123+00:00",
+    "status": "needs_human_review",
+    "note": "Discovery candidate only. Verify the primary document, legal force, provisions, jurisdiction and dates."
+  },
+  {
+    "id": "WATCH-cbe406fe5acd1468",
+    "source_id": "SRC-BIS-FSI",
+    "title": "Competing rails for crossborder payments: banks, fintechs, and stablecoins",
+    "url": "https://www.bis.org/publications/working-paper-1385-competing-rails-crossborder-payments-banks-fintechs-and-stablecoins",
+    "discovered_at": "2026-11-23T16:13:23.329274+00:00",
+    "status": "needs_human_review",
+    "note": "Discovery candidate only. Verify the primary document, legal force, provisions, jurisdiction and dates."
+  },
+  {
+    "id": "WATCH-053fe98cbb07974b",
+    "source_id": "SRC-BIS-FSI",
+    "title": "Money and the architecture of trust",
+    "url": "https://www.bis.org/publications/paper-175-money-and-architecture-trust",
+    "discovered_at": "2026-11-23T16:13:23.329437+00:00",
+    "status": "needs_human_review",
+    "note": "Discovery candidate only. Verify the primary document, legal force, provisions, jurisdiction and dates."
+  }
+]
