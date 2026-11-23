@@ -1,5 +1,9 @@
 # MONAISEC changelog
 
+## 2026-11-23
+
+- Added a discreet Google Preferred Sources deeplink badge to the homepage and two research pages; eligibility and selection remain with Google.
+
 ## 2026-11-20
 
 - Added static, source-linked examples to the Financial Risk Observatory and updated its search metadata.
